@@ -53,8 +53,11 @@ from server.freshness import FreshnessStore        # noqa: E402
 from server.state import StateStore                # noqa: E402
 from server.store import FacultyStore, NoticeStore  # noqa: E402
 
-NOTICES = os.path.join(ROOT, "data", "out", "notices.jsonl")
-FACULTY = os.path.join(ROOT, "data", "out", "faculty.jsonl")
+# 走 config 的解析：有 `data/out` 用它，没有就用仓库自带的脱敏样例 `data/sample/out`。
+# 硬编码 `data/out` 会让"新克隆直接跑门禁"在缺原始数据时 FileNotFound —— 而公开仓库
+# 本来就不带原始数据。
+NOTICES = config.NOTICES_PATH
+FACULTY = config.FACULTY_PATH
 SCHEMA = os.path.join(ROOT, "contracts", "notice.schema.json")
 FACULTY_SCHEMA = os.path.join(ROOT, "contracts", "faculty.schema.json")
 FIXTURES = os.path.join(ROOT, "contracts", "fixtures")

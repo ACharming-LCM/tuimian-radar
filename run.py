@@ -67,16 +67,20 @@ def port_in_use(port):
 
 def check_data():
     """数据体检。**缺数据不是致命错误** —— 服务设计成"读不到也能起来"，
-    只是会返回空列表。所以这里只提醒，不拦。"""
+    只是会返回空列表。所以这里只提醒，不拦。
+
+    路径走 `server.config` 的解析：有 `data/out` 用 `data/out`，
+    没有就用仓库自带的脱敏样例 `data/sample/out`（公开仓库不带原始数据）。"""
+    from server import config
     checks = [
-        ("data/out/notices.jsonl", "公告", True),
-        ("data/out/faculty.jsonl", "导师", False),
-        ("data/out/changes.json", "变更报告", False),
-        ("data/out/history/index.json", "更新历史", False),
+        (config.NOTICES_PATH, "公告", True),
+        (config.FACULTY_PATH, "导师", False),
+        (config.CHANGES_PATH, "变更报告", False),
+        (config.HISTORY_INDEX_PATH, "更新历史", False),
     ]
     rows = []
-    for rel, name, required in checks:
-        path = os.path.join(ROOT, rel)
+    for path, name, required in checks:
+        rel = os.path.relpath(path, ROOT)
         if not os.path.exists(path):
             rows.append((name, rel, "缺失" + ("  ← 公告缺失会让列表为空" if required else "")))
             continue
