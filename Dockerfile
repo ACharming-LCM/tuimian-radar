@@ -1,6 +1,6 @@
 # 推免雷达：魔搭创空间（Docker 方式）/ 任意容器平台部署
 #
-# 数据：镜像里用的是 deploy_data/out（collector/tools/sanitize_for_deploy.py 生成的脱敏版），
+# 数据：镜像里用的是 data/sample/out（collector/tools/sanitize_for_deploy.py 生成的脱敏版），
 #       不是原始 data/out。生成方法见 DEPLOY.md。
 # 端口：默认 7860（创空间常用端口）；平台若注入 PORT 环境变量会以它为准。
 FROM python:3.10-slim
