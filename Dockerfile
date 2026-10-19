@@ -5,14 +5,14 @@
 # 端口：默认 7860（创空间常用端口）；平台若注入 PORT 环境变量会以它为准。
 FROM python:3.10-slim
 
+# 云上不定时抓取：一是对学校服务器不礼貌，二是部分学校官网公网访问不到（见 issues/001）
+# 公网演示：演示身份只读，访客拿到自己的 guest_xxx，论坛只读
 ENV PYTHONUNBUFFERED=1 \
     PYTHONIOENCODING=utf-8 \
     PIP_NO_CACHE_DIR=1 \
     HOST=0.0.0.0 \
     PORT=7860 \
-    # 云上不定时抓取：一是对学校服务器不礼貌，二是部分学校官网公网访问不到（见 issues/001）
     TUIMIAN_CRAWL_SCHEDULE=0 \
-    # 公网演示：演示身份只读，访客拿到自己的 guest_xxx，论坛只读
     TUIMIAN_PUBLIC=1
 
 WORKDIR /app

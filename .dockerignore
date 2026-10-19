@@ -3,8 +3,9 @@
 venv
 __pycache__
 *.pyc
-# 原始抓取数据（含考生名单）绝不进镜像；镜像只用 deploy_data/out
-data/
+# 原始抓取数据（含考生名单）绝不进镜像；镜像只用脱敏后的 data/sample/out
+data/*
+!data/sample/
 server/var/
 journal/
 docs/

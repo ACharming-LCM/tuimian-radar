@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """给公网部署出一份**脱敏数据**（不改原始 data/out）。
 
-    python collector/tools/sanitize_for_deploy.py --src data/out --dst deploy_data/out
+    python collector/tools/sanitize_for_deploy.py --src data/out --dst data/sample/out
 
 为什么要有这一步
 ----------------
