@@ -1,0 +1,9 @@
+# Python 3.10+（代码使用 `str | None` 语法）
+# fastapi / uvicorn / pydantic / pypdf 的版本取自原开发机实际安装版本（journal/2026-10-17-B.md、collector/pdf.py）
+# lxml / python-docx 原开发机版本未记录，这里固定为当前稳定版
+fastapi==0.136.1
+uvicorn==0.47.0
+pydantic==2.13.4
+pypdf==6.19.0
+lxml==6.1.3
+python-docx==1.2.0

@@ -1,0 +1,29 @@
+# 抓取缓存：体积大、每次内容会变、可随时重跑生成 —— 不进版本库
+data/raw/
+
+# 调试产物
+_scratch/
+__pycache__/
+*.pyc
+.DS_Store
+
+# B 的服务端运行时状态（用户 / 订阅 / 论坛帖子 / 免费额度）
+# 不进版本库：里面是用户发的内容和 IP 留痕，以及每次演示都会变的状态。
+# 说明见 server/state.py 顶部。
+server/var/
+
+# 抓取产出不进公开仓库：公告正文里含公示名单（考生姓名等），导师数据含联系方式。
+# 需要数据时本地运行 collector 重新生成，见 README「数据说明」。
+data/out/
+# 脱敏后的部署数据：只推到魔搭创空间，不进 GitHub
+deploy_data/
+
+data/logs/
+
+# 本地环境
+.venv/
+venv/
+.env
+*.log
+.idea/
+.vscode/

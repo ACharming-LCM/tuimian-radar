@@ -1,0 +1,15 @@
+.git
+.venv
+venv
+__pycache__
+*.pyc
+# 原始抓取数据（含考生名单）绝不进镜像；镜像只用 deploy_data/out
+data/
+server/var/
+journal/
+docs/
+issues/
+status/
+recordings/
+_scratch/
+*.log

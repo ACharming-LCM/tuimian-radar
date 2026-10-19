@@ -1,0 +1,36 @@
+{
+ "user": {
+  "id": "u_demo",
+  "nickname": "示例同学",
+  "subscribed": false,
+  "expires_at": null,
+  "daily_free_quota": 3,
+  "daily_used": 1
+ },
+ "plans": [
+  {
+   "id": "monthly",
+   "name": "月度订阅",
+   "price": 29,
+   "period": "月",
+   "features": [
+    "截止日提醒",
+    "套磁信生成",
+    "论坛全文",
+    "变更推送"
+   ]
+  },
+  {
+   "id": "season",
+   "name": "推免季畅读",
+   "price": 99,
+   "period": "5 个月",
+   "features": [
+    "以上全部",
+    "背景匹配报告",
+    "面试题库"
+   ]
+  }
+ ],
+ "_note": "D4 演示用模拟支付，不接真实支付通道（学生拿不到微信支付商户号）"
+}

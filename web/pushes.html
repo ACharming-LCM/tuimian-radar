@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>推送预览 · 推免雷达</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='%232c53c8' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='4.5' fill='%232c53c8'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="page">
+
+  <header class="hero">
+    <div class="brand"><span class="logo">◎</span> 推免雷达 <span class="brand-sub">tuimian radar</span></div>
+    <nav class="nav">
+      <a href="index.html">匹配结果</a>
+      <a href="onboard.html">我的画像</a>
+      <a href="pushes.html" aria-current="page">推送预览</a>
+      <a href="notices.html">公告</a>
+      <a href="faculty.html">导师</a>
+      <a href="daily.html">今日更新</a>
+      <a href="subscriptions.html">我的订阅</a>
+      <a href="pricing.html">订阅</a>
+    </nav>
+    <h1>推送预览</h1>
+    <p class="lede">这就是<strong>你会收到的那条推送</strong>——不是"今天全站变了什么"，是<strong>跟你有关的那几条</strong>。
+      每一条都告诉你<strong>变了什么</strong>、<strong>为什么推给你</strong>，而且<strong>永远能点回原文</strong>（免费身份也能点）。</p>
+  </header>
+
+  <div id="banner" hidden></div>
+
+  <div id="heartbeat"></div>
+
+  <!-- 「快截止」入口（C17）：数字来自 /api/facets 的 within_7 count -->
+  <div id="deadline-entry"></div>
+
+  <div id="tier-bar"></div>
+
+  <section id="phone-wrap" hidden></section>
+
+  <div id="list-head"></div>
+  <main id="results"></main>
+
+  <div id="state" class="state">正在读取数据…</div>
+
+  <footer class="foot">
+    <p>数据源：<code id="api-source">读取中…</code>（<code>GET /api/push/preview</code>，契约 §16）。</p>
+    <p><strong>关于「截止日」的三句话，不能混：</strong>读到了就显示日期；<strong>正文读了、确实没有</strong>写「该公告未公布截止日」；
+        <strong>我们没能读到</strong>写「未能读取截止日，请点原文核对」并给出原文链接。
+        第三种最容易被含糊掉——含糊掉的代价是你以为它没有截止日，于是不去看原文。</p>
+    <p>这三句话<strong>由服务端拼好</strong>，前端原样显示、不再加工——同一句话有两个实现，早晚会不一样。</p>
+    <p>推送只讲三类事：<strong>学校新发了公告</strong>、<strong>截止日变了</strong>、<strong>补发了附件</strong>。
+       我们改了自己抓取代码（重新解析）<strong>不会</strong>变成一条推送——那会让你以为学校更新了，而公告一个字都没变。</p>
+    <p>推送只做<strong>站内预览</strong>，没有接邮件 / 微信通道。</p>
+  </footer>
+
+</div>
+<script src="assets/common.js"></script>
+<script src="assets/deadline.js"></script>
+<!-- 「快截止」入口（C17）：数字只读 /api/facets 的 within_7 count -->
+<script src="assets/deadline-entry.js"></script>
+<script src="assets/pushes.js"></script>
+<script src="assets/notify.js"></script>
+</body>
+</html>

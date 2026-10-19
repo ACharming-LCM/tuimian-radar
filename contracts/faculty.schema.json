@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "tuimian/faculty.schema.v1.json",
+  "title": "Faculty",
+  "description": "导师记录。这是产品的第二个数据契约，和 notice 分开：公告天天变，导师信息几个月才动一次，抓取频率和可靠性要求完全不同。",
+  "version": "v1",
+  "type": "object",
+  "required": ["id", "school", "school_slug", "unit", "name", "source_url",
+               "crawled_at", "content_hash", "group_kind"],
+  "additionalProperties": false,
+  "properties": {
+    "id":            { "type": "string", "description": "稳定主键：{school_slug}-{unit简写}-{姓名拼音或姓名hash}" },
+    "school":        { "type": "string" },
+    "school_slug":   { "type": "string" },
+    "unit":          { "type": "string", "description": "院系，如 物理学院" },
+    "group":         { "type": ["string", "null"], "description": "栏目/研究所原名，如 聚变理论与模拟中心" },
+    "group_kind": {
+      "enum": ["身份", "机构", "其他"],
+      "description": "栏目名的性质。**必须和 group 分开**：浙大物理的师资导航把「中国科学院院士」「特聘教授」（身份）和「凝聚态物理研究所」（机构）挂在同一层，混在一个字段里界面上就分不出组。身份用于徽标，机构用于分组"
+    },
+    "name":          { "type": "string" },
+    "title":         { "type": ["string", "null"], "description": "职称，如 教授 / 研究员" },
+    "is_phd_supervisor":    { "type": ["boolean", "null"], "description": "是否博士生导师（名单上常写「博士生导师」）。null 表示名单没写，不等于 false" },
+    "is_master_supervisor": { "type": ["boolean", "null"], "description": "同上，硕士生导师" },
+    "email":         { "type": ["string", "null"] },
+    "phone":         { "type": ["string", "null"] },
+    "research_areas": {
+      "type": "array", "items": { "type": "string" },
+      "description": "研究方向，已按分隔符切分。**这是把导师和用户专业匹配起来的关键字段**"
+    },
+    "homepage":      { "type": ["string", "null"], "description": "个人主页，浙大统一在 person.zju.edu.cn" },
+    "source_url":    { "type": "string", "description": "抓自哪个列表页，便于回溯和增量" },
+    "crawled_at":    { "type": "string" },
+    "content_hash":  { "type": "string", "description": "姓名+职称+邮箱+研究方向的哈希，用于识别导师信息变更（换方向、升职称）" }
+  }
+}

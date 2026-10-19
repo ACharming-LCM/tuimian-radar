@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>公告 · 推免雷达</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='%232c53c8' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='4.5' fill='%232c53c8'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="page">
+
+  <header class="hero">
+    <div class="brand"><span class="logo">◎</span> 推免雷达 <span class="brand-sub">tuimian radar</span></div>
+    <nav class="nav">
+      <a href="index.html">匹配结果</a>
+      <a href="notices.html" aria-current="page">公告</a>
+      <a href="faculty.html">导师</a>
+      <a href="forum.html">论坛</a>
+      <a href="daily.html">今日更新</a>
+      <a href="subscriptions.html">我的订阅</a>
+      <a href="pricing.html">订阅</a>
+    </nav>
+    <h1>公告</h1>
+    <p class="lede">全部抓到的公告。截止日<strong>有三种说法，不会含糊过去</strong>：读到了就显示日期；正文读了确实没有，写「该公告未公布截止日」；<strong>我们没能读到</strong>，写「未能读取截止日，请点原文核对」并给出原文链接。低置信的标「疑似」，带附件的标出数量——附件里常常才是正文。</p>
+  </header>
+
+  <!-- 数据心跳（C6）：一行，悬停看详情；接口 /api/health/data -->
+  <div id="heartbeat"></div>
+
+  <div id="freshness"></div>
+
+  <!-- 后台数据更新后重拉失败时的提示（不替换列表 —— 已显示的那些数据仍然有效） -->
+  <p id="reload-msg" class="fallback-note" hidden></p>
+
+  <section id="stats-wrap" class="panel panel-stats" hidden>
+    <div id="stats" class="stats"></div>
+  </section>
+
+  <!-- 「截止日读不到」的说明 + 只看有截止日的开关（C17 ③）：数字全部来自 /api/facets 的互斥桶 -->
+  <div id="deadline-summary"></div>
+
+  <div id="toolbar" class="toolbar" hidden>
+    <input id="q" class="search" type="search" autocomplete="off" placeholder="搜标题、专业、单位，如「物理」「推免」">
+    <label class="pick">学校<select id="school"><option value="ALL">全部学校</option></select></label>
+    <label class="pick">单位<select id="unit"><option value="ALL">全部单位</option></select></label>
+    <label class="pick">方式<select id="mode"><option value="ALL">全部方式</option></select></label>
+    <!-- 截止日（C17）：四个窗口走接口 deadline_within，其余四种在本页内筛（页面会写明） -->
+    <label class="pick">截止<select id="deadline"><option value="ALL">全部</option></select></label>
+    <label class="check"><input id="attach-only" type="checkbox"> 只看带附件</label>
+    <label class="sort-label">排序
+      <select id="sort">
+        <option value="publish">发布时间（新 → 旧）</option>
+        <option value="deadline">截止日（近 → 远）</option>
+      </select>
+    </label>
+    <span id="result-count" class="count"></span>
+  </div>
+
+  <main id="results"></main>
+
+  <div id="state" class="state">正在读取数据…</div>
+
+  <footer class="foot">
+    <p>数据源：<code id="api-source">读取中…</code>（<code>GET /api/notices</code> 的形状）。</p>
+    <p>标题点进详情页，右边的「原文 ↗」直接跳学校官网。没标截止日的不是没有截止日，是没抽到——我们不猜一个日期让你照着安排时间。</p>
+    <p><strong>关于截止日期：</strong>只有约 31% 的公告能从中抽出来——很多学校把日期放在附件或图片里。
+       我们没读到的时候，卡片上写「未能读取截止日，请点原文核对」并给原文链接 —— 不会写成「该公告未公布截止日」，那是两句完全不同的话：前一句是我们不知道，后一句是它确实没有。</p>
+  </footer>
+
+</div>
+<script src="assets/common.js"></script>
+<!-- 契约漂移面板：必须在页面取数**之前**加载，它靠包 apiGet/apiPost 记录载荷 -->
+<script src="assets/drift.js"></script>
+<!-- 截止日三态（读到了 / 确实没有 / 我们没读到）：全站唯一实现，见 assets/deadline.js -->
+<script src="assets/deadline.js"></script>
+<script src="assets/live.js"></script>
+<script src="assets/notices.js"></script>
+<script src="assets/notify.js"></script>
+</body>
+</html>

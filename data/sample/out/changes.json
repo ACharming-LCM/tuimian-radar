@@ -1,0 +1,20 @@
+{
+ "generated_at": "2026-10-18T16:43:07",
+ "counts": {
+  "previous": 1135,
+  "current": 1135,
+  "added": 0,
+  "changed": 0,
+  "reparsed": 0,
+  "removed": 0,
+  "reidentified": 0,
+  "unchanged": 1135
+ },
+ "added": [],
+ "changed": [],
+ "reparsed": [],
+ "removed": [],
+ "reidentified": [],
+ "_note": "changed = 正文哈希变了（学校真的改了）；reparsed = 正文没变但我们抽出的字段变了（我们改了代码）。**别把 reparsed 显示成'通知被修改'。**",
+ "site_unrefreshed": []
+}

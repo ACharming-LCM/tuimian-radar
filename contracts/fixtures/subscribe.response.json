@@ -1,0 +1,44 @@
+{
+ "user": {
+  "id": "u_demo",
+  "nickname": "示例同学",
+  "subscribed": true,
+  "expires_at": "2026-11-17T00:00:00",
+  "daily_free_quota": 3,
+  "daily_used": 1
+ },
+ "order": {
+  "order_id": "o_20261017_0001",
+  "plan_id": "monthly",
+  "amount": 29,
+  "paid_at": "2026-10-17T01:30:00",
+  "status": "paid",
+  "_note": "D4 演示用模拟支付，不接真实支付通道（学生拿不到微信支付商户号）"
+ },
+ "plans": [
+  {
+   "id": "monthly",
+   "name": "月度订阅",
+   "price": 29,
+   "period": "月",
+   "features": [
+    "截止日提醒",
+    "套磁信生成",
+    "论坛全文",
+    "变更推送"
+   ]
+  },
+  {
+   "id": "season",
+   "name": "推免季畅读",
+   "price": 99,
+   "period": "5 个月",
+   "features": [
+    "以上全部",
+    "背景匹配报告",
+    "面试题库"
+   ]
+  }
+ ],
+ "_note": "D4 演示用模拟支付，不接真实支付通道（学生拿不到微信支付商户号）"
+}

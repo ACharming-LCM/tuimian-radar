@@ -1,0 +1,222 @@
+{
+ "total": 36,
+ "_note": "论坛 facets 的初始种。unit 仍用自由文本，这只是建议值 —— 不校正的话「物理学院」和「物理系」会裂成两个版块。",
+ "units": [
+  {
+   "school": "大连理工大学",
+   "unit": "教师主页（全校）",
+   "notice_count": 0,
+   "faculty_count": 233
+  },
+  {
+   "school": "浙江大学",
+   "unit": "航空航天学院",
+   "notice_count": 0,
+   "faculty_count": 126
+  },
+  {
+   "school": "北京大学",
+   "unit": "研究生招生网",
+   "notice_count": 104,
+   "faculty_count": 0
+  },
+  {
+   "school": "浙江大学",
+   "unit": "材料科学与工程学院",
+   "notice_count": 21,
+   "faculty_count": 66
+  },
+  {
+   "school": "南京大学",
+   "unit": "研究生院",
+   "notice_count": 79,
+   "faculty_count": 0
+  },
+  {
+   "school": "中南大学",
+   "unit": "研究生院",
+   "notice_count": 78,
+   "faculty_count": 0
+  },
+  {
+   "school": "北京大学",
+   "unit": "物理学院",
+   "notice_count": 72,
+   "faculty_count": 0
+  },
+  {
+   "school": "郑州大学",
+   "unit": "研究生院",
+   "notice_count": 71,
+   "faculty_count": 0
+  },
+  {
+   "school": "浙江大学",
+   "unit": "物理学院",
+   "notice_count": 20,
+   "faculty_count": 50
+  },
+  {
+   "school": "吉林大学",
+   "unit": "研究生院",
+   "notice_count": 68,
+   "faculty_count": 0
+  },
+  {
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "notice_count": 0,
+   "faculty_count": 65
+  },
+  {
+   "school": "上海交通大学",
+   "unit": "研究生招生网",
+   "notice_count": 47,
+   "faculty_count": 0
+  },
+  {
+   "school": "电子科技大学",
+   "unit": "研究生院",
+   "notice_count": 46,
+   "faculty_count": 0
+  },
+  {
+   "school": "华中师范大学",
+   "unit": "研究生院",
+   "notice_count": 45,
+   "faculty_count": 0
+  },
+  {
+   "school": "南开大学",
+   "unit": "研究生院",
+   "notice_count": 42,
+   "faculty_count": 0
+  },
+  {
+   "school": "上海大学",
+   "unit": "研究生院",
+   "notice_count": 40,
+   "faculty_count": 0
+  },
+  {
+   "school": "大连理工大学",
+   "unit": "研究生院",
+   "notice_count": 40,
+   "faculty_count": 0
+  },
+  {
+   "school": "天津大学",
+   "unit": "研究生院",
+   "notice_count": 39,
+   "faculty_count": 0
+  },
+  {
+   "school": "北京航空航天大学",
+   "unit": "研究生院",
+   "notice_count": 38,
+   "faculty_count": 0
+  },
+  {
+   "school": "西安交通大学",
+   "unit": "研究生院",
+   "notice_count": 36,
+   "faculty_count": 0
+  },
+  {
+   "school": "中山大学",
+   "unit": "研究生院",
+   "notice_count": 35,
+   "faculty_count": 0
+  },
+  {
+   "school": "四川大学",
+   "unit": "研究生院",
+   "notice_count": 31,
+   "faculty_count": 0
+  },
+  {
+   "school": "华中科技大学",
+   "unit": "研究生院",
+   "notice_count": 30,
+   "faculty_count": 0
+  },
+  {
+   "school": "同济大学",
+   "unit": "研究生院",
+   "notice_count": 27,
+   "faculty_count": 0
+  },
+  {
+   "school": "中国科学技术大学",
+   "unit": "研究生院",
+   "notice_count": 22,
+   "faculty_count": 0
+  },
+  {
+   "school": "复旦大学",
+   "unit": "物理学系",
+   "notice_count": 0,
+   "faculty_count": 17
+  },
+  {
+   "school": "哈尔滨工业大学",
+   "unit": "研究生院",
+   "notice_count": 15,
+   "faculty_count": 0
+  },
+  {
+   "school": "复旦大学",
+   "unit": "研究生招生网",
+   "notice_count": 13,
+   "faculty_count": 0
+  },
+  {
+   "school": "清华大学",
+   "unit": "研究生招生网",
+   "notice_count": 11,
+   "faculty_count": 0
+  },
+  {
+   "school": "重庆大学",
+   "unit": "研究生院",
+   "notice_count": 10,
+   "faculty_count": 0
+  },
+  {
+   "school": "东南大学",
+   "unit": "研究生院",
+   "notice_count": 9,
+   "faculty_count": 0
+  },
+  {
+   "school": "华东师范大学",
+   "unit": "研究生院",
+   "notice_count": 8,
+   "faculty_count": 0
+  },
+  {
+   "school": "武汉大学",
+   "unit": "物理科学与技术学院",
+   "notice_count": 7,
+   "faculty_count": 0
+  },
+  {
+   "school": "西北工业大学",
+   "unit": "研究生院",
+   "notice_count": 6,
+   "faculty_count": 0
+  },
+  {
+   "school": "厦门大学",
+   "unit": "研究生院",
+   "notice_count": 5,
+   "faculty_count": 0
+  },
+  {
+   "school": "浙江大学",
+   "unit": "研究生招生网",
+   "notice_count": 4,
+   "faculty_count": 0
+  }
+ ]
+}

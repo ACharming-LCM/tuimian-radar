@@ -1,0 +1,43 @@
+{
+ "started_at": "2026-10-17T23:21:08",
+ "finished_at": "2026-10-17T23:38:22",
+ "records": 1119,
+ "steps": [
+  {
+   "step": "抓公告",
+   "seconds": 975.6,
+   "exit": 0
+  },
+  {
+   "step": "抓导师",
+   "seconds": 46.1,
+   "exit": 0
+  },
+  {
+   "step": "院系清单",
+   "seconds": 0.3,
+   "exit": 0
+  },
+  {
+   "step": "重出 fixtures",
+   "seconds": 0.4,
+   "exit": 0
+  },
+  {
+   "step": "数据门禁",
+   "seconds": 11.5,
+   "exit": 0,
+   "note": "首次发现两条旧缓存中文日期标题，修复后单独复验通过"
+  }
+ ],
+ "failed_steps": [],
+ "seconds": 1034.3,
+ "data_changed": true,
+ "counts": {
+  "added": 655,
+  "changed": 0,
+  "reparsed": 0,
+  "removed": 6,
+  "reidentified": 0
+ }
+}

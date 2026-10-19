@@ -1,0 +1,22 @@
+{
+ "_note": "数据健康门禁的比较基线（server/tests/test_data_health.py 的第 6/7/10 条判据）。**改它必须在 journal 里说明理由** —— 它一改，突变检测就重设了。",
+ "recorded_on": "2026-10-18",
+ "unknown_ratio": 0.2536,
+ "max_same_title": 10,
+ "_observed": {
+  "notices": 1120,
+  "events": 1133,
+  "junk": 77,
+  "thin": 102,
+  "ok": 941,
+  "orphans": 13,
+  "no_event": 0,
+  "publish_missing_ratio": 0.008,
+  "deadline_states": {
+   "absent": 513,
+   "unknown": 284,
+   "found": 323
+  },
+  "junk_with_good_body": 0
+ }
+}

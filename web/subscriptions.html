@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>我的订阅 · 推免雷达</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='%232c53c8' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='4.5' fill='%232c53c8'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="page">
+
+  <header class="hero">
+    <div class="brand"><span class="logo">◎</span> 推免雷达 <span class="brand-sub">tuimian radar</span></div>
+    <nav class="nav">
+      <a href="index.html">匹配结果</a>
+      <a href="notices.html">公告</a>
+      <a href="faculty.html">导师</a>
+      <a href="forum.html">论坛</a>
+      <a href="daily.html">今日更新</a>
+      <a href="subscriptions.html" aria-current="page">我的订阅</a>
+      <a href="pricing.html">订阅</a>
+    </nav>
+    <h1>我的订阅</h1>
+    <p class="lede">关注一个<strong>学校 / 学院</strong>，它以后的新公告就进页头的通知里。
+       这里列的是<strong>服务端存着的</strong>关注规则——换台机器、关掉浏览器再打开，它们还在。</p>
+  </header>
+
+  <section class="subs-card">
+    <h2>我关注的</h2>
+    <p class="subs-lead" id="subs-summary">正在读取关注规则…</p>
+    <ul class="subs-list" id="subs-list"></ul>
+    <p class="subs-hint" id="subs-list-hint" hidden></p>
+    <div class="dactions">
+      <button type="button" class="btn-ghost" id="preview-btn">预览会收到什么</button>
+      <span class="pf-hint" id="preview-msg"></span>
+    </div>
+    <div id="preview-body" class="subs-preview" hidden></div>
+  </section>
+
+  <section class="subs-card">
+    <h2>加一条关注</h2>
+    <p class="subs-lead">学校和学院是<strong>子串匹配</strong>（填「物理」能覆盖「物理学院」「物理科学与技术学院」）。
+       只填一个也能用：只填学校 = 整所学校都推；只填关键词 = 标题/院系/专业/正文里出现这个词就推。</p>
+    <div class="pform subs-form">
+      <div class="subs-add-row">
+        <label>学校
+          <input type="text" id="f-school" list="school-list" placeholder="例如 北京大学" autocomplete="off">
+        </label>
+        <label>学院 / 单位（可不填）
+          <input type="text" id="f-unit" list="unit-list" placeholder="例如 物理学院" autocomplete="off">
+        </label>
+      </div>
+      <div class="pf-wide">
+        <label>关键词（可不填，逗号分隔）
+          <input type="text" id="f-kw" placeholder="例如 凝聚态, 预推免" autocomplete="off">
+        </label>
+      </div>
+      <div class="dactions">
+        <button type="button" class="btn-primary" id="f-add">关注</button>
+        <button type="button" class="btn-ghost" id="f-from-profile">从画像生成关注（按意向学校）</button>
+        <span class="pf-hint" id="f-msg"></span>
+      </div>
+    </div>
+    <datalist id="school-list"></datalist>
+    <datalist id="unit-list"></datalist>
+    <p class="subs-hint" id="f-scope"></p>
+  </section>
+
+  <section class="subs-card">
+    <h2>关于这些开关</h2>
+    <p class="subs-lead">
+      <strong>关注规则</strong>存在服务端（<code>/api/watch</code> → <code>server/var/state.json</code>），所以刷新、换页、重开浏览器都还在。<br>
+      <strong>「提醒」开关</strong>目前只存在<strong>这台浏览器</strong>：服务端的关注规则没有「暂停」这个字段，
+      所以它只决定「页头通知里要不要出现这条规则命中的东西」，不影响规则本身，也不会同步到别的机器。<br>
+      要看通知长什么样，点页头导航里的「通知」。
+    </p>
+  </section>
+
+  <div id="state" class="state">正在读取关注规则…</div>
+
+  <footer class="foot">
+    <p>数据源：<code id="api-source">读取中…</code>（<code>GET /api/watch</code> · <code>POST /api/watch</code> · <code>DELETE /api/watch/{id}</code>）。</p>
+    <p>身份是演示用假登录态（<code>?user=</code>）。关注规则按身份分开存，换身份看到的是另一套。</p>
+  </footer>
+
+</div>
+<script src="assets/common.js"></script>
+<!-- 契约漂移面板：必须在页面取数**之前**加载，它靠包 apiGet/apiPost 记录载荷 -->
+<script src="assets/drift.js"></script>
+<!-- 页头铃铛（C13）：本页也要能看见"我关注的东西有没有动静" -->
+<script src="assets/notify.js"></script>
+<script src="assets/subscriptions.js"></script>
+</body>
+</html>

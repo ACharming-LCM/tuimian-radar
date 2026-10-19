@@ -1,0 +1,53 @@
+{
+ "name": "示例：浙大物理方向大三",
+ "school": "浙江大学",
+ "majors": [
+  "物理学",
+  "力学",
+  "应用物理",
+  "光学",
+  "材料"
+ ],
+ "grade": "大三",
+ "target_entry_year": 2027,
+ "gpa_rank": {
+  "rank": 5,
+  "total": 120
+ },
+ "english": {
+  "cet6": 580,
+  "toefl": null,
+  "ielts": null
+ },
+ "research": [
+  "CUPT 国赛一等奖",
+  "凝聚态实验一段"
+ ],
+ "interest_keywords": [
+  "凝聚态物理",
+  "超导",
+  "量子",
+  "自旋电子学"
+ ],
+ "target_levels": [
+  "直博",
+  "硕士"
+ ],
+ "wanted_modes": [
+  "推免",
+  "预推免",
+  "夏令营"
+ ],
+ "preferred_schools": [
+  "浙江大学",
+  "中国科学技术大学",
+  "复旦大学",
+  "北京大学",
+  "南京大学"
+ ],
+ "preferred_units": [
+  "物理学院",
+  "材料科学与工程学院",
+  "研究生院"
+ ]
+}

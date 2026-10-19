@@ -1,0 +1,115 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "tuimian/events.schema.v1.json",
+  "title": "NoticeEvent",
+  "description": "推免公告的**变更事件**。这是数据层给后端/前端的唯一事件口径：collector 产出它，server 只读它，web 只读接口。文件形态是 `data/out/events.jsonl`（**append-only，一行一条**）。为什么要事件而不是直接给 notices.jsonl：推送要回答的是「**今天有什么新东西值得打扰你**」，而不是「现在数据库里有什么」。两者的区别就是 events 和 notices 的区别。",
+  "version": "v1",
+  "type": "object",
+  "required": [
+    "event_id", "type", "notice_id", "at", "detected_on",
+    "url", "school", "unit", "title", "publish_date",
+    "deadline", "field_state", "relevance"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "description": "**稳定去重键**。同一个变更无论重跑多少次、隔多久重算，值都不变 —— 后端按它去重，保证「同一条变更不重复推送」。构造规则见 collector/tools/make_events.py：`sha1(type|notice_id|变更内容指纹)`。注意它**不含生成时间**：含了的话每天重跑都会变成新事件，去重就失效了。"
+    },
+    "type": {
+      "enum": ["added", "deadline_changed", "attachment_added"],
+      "description": "事件类型。**只有这三种**：`added`=学校新发了这条公告；`deadline_changed`=截止日变了（我们读到的新值和上次不同）；`attachment_added`=新增了附件（学校补发了材料）。**`reparsed`（我们改了抽取代码）绝不产生事件** —— 那会让用户以为学校更新了，而公告一个字没变。"
+    },
+    "notice_id": {
+      "type": "string",
+      "description": "稳定公告 id，等于 notices.jsonl 里的 `id`。后端可以用它回查完整记录。"
+    },
+    "at": {
+      "type": "string",
+      "description": "**事件时间**（ISO8601，带时区含义按本机）。语义是「我们**检测到**这个变更的时刻」，不是公告的发布时间。用户看到的「3 分钟前」用的是这个。"
+    },
+    "detected_on": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "事件时间对应的日期，方便按天分组/统计。冗余字段，就是为了别让消费方各自解析时区。"
+    },
+    "url": {
+      "type": "string",
+      "description": "**原文链接，必填**。每条推送都必须能点回原文（免费层也一样）。缺了它这条事件不该被发出 —— 这是「可信」的底线。"
+    },
+    "school": { "type": "string" },
+    "unit":   { "type": "string" },
+    "title":  { "type": "string" },
+    "publish_date": {
+      "type": "string",
+      "description": "公告的发布日 YYYY-MM-DD；缺失时为空串（**不是 null** —— 这是 notices.jsonl 的既有约定，别在这里改成 null）"
+    },
+    "deadline": {
+      "type": ["string", "null"],
+      "description": "截止日 YYYY-MM-DD，抽不到就是 `null`。**绝不编造。** 注意 `null` 要配合下面 `field_state.deadline` 一起读：`absent` 是「确实没有」，`unknown` 是「我们没读到」，两者对用户是相反的话。"
+    },
+    "field_state": {
+      "type": "object",
+      "description": "**字段可信度三态，事件必须带上，不许省。** 推送文案的唯一依据：`unknown` 必须写成「未能读取截止日，请点原文核对」并带原文链接，**不许写「暂无」或「——」，也不许省略不显示**（不显示最危险：用户会以为没有截止日，于是不去看原文）。定义见 notice.schema.json 的 field_state。\n\n⚠️ **2026-10-18 补：`contact` / `materials` 是可选属性。** 2026-10-17 `field_state` 从 4 个字段扩到 6 个（notice.schema.json 已同步），但本文件的 `additionalProperties: false` 没跟着改 —— 于是任何**新生成**的事件都过不了校验（实测 10-18 补齐 655 条后 1119 条事件中这批全部违规）。历史事件（2026-10-17 19:27 之前的 476 条）确实只有 4 个键，所以这两个键**只能可选、不能 required**：消费方读不到时按 `unknown` 处理，不要当成 `absent`。",
+      "additionalProperties": false,
+      "required": ["deadline", "majors", "attachments", "body"],
+      "properties": {
+        "deadline":    { "enum": ["found", "absent", "unknown"] },
+        "majors":      { "enum": ["found", "absent", "unknown"] },
+        "attachments": { "enum": ["found", "absent", "unknown"] },
+        "body":        { "enum": ["ok", "generic", "missing"] },
+        "materials":   { "enum": ["found", "absent", "unknown"] },
+        "contact":     { "enum": ["found", "absent", "unknown"] }
+      }
+    },
+    "relevance": {
+      "enum": [0, 1, 2],
+      "description": "跟招生相关的程度，**只用于排序，绝不用来决定「不推」**。拿不准时宁可多推，并在推送里标注匹配依据。这条是硬规矩：过滤错了用户会错过报名，排序错了只是某条低几行。"
+    },
+    "notice_kind": {
+      "enum": ["announcement", "catalog", "emba", "other"],
+      "description": "公告类型，从 notice.schema.json 的同名字段透传（2026-10-19 A29 起 make_events 会带上）。推送按它分层：announcement 进首屏，catalog/emba 收进「参考资料」。旧事件可以没有。"
+    },
+    "change": {
+      "type": "object",
+      "description": "变更细节。`added` 时可以不出现；`deadline_changed` / `attachment_added` 必填，让推送能说清「变成了什么」。",
+      "additionalProperties": false,
+      "properties": {
+        "field": {
+          "enum": ["deadline", "attachments"],
+          "description": "哪个字段变了"
+        },
+        "from": {
+          "type": ["string", "null"],
+          "description": "变之前的值（deadline_changed 用）。原来是 null 说明之前没抽到。"
+        },
+        "to": {
+          "type": ["string", "null"],
+          "description": "变之后的值（deadline_changed 用）"
+        },
+        "attachments": {
+          "type": "array",
+          "description": "**这次新增的**附件（attachment_added 用），不是全量附件清单",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "url"],
+            "properties": {
+              "name": { "type": "string" },
+              "url":  { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "is_backfill": {
+      "type": "boolean",
+      "description": "**这条事件是「我们这次多抓到了」还是「学校今天新发了」。** true = 扩抓/补抓时翻出来的旧公告（实测这一轮把 details_per_board 从 3 放到 6，多出 90 条，其中最早的发布日是 2013 年）；false = 正常的增量。**推送规则必须排除 is_backfill=true** —— 否则用户会收到「2013 年论坛成功举办」，那是当场露馅的形态。判定口径：`publish_date` 早于检测日 30 天以上即视为补抓。"
+    },
+    "matched": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "**匹配依据**（数据层能给的粗粒度线索：涉及的学科、招生方式、学位类型）。后端把它和用户画像的交集变成人话「为什么推给你」。数据层**不做匹配判断** —— 匹配是后端的事，这里只给素材。"
+    }
+  }
+}

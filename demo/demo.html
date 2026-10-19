@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>推免雷达 · 演示</title>
+<style>
+  :root { --bg:#0d1117; --ink:#e6edf3; --dim:#9aa7b4; --accent:#5b8cff; --line:#222b36; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; height:100%; background:var(--bg); color:var(--ink);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif; }
+  .deck { max-width: 1180px; margin: 0 auto; padding: 28px 28px 80px; }
+  .bar { display:flex; align-items:center; justify-content:space-between; gap:12px;
+    color:var(--dim); font-size:13px; letter-spacing:.04em; }
+  .brand { color:var(--accent); font-weight:700; }
+  .progress { height:3px; background:var(--line); border-radius:2px; margin:14px 0 22px; overflow:hidden; }
+  .progress i { display:block; height:100%; width:0; background:var(--accent); transition:width .4s ease; }
+  .slide { display:none; animation: fade .45s ease; }
+  .slide.on { display:block; }
+  @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+  h1 { font-size:44px; line-height:1.2; margin:18px 0 12px; letter-spacing:-.02em; }
+  h2 { font-size:24px; margin:0 0 6px; }
+  .sub { color:var(--dim); font-size:17px; margin:0 0 18px; }
+  .points { display:flex; flex-wrap:wrap; gap:10px; margin:18px 0; }
+  .point { border:1px solid var(--line); border-radius:10px; padding:10px 14px; color:var(--dim); }
+  .point b { color:var(--ink); }
+  .shot { width:100%; max-height:72vh; object-fit:contain; object-position:top;
+    background:#fff; border-radius:12px; border:1px solid var(--line); }
+  .caption { margin-top:14px; color:var(--dim); font-size:15px; }
+  .caption b { color:var(--ink); }
+  .nav { position:fixed; bottom:0; left:0; right:0; background:rgba(13,17,23,.92);
+    border-top:1px solid var(--line); padding:10px 20px; display:flex; align-items:center;
+    justify-content:space-between; gap:12px; backdrop-filter: blur(8px); }
+  .nav button { background:#161d27; color:var(--ink); border:1px solid var(--line);
+    border-radius:8px; padding:8px 16px; font-size:14px; cursor:pointer; }
+  .nav button:hover { border-color:var(--accent); color:var(--accent); }
+  .dots { display:flex; gap:6px; flex-wrap:wrap; }
+  .dots span { width:8px; height:8px; border-radius:50%; background:#2a3542; cursor:pointer; }
+  .dots span.on { background:var(--accent); }
+  .k { color:var(--accent); }
+  .big { font-size:30px; line-height:1.35; }
+  .cols { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:20px; }
+  .card { border:1px solid var(--line); border-radius:12px; padding:16px 18px; }
+  .card h3 { margin:0 0 6px; font-size:16px; color:var(--accent); }
+  .card p { margin:0; color:var(--dim); font-size:14px; }
+  .foot { color:#5d6b7a; font-size:12px; margin-top:26px; }
+  @media (max-width:700px){ h1{font-size:32px} .shot{max-height:60vh} .deck{padding:18px 16px 90px} }
+</style>
+</head>
+<body>
+<div class="deck">
+  <div class="bar"><span class="brand">推免雷达 · TUIMIAN RADAR</span><span id="counter"></span></div>
+  <div class="progress"><i id="pbar"></i></div>
+
+  <section class="slide on">
+    <h1>推免雷达</h1>
+    <p class="sub">把 29 所高校官网的推免公告，变成「今天该你办的几件事」。<br>每条都能点回原文。</p>
+    <div class="points">
+      <div class="point"><b>2,561</b> 条公告</div>
+      <div class="point"><b>29</b> 所学校 · <b>37</b> 个站点</div>
+      <div class="point"><b>557</b> 位导师</div>
+      <div class="point"><b>232</b> 条自动门禁</div>
+    </div>
+    <p class="big" style="margin-top:34px">不是保研指导平台，<br>是<span class="k">说得清自己哪里不知道</span>的信息监控工具。</p>
+    <p class="foot">用 ← → 或下方按钮切换 · 每 8 秒自动播放</p>
+  </section>
+
+  <section class="slide">
+    <h2>问题：不是信息少，是不知道今天该做什么</h2>
+    <p class="sub">20+ 个研究生院和院系官网，暑期夏令营、预推免、推免系统三个窗口，截止日藏在附件里。</p>
+    <div class="cols">
+      <div class="card"><h3>会漏</h3><p>手动刷 29 所学校，一天不刷就可能错过报名。</p></div>
+      <div class="card"><h3>会旧</h3><p>微信群靠转发，公告改了、补了附件也没人知道。</p></div>
+      <div class="card"><h3>对不上</h3><p>二手转载点不回原文，没法核对。</p></div>
+    </div>
+    <p class="big" style="margin-top:28px">漏一条公告，代价是一整年的机会。</p>
+  </section>
+
+  <section class="slide">
+    <h2>填四行画像 → 拿到今天的推送</h2>
+    <img class="shot" src="screenshots/push-user.png" alt="推送预览">
+    <p class="caption"><b>顶部先说数据有多新</b>，再说 7 天内截止几条；每张卡写清「为什么推给你」和「还剩几天」。</p>
+  </section>
+
+  <section class="slide">
+    <h2>点开详情：读到了、没写、还是我们没读到</h2>
+    <img class="shot" src="screenshots/detail.png" alt="公告详情">
+    <p class="caption"><b>三态分开写：</b>「该公告未公布截止日」和「未能读取，请点原文核对」不是一回事。页面永远保留原文入口。</p>
+  </section>
+
+  <section class="slide">
+    <h2>按契合度排序，也给理由</h2>
+    <img class="shot" src="screenshots/index.png" alt="匹配结果">
+    <p class="caption">学校 / 专业 / 方向 / 新鲜度四维排序；<b>EMBA、报考点、目录简章不占首屏</b>。右侧按研究方向匹配导师。</p>
+  </section>
+
+  <section class="slide">
+    <h2>导师：方向、邮箱、主页</h2>
+    <img class="shot" src="screenshots/faculty.png" alt="导师页">
+    <p class="caption">557 位导师，379 位有研究方向，327 位有邮箱。邮箱从官网抓取，<b>发信前请自己在主页核对</b>。</p>
+  </section>
+
+  <section class="slide">
+    <h2>套磁信：模板生成，4 条引文逐条回原文</h2>
+    <img class="shot" src="screenshots/letter.png" alt="套磁信">
+    <p class="caption">明确标注「模板生成、没有接入模型」。<b>引文能点回原文</b>，这是防止模型编造导师信息的唯一机制。</p>
+  </section>
+
+  <section class="slide">
+    <h2>每天跑一轮：新增、被改、没抓到</h2>
+    <img class="shot" src="screenshots/daily.png" alt="今日更新">
+    <p class="caption"><b>「没抓到」单独列出来</b>，不和「没有变化」混在一起。哪所学校失败、原因是什么，都公开。</p>
+  </section>
+
+  <section class="slide">
+    <h2>商业模式</h2>
+    <div class="cols">
+      <div class="card"><h3>免费</h3><p>每天前 10 条推送；公告列表和原文链接不设限。</p></div>
+      <div class="card"><h3>订阅 ¥29 / 月</h3><p>全部推送、匹配排序、套磁信。</p></div>
+      <div class="card"><h3>B 端</h3><p>院系招生宣传、机构数据接口（合规前提下）。</p></div>
+    </div>
+    <p class="sub" style="margin-top:22px">当前支付为演示（开通码），未接真实通道；不把模拟支付说成收入。</p>
+  </section>
+
+  <section class="slide">
+    <h2>为什么可信</h2>
+    <div class="cols">
+      <div class="card"><h3>232 条门禁</h3><p>契约形状、三态不变量、数据健康、公网只读，全绿才算交付。</p></div>
+      <div class="card"><h3>漏率 17.4%</h3><p>北大 / 川大 / 清华物理三校外部对照，从 74.1% 降下来；其余 26 所是已知边界。</p></div>
+      <div class="card"><h3>每条回原文</h3><p>不要求你相信结论，只要求你点一下。</p></div>
+    </div>
+    <p class="big" style="margin-top:28px">读不到就说读不到，没有就说没有，判据错了就把过程写下来。</p>
+  </section>
+
+  <section class="slide">
+    <h1 style="font-size:38px">推免雷达</h1>
+    <p class="sub">今天该看的公告，一条不漏；每条都能点回原文。</p>
+    <p class="k" style="font-size:22px">说得清自己哪里不知道。</p>
+    <p class="foot">GitHub · 魔搭创空间演示 · 本地一键运行</p>
+  </section>
+</div>
+
+<div class="nav">
+  <button id="prev">← 上一页</button>
+  <div class="dots" id="dots"></div>
+  <button id="next">下一页 →</button>
+</div>
+
+<script>
+(function () {
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const dots = document.getElementById('dots');
+  const pbar = document.getElementById('pbar');
+  const counter = document.getElementById('counter');
+  let i = 0, timer = null, paused = false;
+
+  slides.forEach((_, n) => {
+    const d = document.createElement('span');
+    d.addEventListener('click', () => go(n));
+    dots.appendChild(d);
+  });
+
+  function render() {
+    slides.forEach((s, n) => s.classList.toggle('on', n === i));
+    Array.from(dots.children).forEach((d, n) => d.classList.toggle('on', n === i));
+    pbar.style.width = ((i + 1) / slides.length * 100) + '%';
+    counter.textContent = (i + 1) + ' / ' + slides.length;
+  }
+  function go(n) { i = (n + slides.length) % slides.length; render(); restart(); }
+  function next() { go(i + 1); }
+  function prev() { go(i - 1); }
+  function restart() {
+    clearInterval(timer);
+    if (!paused) timer = setInterval(next, 8000);
+  }
+
+  document.getElementById('next').addEventListener('click', next);
+  document.getElementById('prev').addEventListener('click', prev);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); next(); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
+  });
+  document.addEventListener('mouseenter', () => { paused = true; clearInterval(timer); });
+  document.addEventListener('mouseleave', () => { paused = false; restart(); });
+
+  render(); restart();
+})();
+</script>
+</body>
+</html>

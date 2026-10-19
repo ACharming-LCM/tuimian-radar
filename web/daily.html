@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>今日更新 · 推免雷达</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='%232c53c8' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='4.5' fill='%232c53c8'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="page">
+
+  <header class="hero">
+    <div class="brand"><span class="logo">◎</span> 推免雷达 <span class="brand-sub">tuimian radar</span></div>
+    <nav class="nav">
+      <a href="index.html">匹配结果</a>
+      <a href="notices.html">公告</a>
+      <a href="faculty.html">导师</a>
+      <a href="forum.html">论坛</a>
+      <a href="daily.html" aria-current="page">今日更新</a>
+      <a href="subscriptions.html">我的订阅</a>
+      <a href="pricing.html">订阅</a>
+    </nav>
+    <h1>今日更新</h1>
+    <p class="lede">每天抓一轮，只讲三件事：<strong>新发了什么、什么被改了、什么这轮没抓到</strong>。最后一类不能当成「被删了」看——下面会说明为什么。</p>
+    <p class="generated" id="generated"></p>
+  </header>
+
+  <section id="stats-wrap" class="panel panel-stats" hidden>
+    <div id="stats" class="stats"></div>
+  </section>
+
+  <!-- 实时刷新的宿主：这一行「数据更新于 N 分钟前」会自己走动（live.js 负责） -->
+  <!-- 数据心跳（C6）：一行，悬停看详情；接口 /api/health/data -->
+  <div id="heartbeat"></div>
+
+  <div id="freshness"></div>
+
+  <!-- 后台数据更新后重拉失败时的提示（不替换已显示的内容） -->
+  <p id="reload-msg" class="fallback-note" hidden></p>
+
+  <div id="alert-wrap"></div>
+
+  <section id="fresh-wrap" class="panel" hidden></section>
+
+  <!-- 时效四档（C1 补）：数字直接来自 /api/updates 与 /api/library，不自己算 -->
+  <section id="window-wrap" class="panel" hidden>
+    <div class="panel-head">
+      <h2 class="panel-title">按发布时间看事件流</h2>
+      <span class="hist-range" id="window-identity"></span>
+    </div>
+    <div id="window-filters"></div>
+    <p class="section-note" id="window-note"></p>
+  </section>
+
+  <section id="history-wrap" class="panel" hidden></section>
+
+  <main id="results"></main>
+
+  <div id="state" class="state">正在读取数据…</div>
+
+  <footer class="foot">
+    <p>数据源：<code id="api-source">读取中…</code>（A 的抓取产物）+ <code>data/out/changes.md</code>（口径文字从报告原文读，不在前端改写）。</p>
+    <p>没标截止日的条目，是没抽到截止日，不代表没有截止日；这一类我们不填一个猜的日期进去。</p>
+  </footer>
+
+</div>
+<script src="assets/common.js"></script>
+<script src="assets/daily.js"></script>
+<!-- 实时刷新：让上面那行「数据更新于 N 分钟前」自己走；后台更新了主动提示 -->
+<script src="assets/live.js"></script>
+<script src="assets/notify.js"></script>
+</body>
+</html>

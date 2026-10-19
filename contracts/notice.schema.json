@@ -1,0 +1,413 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "$id": "tuimian/notice.schema.v1.json",
+ "title": "Notice",
+ "description": "推免/招生公告的结构化记录。这是全队唯一的数据契约：collector 产出它，server 只读它，web 不碰它。任何人改字段必须先改本文件并升 version。",
+ "version": "v1",
+ "type": "object",
+ "required": [
+  "id",
+  "school",
+  "unit",
+  "board",
+  "title",
+  "url",
+  "publish_date",
+  "body_text",
+  "crawled_at",
+  "content_hash",
+  "extract",
+  "relevance"
+ ],
+ "additionalProperties": false,
+ "properties": {
+  "id": {
+   "type": "string",
+   "description": "稳定主键。规则：{school_slug}-{colid}-{artid}，取不到时退化为 url 的 sha1 前 16 位"
+  },
+  "school": {
+   "type": "string",
+   "description": "学校全称，如 浙江大学"
+  },
+  "school_slug": {
+   "type": "string",
+   "description": "英文短名，用于 id 和文件名，如 zju"
+  },
+  "unit": {
+   "type": "string",
+   "description": "院系/部门，如 物理学院；校级填 研究生院"
+  },
+  "board": {
+   "type": "string",
+   "description": "栏目名，如 招生信息 / 通知公告"
+  },
+  "title": {
+   "type": "string"
+  },
+  "publish_date": {
+   "type": "string",
+   "description": "ISO 日期 YYYY-MM-DD。**取不到时是空串 `\"\"`，不是 null**（`type` 是 string，下游排序按字符串比，null 会让 `str` 与 `None` 不可比而崩）。空串的含义是「这个列表页/详情页没有给日期」，和 `field_state` 是两回事：后者讲「字段抽得可不可信」，这里讲「值存成什么形状」。",
+   "pattern": "^(\\d{4}-\\d{2}-\\d{2})?$"
+  },
+  "url": {
+   "type": "string"
+  },
+  "source": {
+   "type": [
+    "string",
+    "null"
+   ],
+   "description": "原文标注的来源"
+  },
+  "body_text": {
+   "type": "string",
+   "description": "正文纯文本，段落用 \\n 分隔"
+  },
+  "body_len": {
+   "type": "integer"
+  },
+  "body_how": {
+   "type": [
+    "string",
+    "null"
+   ],
+   "enum": [
+    "selector",
+    "generic",
+    "none",
+    "file",
+    "incomplete",
+    null
+   ],
+   "description": "**正文是怎么取到的，决定这条记录的其他字段敢不敢下断言。** selector=站点选择器命中；generic=通用兜底（形状不可信）；none=没取到；file=整条公告本身就是一个 PDF/DOCX，正文从那份文件里抽出；**incomplete=整页看起来被截断**（响应里没有 `</html>`，实测 190/190 条正常页面都有）—— 这种情况下正文可能只到一半，**不许当成'我读全了'**。没有它就只能看到 field_state 的结果、无法复核'凭什么敢说确实没有'。"
+  },
+  "field_state": {
+   "type": "object",
+   "description": "**字段可信度三态。** 解决的是 `deadline: null` 一个值同时表示两件事的问题：「公告里就没有」和「我们没读到」—— 对用户是天差地别的两句话。found=抽到了值；absent=**正文读到了、内容足够，里面确实没有**；unknown=**我们判不了**（正文是兜底抽取的 / 太短 / 是扫描件 / 页面是空壳）。**关键不变量：`unknown` 绝不能被当成 `absent`** —— 任何排序、统计、聚合都不许把'不知道'算成'没有'。措辞规范见 api.md（C 直接照做）。\n\n**2026-10-17 从 4 个字段扩到 6 个**（`materials` / `contact` 新增）：这两项用户据以做决定的频次不比截止日低 —— 「要交什么材料」决定他这周做什么，「怎么联系」决定他敢不敢报。\n\n⚠️ `contact` 是**复合字段**：`{\"email\": …, \"phone\": …}`。**有键不等于有值** —— 实测 470 条里 232 条是 `{\"email\": null, \"phone\": null}` 的空壳，那种情况必须判 `absent`（学校没写）或 `unknown`（我们没读到），**不能判 `found`**。",
+   "additionalProperties": false,
+   "required": [
+    "deadline",
+    "majors",
+    "attachments",
+    "body",
+    "materials",
+    "contact"
+   ],
+   "properties": {
+    "deadline": {
+     "enum": [
+      "found",
+      "absent",
+      "unknown"
+     ]
+    },
+    "majors": {
+     "enum": [
+      "found",
+      "absent",
+      "unknown"
+     ]
+    },
+    "attachments": {
+     "enum": [
+      "found",
+      "absent",
+      "unknown"
+     ]
+    },
+    "body": {
+     "enum": [
+      "ok",
+      "generic",
+      "missing"
+     ],
+     "description": "单独一档：ok=用站点选择器取到了真正文（file 同义）；generic=通用兜底；missing=没取到 / 太短 / 只剩元信息框 / **看起来被截断**。**generic 和 missing 都不足以支撑 absent**。"
+    },
+    "materials": {
+     "enum": [
+      "found",
+      "absent",
+      "unknown"
+     ]
+    },
+    "contact": {
+     "enum": [
+      "found",
+      "absent",
+      "unknown"
+     ]
+    }
+   }
+  },
+  "attachments": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "name",
+     "url",
+     "parsed",
+     "kind"
+    ],
+    "properties": {
+     "name": {
+      "type": "string"
+     },
+     "url": {
+      "type": "string"
+     },
+     "parsed": {
+      "type": "boolean",
+      "description": "附件正文是否已抽取进 body_text（D2 起对 PDF/DOCX 为 true）"
+     },
+     "kind": {
+      "enum": [
+       "file",
+       "pdf_embed",
+       "iframe",
+       "image"
+      ],
+      "description": "file=<a href> 直接下载；pdf_embed=CMS 的 pdfsrc 内嵌阅读器（正文其实是 PDF）；iframe=嵌入第三方页面"
+     },
+     "text_len": {
+      "type": "integer",
+      "description": "从该附件抽出的正文字数，0 表示没抽到"
+     },
+     "note": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "description": "没抽到时的原因，如「扫描版，无文本层（需 OCR，本机无引擎）」。前端应把这类附件标成「需人工查看」，不要静默隐藏"
+     }
+    }
+   }
+  },
+  "deadline": {
+   "type": [
+    "string",
+    "null"
+   ],
+   "description": "报名/申请/材料提交截止日 YYYY-MM-DD"
+  },
+  "target_year": {
+   "type": [
+    "integer",
+    "null"
+   ],
+   "description": "招生年份，如 2027"
+  },
+  "degree_types": {
+   "type": "array",
+   "items": {
+    "enum": [
+     "硕士",
+     "博士",
+     "直博",
+     "本科"
+    ]
+   }
+  },
+  "apply_mode": {
+   "type": [
+    "string",
+    "null"
+   ],
+   "enum": [
+    "推免",
+    "统考",
+    "申请考核",
+    "夏令营",
+    "预推免",
+    null
+   ]
+  },
+  "majors": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   },
+   "description": "涉及的学科/专业"
+  },
+  "materials": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   },
+   "description": "要求提交的材料清单"
+  },
+  "contact": {
+   "type": "object",
+   "additionalProperties": false,
+   "properties": {
+    "email": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "phone": {
+     "type": [
+      "string",
+      "null"
+     ]
+    }
+   }
+  },
+  "tags": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "relevance": {
+   "enum": [
+    0,
+    1,
+    2
+   ],
+   "description": "这条公告跟招生有关的程度，**只用于排序，绝对不要用来隐藏内容**。2=像招生信息，1=说不清，0=明显不是。判据见 collector/fields.py 的 relevance_of()。为什么只能排不能滤：这个信号我实测过，两个方向都会错（把『推免拟录取名单』判成无关、把 EMBA 招生简章判成相关）。过滤错了的代价是用户错过报名，排序错了的代价只是某条公告低几行 —— 代价差一个量级，所以同一个不可靠的信号能排不能滤。建议排序：先 relevance 降序，同一档内仍按 publish_date 降序。"
+  },
+  "extract": {
+   "type": "object",
+   "required": [
+    "method",
+    "version",
+    "confidence"
+   ],
+   "description": "抽取元信息。method=rule 表示规则抽取，method=llm 表示大模型抽取；confidence 用于前端标注'疑似'",
+   "additionalProperties": false,
+   "properties": {
+    "method": {
+     "enum": [
+      "rule",
+      "llm",
+      "hybrid"
+     ]
+    },
+    "version": {
+     "type": "string"
+    },
+    "confidence": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    }
+   }
+  },
+  "crawled_at": {
+   "type": "string",
+   "description": "ISO8601"
+  },
+  "content_hash": {
+   "type": "string",
+   "description": "body_text 的 sha1，用于识别'公告被静默修改'——这是本产品的核心卖点之一"
+  },
+  "record_quality": {
+   "type": "string",
+   "enum": [
+    "junk",
+    "thin",
+    "ok"
+   ],
+   "description": "**记录质量分级，只标记不删除。** junk=标题就是站点名/栏目名、正文<100字、或正文只有「发布时间/浏览次数/来源」；thin=正文100~300字（常见「详见附件」型，可能有用但信息不全）；ok=正文≥300字。**下游按需取用**：首屏/推送只收 ok（thin 可放检索页并标注「正文较短」），junk 留档可查、不进任何面向用户的列表。判据见 collector/quality.py，阈值来自实测分位数（p5=17 / p10=193 / p25=359 / p50=928）。**不要在下游自己再判一遍** —— 两套判据迟早打架。"
+  },
+  "quality_hits": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   },
+   "description": "命中的质量判据名（\title_is_site_name / \body_lt_100 / \body_meta_only / \body_100_to_300），用来回答「凭什么判成这个档」，可追溯。"
+  },
+  "topic": {
+   "type": "string",
+   "enum": [
+    "apply",
+    "non_apply",
+    "other"
+   ],
+   "description": "**主题三档。** apply=报考相关（推免/招生简章/专业目录/报名/报考点/夏令营/复试/调剂/申请考核/直博/学制学费）；non_apply=在读或录取之后的事务（拟录取/名单公示/答辩/学位论文/博士后/四六级/选课/注册/报到/考试安排/竞赛/教师资格/奖学金）；other=两边都不像（新闻、活动、讲座、招聘、机构介绍、导航页）。**首屏只取 apply**（non_apply 对读研的人也有信息量，但不该占据“今天该看”的位置）。判据见 collector/topic.py：规则 + 关键词，不做黑箱。"
+  },
+  "topic_hits": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   },
+   "description": "命中的关键词数组（最多 8 个），用来回答“这条凭什么被判成这个 topic”。**必须可解释**：用户问“为什么推给我”，答案要能复述成一句“标题里有『推免』”。"
+  },
+  "is_fresh": {
+   "type": [
+    "boolean",
+    "string",
+    "null"
+   ],
+   "enum": [
+    true,
+    false,
+    "stale",
+    null
+   ],
+   "description": "**时效三态**（2026-10-18 新增）。`true`=发布 ≤30 天；`false`=30~180 天；`\"stale\"`=>180 天；`null`=**没有发布日**（不知道有多新，**绝不能说成“不新”**）。首屏取 `true`；`false`/`stale` 只影响排序，不影响是否可检索。判据见 collector/timeliness.py。"
+  },
+  "age_days": {
+   "type": [
+    "integer",
+    "null"
+   ],
+   "description": "发布日距今多少天（≥0）。没有发布日时为 null。用来替代各下游各自拿 publish_date 和 today 相减。"
+  },
+  "admission_year": {
+   "type": [
+    "integer",
+    "null"
+   ],
+   "description": "**这条公告在招哪一届**（只在 topic=apply 时给值）。优先取标题里的年份（「2027年硕士招生简章」→2027），标题没有才退到 target_year；非报考类记录一律 null —— 因为 `target_year` 原来把「2027 年招生」和「2026 年的日常事务」混在一起（2026 只是公告写于哪一年）。"
+  },
+  "age_tier": {
+   "type": "string",
+   "enum": [
+    "live",
+    "recent",
+    "archive"
+   ],
+   "description": "**时效分层（2026-10-18 A24 新增，同日由 `tier` 改名）。** live=发布 ≤30 天且截止日未过或未知；recent=发布 ≤180 天；archive=更早。与 `is_fresh` 的区别：`is_fresh` 只说“新不新”，`age_tier` 还要看**截止日过没过**（一条 20 天前发布但昨天截止的公告不该占“今天该看”的位置）。**前端默认只显示 live + recent，archive 归“资料库”**；接口 `/api/notices?age_tier=live` 可只取 live。没有发布日的记录归 archive（不知道多新就不能说它新）。⚠️ **不要叫 `tier`**：推送层的 `tier` 是匹配档（1=一级 / 2=二级），两个含义同名会出事。判据见 collector/timeliness.py::tier_of。"
+  },
+  "notice_kind": {
+   "type": "string",
+   "enum": [
+    "announcement",
+    "catalog",
+    "emba",
+    "other"
+   ],
+   "description": "**这条是哪种公告（2026-10-19 A29 新增）。** 和 `topic` 的分工：`topic` 回答“招不招生”，`notice_kind` 回答“哪一种”。announcement=招生通知（推免/夏令营/预推免/报名/复试/调剂/材料/接收/选拔/考核），**今天该看、有时限**；catalog=参考资料（招生目录/专业目录/招生计划/专业一览/简章/章程/报考指南），**随时可查，不该占首屏**；emba=非全日制/在职项目（EMBA/MBA/MPAcc/高级管理人员/在职攻读/非全日制）；other=其余（含所有 topic≠apply 的记录）。实测 1193 条 apply 且非 junk 里：529 / 296 / 48 / 320。判定顺序 emba → catalog → announcement，两类词同时命中时看目录词：专业目录/招生计划 视为“通知附的文档”判 announcement，简章/章程 判 catalog。判据见 collector/kind.py。"
+  },
+  "kind_hits": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   },
+   "description": "`notice_kind` 命中的关键词（最多 8 个），用来回答“凭什么判成这一档”。"
+  },
+  "publish_date_source": {
+   "type": "string",
+   "enum": [
+    "existing",
+    "detail_cache",
+    "url",
+    "body_head"
+   ],
+   "description": "发布日是从哪儿补回来的（`existing` 表示原本就有）。补不到时该字段不出现、`publish_date` 仍为空串 —— **留痕，方便复查是哪条路救回来的**。"
+  },
+  "title_source": {
+   "type": "string",
+   "enum": [
+    "detail",
+    "fallback",
+    "fallback_body",
+    "none"
+   ],
+   "description": "标题是哪儿来的（2026-10-18 新增；`fallback_body` 同日补进枚举）。`detail` = 详情页抽到的（正常情况，实测 989 条）；`fallback` = 标题被判定不可用后，走 `quality.title_fallback()` 从缓存详情页 `<title>` 或正文里回捞到的（实测 61 条）；`fallback_body` = 标题**只是机构名**（「北京大学数学学院」）时，走 `quality.notice_title_from_body()` 从**正文前若干行**里取第一条带公告词的行（实测 5 条）；`none` = 试过回退但没找到可用的行，仍是 junk（实测 80 条）。回退成功的记录会同时重算 `record_quality` 与 `topic` —— 这两个判据都看标题。⚠️ `fallback` 和 `fallback_body` 是**两条不同的回退路径**，不是同义：前者来自 `title_fallback()`（缓存页 / 导航短语），后者来自 `notice_title_from_body()`（正文里的公告标题行）。合起来当「回退过」用可以，但当「哪种回退更可靠」比较时不能合并。"
+  }
+ }
+}

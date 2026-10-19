@@ -1,0 +1,41 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>套磁信 · 推免雷达</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='%232c53c8' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='4.5' fill='%232c53c8'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="page">
+
+  <header class="hero">
+    <div class="brand"><span class="logo">◎</span> 推免雷达 <span class="brand-sub">tuimian radar</span></div>
+    <nav class="nav">
+      <a href="index.html">匹配结果</a>
+      <a href="notices.html" aria-current="page">公告</a>
+      <a href="faculty.html">导师</a>
+      <a href="daily.html">今日更新</a>
+      <a href="subscriptions.html">我的订阅</a>
+      <a href="pricing.html">订阅</a>
+    </nav>
+    <h1>套磁信</h1>
+    <p class="lede">这一页真正值得看的不是信写得好不好，而是<strong>每一条引文都能点回公告原文</strong>——那是防止模型编造导师信息的唯一手段。</p>
+  </header>
+
+  <main id="results"></main>
+
+  <div id="state" class="state">正在读取数据…</div>
+
+  <footer class="foot">
+    <p>数据源：<code id="api-source">读取中…</code>（<code>POST /api/letter</code> 的形状）。</p>
+    <p><code>citations</code> 是对象数组（<code>label</code> / <code>quote</code> / <code>source</code> / <code>url</code>），不是字符串——字符串没法点回原文。</p>
+  </footer>
+
+</div>
+<script src="assets/common.js"></script>
+<script src="assets/letter.js"></script>
+<script src="assets/notify.js"></script>
+</body>
+</html>

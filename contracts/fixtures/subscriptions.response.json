@@ -1,0 +1,37 @@
+{
+ "user_id": "u_demo",
+ "plan": {
+  "active": false,
+  "plan_id": null,
+  "plan_name": null,
+  "expires_at": null,
+  "reason": "free",
+  "text": "免费版：可以浏览公告、看三态、点原文链接"
+ },
+ "channels": [
+  {
+   "channel": "preview",
+   "available": true,
+   "enabled": false,
+   "text": "站内预览：这条推送长什么样，页面直接渲染（不需要任何外部服务）"
+  },
+  {
+   "channel": "email",
+   "available": false,
+   "enabled": false,
+   "text": "邮件通道还没接：没有发信服务，也不会问你要邮箱"
+  },
+  {
+   "channel": "webhook",
+   "available": false,
+   "enabled": false,
+   "text": "Webhook 还没接：留了适配位置，演示不碰"
+  }
+ ],
+ "activation": {
+  "method": "manual_code",
+  "code_required": true,
+  "_note": "**没接支付通道**。开通用的是手动开通码（演示用），不是付款。"
+ },
+ "_note": "D4 演示用，未接真实支付；开通码由课程助教/评委人工发放"
+}

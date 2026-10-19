@@ -1,0 +1,182 @@
+{
+ "_note": "**这是演示样例，不是真实事件流。** 每条都从真实 notices.jsonl 里挑出的记录生成，字段值原样搬；只把 type/at 设成演示值，event_id 带 `sample-` 指纹以便和真事件区分。真实事件流是 data/out/events.jsonl（append-only）。用途：让前端在后端接口就位之前就能把三种截止日措辞的界面做完。⚠️ 2026-10-19 B 重出：挑选时**优先 announcement/other**（catalog 不进首屏，A 的 make_sample 还没改，见 issues/013）。",
+ "_as_of": "2026-10-19",
+ "_generated_on": "2026-10-19",
+ "_how_to_reproduce": "cd collector && python tools/make_events.py --sample（挑选顺序待 A 修，见 issues/013）",
+ "_covers": [
+  "found",
+  "absent",
+  "unknown",
+  "deadline_changed",
+  "attachment_added"
+ ],
+ "events": [
+  {
+   "event_id": "adde_4f30d0faab8e40d0",
+   "type": "added",
+   "notice_id": "u0f849fc1-8cf6f983d68106f6",
+   "at": "2026-10-19T12:06:36",
+   "detected_on": "2026-10-19",
+   "url": "https://graduate.sysu.edu.cn/zsw/article/545",
+   "school": "中山大学",
+   "unit": "研究生院",
+   "title": "中山大学2027年少数民族高层次骨干人才研究生招生计划公告",
+   "publish_date": "2026-10-13",
+   "deadline": "2026-10-21",
+   "field_state": {
+    "deadline": "found",
+    "majors": "found",
+    "materials": "absent",
+    "contact": "found",
+    "attachments": "found",
+    "body": "ok"
+   },
+   "relevance": 2,
+   "is_backfill": false,
+   "matched": [
+    "博士",
+    "统考",
+    "材料",
+    "信息",
+    "医学",
+    "管理"
+   ]
+  },
+  {
+   "event_id": "adde_6f5f73652787e409",
+   "type": "added",
+   "notice_id": "ud6a1294d-50981-3213081",
+   "at": "2026-10-19T12:06:36",
+   "detected_on": "2026-10-19",
+   "url": "https://mse.zju.edu.cn/2026/1011/c50981a3213081/page.htm",
+   "school": "浙江大学",
+   "unit": "材料科学与工程学院",
+   "title": "材料科学与工程学院关于2025级先进材料卓越培养项目报名和选拔的通知",
+   "publish_date": "2026-10-10",
+   "deadline": null,
+   "field_state": {
+    "deadline": "absent",
+    "majors": "found",
+    "materials": "found",
+    "contact": "found",
+    "attachments": "found",
+    "body": "ok"
+   },
+   "relevance": 2,
+   "is_backfill": false,
+   "matched": [
+    "博士",
+    "直博",
+    "推免",
+    "力学",
+    "数学",
+    "化学"
+   ]
+  },
+  {
+   "event_id": "adde_cbb98e7755f66611",
+   "type": "added",
+   "notice_id": "u57dcf3ee-47863-845812",
+   "at": "2026-10-19T12:06:36",
+   "detected_on": "2026-10-19",
+   "url": "https://yzb.nju.edu.cn/e7/f4/c47863a845812/page.htm",
+   "school": "南京大学",
+   "unit": "研究生院",
+   "title": "南京大学2027年工商管理、公共管理、工程管理、教育管理等硕士招生专业报名条件说明",
+   "publish_date": "2026-10-10",
+   "deadline": null,
+   "field_state": {
+    "deadline": "unknown",
+    "majors": "found",
+    "materials": "found",
+    "contact": "unknown",
+    "attachments": "found",
+    "body": "missing"
+   },
+   "relevance": 2,
+   "is_backfill": false,
+   "matched": [
+    "博士",
+    "统考",
+    "管理",
+    "教育"
+   ]
+  },
+  {
+   "event_id": "dead_71111029aacc71ed",
+   "type": "deadline_changed",
+   "notice_id": "u0f849fc1-8cf6f983d68106f6",
+   "at": "2026-10-19T12:06:36",
+   "detected_on": "2026-10-19",
+   "url": "https://graduate.sysu.edu.cn/zsw/article/545",
+   "school": "中山大学",
+   "unit": "研究生院",
+   "title": "中山大学2027年少数民族高层次骨干人才研究生招生计划公告",
+   "publish_date": "2026-10-13",
+   "deadline": "2026-10-21",
+   "field_state": {
+    "deadline": "found",
+    "majors": "found",
+    "materials": "absent",
+    "contact": "found",
+    "attachments": "found",
+    "body": "ok"
+   },
+   "relevance": 2,
+   "is_backfill": false,
+   "matched": [
+    "博士",
+    "统考",
+    "材料",
+    "信息",
+    "医学",
+    "管理"
+   ],
+   "change": {
+    "field": "deadline",
+    "from": null,
+    "to": "2026-10-21"
+   }
+  },
+  {
+   "event_id": "atta_bad166c0aae16339",
+   "type": "attachment_added",
+   "notice_id": "u0f849fc1-8cf6f983d68106f6",
+   "at": "2026-10-19T12:06:36",
+   "detected_on": "2026-10-19",
+   "url": "https://graduate.sysu.edu.cn/zsw/article/545",
+   "school": "中山大学",
+   "unit": "研究生院",
+   "title": "中山大学2027年少数民族高层次骨干人才研究生招生计划公告",
+   "publish_date": "2026-10-13",
+   "deadline": "2026-10-21",
+   "field_state": {
+    "deadline": "found",
+    "majors": "found",
+    "materials": "absent",
+    "contact": "found",
+    "attachments": "found",
+    "body": "ok"
+   },
+   "relevance": 2,
+   "is_backfill": false,
+   "matched": [
+    "博士",
+    "统考",
+    "材料",
+    "信息",
+    "医学",
+    "管理"
+   ],
+   "change": {
+    "field": "attachments",
+    "attachments": [
+     {
+      "name": "附件1 少数民族高层次骨干人才计划硕士研究生招生专业.pdf",
+      "url": "https://graduate.sysu.edu.cn/zsw/sites/default/files/2026-10/%E9%99%84%E4%BB%B61%20%E5%B0%91%E6%95%B0%E6%B0%91%E6%97%8F%E9%AB%98%E5%B1%82%E6%AC%A1%E9%AA%A8%E5%B9%B2%E4%BA%BA%E6%89%8D%E8%AE%A1%E5%88%92%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E4%B8%93%E4%B8%9A.pdf"
+     }
+    ]
+   }
+  }
+ ]
+}

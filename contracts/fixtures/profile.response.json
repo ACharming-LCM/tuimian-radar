@@ -1,0 +1,32 @@
+{
+ "user_id": "u_demo_sub",
+ "profile": {
+  "school": "浙江大学",
+  "majors": [
+   "物理学"
+  ],
+  "preferred_schools": [
+   "中山大学",
+   "大连理工大学",
+   "中国科学技术大学"
+  ],
+  "interest_keywords": [
+   "材料",
+   "教育"
+  ]
+ },
+ "complete": {
+  "filled": true,
+  "has": [
+   "school",
+   "majors",
+   "preferred_schools",
+   "interest_keywords"
+  ],
+  "missing": [],
+  "can_push": true,
+  "message": "画像已填写，按 意向学校 / 本科专业 / 意向方向 匹配。"
+ },
+ "updated_at": "2026-10-17T18:26:54",
+ "_note": "画像只存在本机 server/var/state.json，不发送到任何第三方。"
+}

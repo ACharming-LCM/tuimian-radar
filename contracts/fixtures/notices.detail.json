@@ -1,0 +1,60 @@
+{
+ "id": "u1b6a206e-739bce9a09580282",
+ "school": "北京航空航天大学",
+ "school_slug": "u1b6a206e",
+ "unit": "研究生院",
+ "board": "学历硕士",
+ "title": "关于10月14日温馨提示的学籍学历校验补充通知（2026年10月16日）",
+ "publish_date": "2026-10-16",
+ "url": "http://yzb.buaa.edu.cn/info/1003/3653.htm",
+ "source": null,
+ "body_text": "根据上级提供的学籍学历校验信息，现对北航研招网10月14日公布的“报考北航2027年硕士研究生温馨提示（10月14日）”及“北航报考点2026年10月14日温馨提示”做补充通知，对预报名阶段学籍学历校验存在疑问的考生予以提醒，具体名单见附件。考生若有疑问，可拨打010-88888888（工作日上午8:30-11:30；下午14:30-17:30）或发送邮件至yzb@buaa.edu.cn咨询。\n附件名单中的考生，须按照附件中“提交材料类别”列提及的内容，通过PC端点击附件中提及的“提交材料网址”，上传相关材料。未提交相应材料者，将不予审核通过，造成无法参加考试的后果由考生自行承担。点击可下载  硕士初试考生提交材料操作指南.pdf。\n附件：\n报考北航2027年硕士研究生10月14日温馨提示中学籍学历检验补充名单（2026年10月16日）.pdf\n北航报考点报考2027年硕士研究生10月14日温馨提示中学籍学历检验补充名单（2026年10月16日）.pdf",
+ "body_len": 433,
+ "attachments": [],
+ "deadline": null,
+ "target_year": 2026,
+ "degree_types": [
+  "硕士"
+ ],
+ "apply_mode": null,
+ "majors": [
+  "材料",
+  "信息"
+ ],
+ "materials": [],
+ "contact": {
+  "email": "yzb@buaa.edu.cn",
+  "phone": "010-88888888"
+ },
+ "tags": [],
+ "extract": {
+  "method": "rule",
+  "version": "v6",
+  "confidence": 0.5
+ },
+ "crawled_at": "2026-10-18T17:51:25",
+ "content_hash": "sha1:26c561372c4741210151190a34c5d1d98249ad69",
+ "relevance": 0,
+ "body_how": "selector",
+ "field_state": {
+  "deadline": "absent",
+  "majors": "found",
+  "materials": "absent",
+  "contact": "found",
+  "attachments": "absent",
+  "body": "ok"
+ },
+ "record_quality": "ok",
+ "quality_hits": [],
+ "title_source": "detail",
+ "topic": "non_apply",
+ "topic_hits": [
+  "学籍"
+ ],
+ "is_fresh": true,
+ "age_days": 3,
+ "admission_year": null,
+ "age_tier": "live",
+ "notice_kind": "other",
+ "kind_hits": []
+}

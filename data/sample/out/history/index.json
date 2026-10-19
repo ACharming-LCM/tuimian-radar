@@ -1,0 +1,22 @@
+{
+ "days": [
+  {
+   "date": "2026-10-16",
+   "records": 78,
+   "added": 0,
+   "changed": 0,
+   "removed": 0,
+   "reidentified": 0
+  },
+  {
+   "date": "2026-10-17",
+   "records": 1119,
+   "added": 655,
+   "changed": 0,
+   "removed": 6,
+   "reidentified": 0,
+   "reparsed": 0
+  }
+ ],
+ "_note": "每天一条。这是「每天更新」的凭据，也是月度订阅的素材。records 是当天抓到的条数；其余是相对上一次抓取的增删改。reparsed 是「我们改了抽取代码」，不是学校改了通知 —— 绝不要把它算进给用户的提醒。"
+}

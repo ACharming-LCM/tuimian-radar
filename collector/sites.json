@@ -1,0 +1,273 @@
+{
+ "_comment": "由 tools/add_sites.py 生成。加学校请改 tools/candidates.json 后重跑，不要手改本文件。",
+ "_owner": "A",
+ "_generated": "2026-10-16 21:43",
+ "_probe_summary": {
+  "candidates": 50,
+  "reachable": 37,
+  "unreachable": 13
+ },
+ "_limits_comment": "默认每栏 4 页 / 50 候选 / 30 详情；**档案深的学校**（川大、北大、吉大、南大、中南、郑大）用 --pages 8 --details 60 单独跑，见 tools/run_batches.py 的 DEEP_SCHOOLS。为什么分档：实测单校深抓 3.8~6.2 分钟，29 所全深抓要 2 小时以上，今晚跑不完；而深档案只集中在少数学校——为了统一而让所有学校都慢，是拿时间换整齐。另：`max-stale-days 0`（关掉 400 天过滤）现在是 run_daily 与分批脚本都带的参数。",
+ "limits": {
+  "boards_per_site": 8,
+  "pages_per_board": 4,
+  "items_per_board": 50,
+  "details_per_board": 30
+ },
+ "schools": [
+  {
+   "school": "浙江大学",
+   "school_slug": "ud39a7e19",
+   "unit": "研究生招生网",
+   "homepage": "http://www.grs.zju.edu.cn/"
+  },
+  {
+   "school": "上海交通大学",
+   "school_slug": "uff9f40ba",
+   "unit": "研究生招生网",
+   "homepage": "https://yzb.sjtu.edu.cn/",
+   "boards": [
+    {
+     "label": "硕士招生",
+     "url": "https://yzb.sjtu.edu.cn/zkxx/sszs"
+    },
+    {
+     "label": "博士招生",
+     "url": "https://yzb.sjtu.edu.cn/zkxx/bszs"
+    },
+    {
+     "label": "招生办法",
+     "url": "https://yzb.sjtu.edu.cn/xxgs/zsbf"
+    }
+   ]
+  },
+  {
+   "school": "武汉大学",
+   "school_slug": "u2d59ca63",
+   "unit": "研究生院",
+   "homepage": "https://gs.whu.edu.cn/"
+  },
+  {
+   "school": "北京大学",
+   "school_slug": "ua8ae400a",
+   "unit": "研究生招生网",
+   "homepage": "https://admission.pku.edu.cn/"
+  },
+  {
+   "school": "中山大学",
+   "school_slug": "u0f849fc1",
+   "unit": "研究生院",
+   "homepage": "https://graduate.sysu.edu.cn/"
+  },
+  {
+   "school": "中国科学技术大学",
+   "school_slug": "u4050c4ba",
+   "unit": "研究生院",
+   "homepage": "https://gradschool.ustc.edu.cn/"
+  },
+  {
+   "school": "南京大学",
+   "school_slug": "u57dcf3ee",
+   "unit": "研究生院",
+   "homepage": "https://yzb.nju.edu.cn/main.htm"
+  },
+  {
+   "school": "华中科技大学",
+   "school_slug": "u01e47e63",
+   "unit": "研究生院",
+   "homepage": "https://gs.hust.edu.cn/"
+  },
+  {
+   "school": "西安交通大学",
+   "school_slug": "u29f26650",
+   "unit": "研究生院",
+   "homepage": "https://gs.xjtu.edu.cn/"
+  },
+  {
+   "school": "复旦大学",
+   "school_slug": "ud1ddf924",
+   "unit": "研究生招生网",
+   "homepage": "https://gsao.fudan.edu.cn/"
+  },
+  {
+   "school": "清华大学",
+   "school_slug": "u821fddd7",
+   "unit": "研究生招生网",
+   "homepage": "https://yz.tsinghua.edu.cn/"
+  },
+  {
+   "school": "哈尔滨工业大学",
+   "school_slug": "uf44a71c0",
+   "unit": "研究生院",
+   "homepage": "http://hitgs.hit.edu.cn/"
+  },
+  {
+   "school": "北京航空航天大学",
+   "school_slug": "u1b6a206e",
+   "unit": "研究生院",
+   "homepage": "http://yzb.buaa.edu.cn/"
+  },
+  {
+   "school": "南开大学",
+   "school_slug": "u50d849a2",
+   "unit": "研究生院",
+   "homepage": "https://graduate.nankai.edu.cn/"
+  },
+  {
+   "school": "厦门大学",
+   "school_slug": "u8d6935c1",
+   "unit": "研究生院",
+   "homepage": "https://gs.xmu.edu.cn/"
+  },
+  {
+   "school": "同济大学",
+   "school_slug": "u162377f8",
+   "unit": "研究生院",
+   "homepage": "https://gs.tongji.edu.cn/"
+  },
+  {
+   "school": "大连理工大学",
+   "school_slug": "ufa82ed2b",
+   "unit": "研究生院",
+   "homepage": "https://gs.dlut.edu.cn/"
+  },
+  {
+   "school": "中南大学",
+   "school_slug": "ua454ff46",
+   "unit": "研究生院",
+   "homepage": "https://gra.csu.edu.cn/"
+  },
+  {
+   "school": "电子科技大学",
+   "school_slug": "ue00ab131",
+   "unit": "研究生院",
+   "homepage": "https://yz.uestc.edu.cn/"
+  },
+  {
+   "school": "西北工业大学",
+   "school_slug": "ud0983d5c",
+   "unit": "研究生院",
+   "homepage": "https://gs.nwpu.edu.cn/"
+  },
+  {
+   "school": "吉林大学",
+   "school_slug": "uf47e0e0b",
+   "unit": "研究生院",
+   "homepage": "https://yzb.jlu.edu.cn/"
+  },
+  {
+   "school": "东南大学",
+   "school_slug": "ucd1acaac",
+   "unit": "研究生院",
+   "homepage": "https://yzb.seu.edu.cn/"
+  },
+  {
+   "school": "华东师范大学",
+   "school_slug": "u0e6b64d1",
+   "unit": "研究生院",
+   "homepage": "https://yjszs.ecnu.edu.cn/"
+  },
+  {
+   "school": "华中师范大学",
+   "school_slug": "u2f6e7289",
+   "unit": "研究生院",
+   "homepage": "https://gs.ccnu.edu.cn/"
+  },
+  {
+   "school": "天津大学",
+   "school_slug": "ua37ee91b",
+   "unit": "研究生院",
+   "homepage": "https://yzb.tju.edu.cn/"
+  },
+  {
+   "school": "郑州大学",
+   "school_slug": "u707654a2",
+   "unit": "研究生院",
+   "homepage": "https://gs.zzu.edu.cn/"
+  },
+  {
+   "school": "浙江大学",
+   "school_slug": "u285779f0",
+   "unit": "物理学院",
+   "homepage": "https://physics.zju.edu.cn/"
+  },
+  {
+   "school": "浙江大学",
+   "school_slug": "ud6a1294d",
+   "unit": "材料科学与工程学院",
+   "homepage": "https://mse.zju.edu.cn/"
+  },
+  {
+   "school": "清华大学",
+   "school_slug": "u2dffaa47",
+   "unit": "物理系",
+   "homepage": "https://www.phys.tsinghua.edu.cn/"
+  },
+  {
+   "school": "北京大学",
+   "school_slug": "ua789e854",
+   "unit": "物理学院",
+   "homepage": "https://www.phy.pku.edu.cn/"
+  },
+  {
+   "school": "中国科学技术大学",
+   "school_slug": "ufcd0af47",
+   "unit": "物理学院",
+   "homepage": "https://physics.ustc.edu.cn/"
+  },
+  {
+   "school": "南京大学",
+   "school_slug": "uf41865ff",
+   "unit": "物理学院",
+   "homepage": "https://physics.nju.edu.cn/"
+  },
+  {
+   "school": "复旦大学",
+   "school_slug": "u9d2dc1d1",
+   "unit": "物理学系",
+   "homepage": "https://phys.fudan.edu.cn/"
+  },
+  {
+   "school": "武汉大学",
+   "school_slug": "uaafa5276",
+   "unit": "物理科学与技术学院",
+   "homepage": "https://physics.whu.edu.cn/"
+  },
+  {
+   "school": "上海大学",
+   "school_slug": "u815fd713",
+   "unit": "研究生院",
+   "homepage": "https://yjszs.shu.edu.cn/"
+  },
+  {
+   "school": "重庆大学",
+   "school_slug": "u09c53391",
+   "unit": "研究生院",
+   "homepage": "https://yz.cqu.edu.cn/"
+  },
+  {
+   "school": "四川大学",
+   "school_slug": "u4bf1b0fe",
+   "unit": "研究生院",
+   "homepage": "https://yz.scu.edu.cn/",
+   "boards": [
+    {
+     "label": "硕士公告",
+     "url": "https://yz.scu.edu.cn/zsxx/newslist/ss/gg"
+    },
+    {
+     "label": "硕士章程",
+     "url": "https://yz.scu.edu.cn/zsxx/newslist/ss/zc"
+    },
+    {
+     "label": "博士公告",
+     "url": "https://yz.scu.edu.cn/zsxx/newslist/bs/gg"
+    },
+    {
+     "label": "博士章程",
+     "url": "https://yz.scu.edu.cn/zsxx/newslist/bs/zc"
+    }
+   ]
+  }
+ ]
+}

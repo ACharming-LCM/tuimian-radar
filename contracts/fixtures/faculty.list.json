@@ -1,0 +1,842 @@
+{
+ "total": 557,
+ "page": 1,
+ "size": 50,
+ "items": [
+  {
+   "id": "pku-38dec532-137397",
+   "name": "夏斌",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "分析化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [
+    "兴趣： 利用液相核磁共振技术（NMR）",
+    "结合其它应用于生物化学和分子生物学领域的分析技术",
+    "研究蛋白质和DNA等生物大分子的结构与功能关系",
+    "以阐明其在生命过程中的作用机制"
+   ],
+   "email": "teacher10@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/fxhx/9hxyzww91994.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-6198e1ec-f6df0b",
+   "name": "张新祥",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "分析化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": true,
+   "research_areas": [
+    "兴趣： (1) 毛细管电泳-质谱联用技术 (2) 多糖",
+    "单细胞及DNA甲基化分析 (3)生物样品的富集与分离 近5年"
+   ],
+   "email": "teacher11@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/fxhx/9hxyzww99995.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-f0c2124e-a772dc",
+   "name": "王欢",
+   "title": "助理教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "分析化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": true,
+   "research_areas": [
+    "分析化学"
+   ],
+   "email": "teacher12@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/fxhx/9hxyzww125860.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-16cecf26-068651",
+   "name": "白玉",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "分析化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": true,
+   "research_areas": [
+    "感兴趣的本科生",
+    "\"bdText\":\"\"",
+    "\"bdMini\":\"2\"",
+    "\"bdMiniList\":false",
+    "\"bdPic\":\"\"",
+    "\"bdStyle\":\"0\"",
+    "\"bdSize\":\"24\"}",
+    "\"share\":{}}"
+   ],
+   "email": "teacher13@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/fxhx/9hxyzww97015.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-aae84106-445321",
+   "name": "赵美萍",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "分析化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": true,
+   "research_areas": [
+    "分析化学"
+   ],
+   "email": "teacher14@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/fxhx/9hxyzww60634.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-a5a98b59-027a07",
+   "name": "金长文",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "分析化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [
+    "G蛋白偶联受体（GPCR）的动态结构",
+    "相互作用和药物设计"
+   ],
+   "email": "teacher15@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/fxhx/9hxyzww91990.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-d6fe43e4-d21c61",
+   "name": "黄岩谊",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "分析化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [],
+   "email": "teacher16@pku.edu.cn",
+   "homepage": "https://biopic.pku.edu.cn/zxpi/107bdswyxqycxzxgb510942.htm",
+   "matchable": false
+  },
+  {
+   "id": "pku-5cc9c975-99b08c",
+   "name": "刘志博",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "应用化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [
+    "如下： 1）放射性药物化学：新靶点",
+    "新平台技术",
+    "新螯合剂"
+   ],
+   "email": "teacher17@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/yyhx/9hxyzww97037.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-f210e3f1-943f25",
+   "name": "刘春立",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "应用化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": true,
+   "research_areas": [],
+   "email": "teacher18@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/yyhx/9hxyzww60688.htm",
+   "matchable": false
+  },
+  {
+   "id": "pku-382af05a-68eead",
+   "name": "李能旭",
+   "title": "助理教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "应用化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": true,
+   "research_areas": [
+    "课题组主攻新一代功能半导体的设计合成与能源转化应用",
+    "主要研究方向包括： 解析高能辐射-半导体相互作用机制",
+    "阐明材料辐射老化机理",
+    "支撑耐辐射半导体材料的定向设计"
+   ],
+   "email": "teacher19@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/yyhx/cda4ac757ef14889a962b9db72a5d1d3.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-05c9ba6b-5b54d3",
+   "name": "沈兴海",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "应用化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [
+    "超分子化学与材料"
+   ],
+   "email": "teacher20@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/yyhx/9hxyzww97039.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-88446f7d-919a5c",
+   "name": "翟茂林",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "应用化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": true,
+   "research_areas": [
+    "功能高分子材料",
+    "辐射化学"
+   ],
+   "email": "teacher21@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/yyhx/9hxyzww89468.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-49a206aa-af1f15",
+   "name": "褚泰伟",
+   "title": "副教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "应用化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [
+    "兴趣： 药物合成以及核素",
+    "荧光标记",
+    "用于心肌",
+    "肿瘤以及乏氧组织的显像"
+   ],
+   "email": "teacher22@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/yyhx/9hxyzww60686.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-ad98185d-5b93b4",
+   "name": "谢懿",
+   "title": "副教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "应用化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": true,
+   "research_areas": [
+    "核材料化学"
+   ],
+   "email": "teacher23@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/yyhx/9hxyzww159531.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-e38134b0-030961",
+   "name": "严纯华",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "无机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [
+    "无机化学",
+    "稀土分离化学及应用",
+    "稀土功能材料化学"
+   ],
+   "email": "teacher24@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/wjhx/9hxyzww55793.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-1cb10b1b-bfc742",
+   "name": "侯凯鹏",
+   "title": "特聘研究员",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "无机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": true,
+   "research_areas": [
+    "兴趣 课题组以人工金属酶设计推动化学前沿发展为核心目标"
+   ],
+   "email": "teacher25@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/wjhx/9hxyzww170886.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-475189a5-c13acb",
+   "name": "傅永平",
+   "title": "助理教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "无机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": true,
+   "research_areas": [
+    "有机-无机杂化材料化学",
+    "光物理"
+   ],
+   "email": "teacher26@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/wjhx/9hxyzww129147.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-7bde2d11-353e57",
+   "name": "刘志伟",
+   "title": "研究员",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "无机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": true,
+   "research_areas": [
+    "稀土配位化学",
+    "光电功能材料与器件"
+   ],
+   "email": "teacher27@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/wjhx/9hxyzww146645.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-dfc89b4c-f8ea05",
+   "name": "孙俊良",
+   "title": "研究员",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "无机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [
+    "主要包括: 无机微孔材料的合成和应用(分子筛",
+    "含硼",
+    "锗骨架结构等)"
+   ],
+   "email": "teacher28@pku.edu.cn",
+   "homepage": "https://www.chem.pku.edu.cn/issm/dsjj/50208sjlktz556197.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-f87f3cc7-060e88",
+   "name": "张亚文",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "无机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [
+    "稀土-贵金属纳米材料化学"
+   ],
+   "email": "teacher29@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/wjhx/9hxyzww55790.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-b8e0b728-853eee",
+   "name": "张俊龙",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "无机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [
+    "生物无机化学",
+    "金属有机催化"
+   ],
+   "email": "teacher30@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/wjhx/9hxyzww55791.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-3cfa05fa-31980e",
+   "name": "张文雄",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "无机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": true,
+   "research_areas": [
+    "配位化学",
+    "稀土金属有机化学和元素有机化学"
+   ],
+   "email": "teacher31@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/wjhx/9hxyzww125454.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-7fe8c2e6-e38577",
+   "name": "徐怡庄",
+   "title": "副教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "无机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [
+    "兴趣： 1． 分子光谱的基础研究"
+   ],
+   "email": "teacher32@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/wjhx/9hxyzww55794.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-0434b460-8f986d",
+   "name": "施祖进",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "无机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [
+    "兴趣： 1. 单（双）层碳纳米管",
+    "富勒烯包合物的高产率合成",
+    "分离和纯化"
+   ],
+   "email": "teacher33@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/wjhx/9hxyzww55800.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-43831a66-e60158",
+   "name": "李彦",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "无机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": true,
+   "research_areas": [
+    "纳米材料与纳米结构"
+   ],
+   "email": "teacher34@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/wjhx/9hxyzww55805.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-1fd7e81b-81c24a",
+   "name": "杨四海",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "无机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [],
+   "email": "teacher35@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/wjhx/0cb97d4e9d17474fa17cdc61a91119b6.htm",
+   "matchable": false
+  },
+  {
+   "id": "pku-67450e57-dceba1",
+   "name": "蓝光旭",
+   "title": "研究员",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "无机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": true,
+   "research_areas": [
+    "无机–生物杂化体系"
+   ],
+   "email": "teacher36@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/wjhx/9hxyzww146037.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-82756091-7723d2",
+   "name": "高松",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "无机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [],
+   "email": "teacher37@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/mmm/",
+   "matchable": false
+  },
+  {
+   "id": "pku-e1b65a90-f4e1c2",
+   "name": "黄闻亮",
+   "title": "副教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "无机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": true,
+   "research_areas": [
+    "无机化学",
+    "放射化学"
+   ],
+   "email": "teacher38@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/wjhx/9hxyzww55808.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-ff55bd7d-b3bbfd",
+   "name": "余志祥",
+   "title": "博士后",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "有机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [
+    "有机化学反应机理",
+    "有机合成方法",
+    "天然产物与药物分子的合成",
+    "药物化学和化学生物学"
+   ],
+   "email": "teacher39@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/yjhx/9hxyzww60623.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-74eb29cc-ddb19d",
+   "name": "席振峰",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "有机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [
+    "氮气的活化与转化",
+    "金属有机化学",
+    "配位化学"
+   ],
+   "email": "teacher40@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/yjhx/9hxyzww89595.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-4e9472d8-ae788f",
+   "name": "朱戎",
+   "title": "研究员",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "有机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": true,
+   "research_areas": [
+    "课题组致力于开发新型催化反应和结构设计",
+    "创制新型富碳骨架功能材料"
+   ],
+   "email": "teacher41@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/yjhx/9hxyzww63029.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-4c2b46ff-b8b094",
+   "name": "焦阳",
+   "title": "特聘研究员",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "有机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": true,
+   "research_areas": [
+    "有机超分子化学"
+   ],
+   "email": "teacher42@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/yjhx/9hxyzww147333.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-a90ba7b9-8cd4aa",
+   "name": "甘良兵",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "有机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [],
+   "email": "teacher43@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/yjhx/9hxyzww54965.htm",
+   "matchable": false
+  },
+  {
+   "id": "pku-365c3b3b-710aa0",
+   "name": "罗佗平",
+   "title": "特聘研究员",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "有机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [
+    "有机合成",
+    "化学生物学"
+   ],
+   "email": "teacher44@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/yjhx/9hxyzww97027.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-739624f5-75a754",
+   "name": "裴坚",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "有机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [],
+   "email": "teacher45@pku.edu.cn",
+   "homepage": "https://www.chem.pku.edu.cn/pei/",
+   "matchable": false
+  },
+  {
+   "id": "pku-0c147380-89d845",
+   "name": "许言",
+   "title": "特聘研究员",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "有机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": true,
+   "research_areas": [],
+   "email": "teacher46@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/yjhx/9hxyzww129413.htm",
+   "matchable": false
+  },
+  {
+   "id": "pku-378efaf8-b2ec6b",
+   "name": "赵达慧",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "有机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": true,
+   "research_areas": [
+    "有机",
+    "高分子功能材料化学"
+   ],
+   "email": "teacher47@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/yjhx/9hxyzww128962.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-eaa4769a-662ff6",
+   "name": "钮大文",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "有机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": true,
+   "research_areas": [
+    "感兴趣的本科生",
+    "\"bdText\":\"\"",
+    "\"bdMini\":\"2\"",
+    "\"bdMiniList\":false",
+    "\"bdPic\":\"\"",
+    "\"bdStyle\":\"0\"",
+    "\"bdSize\":\"24\"}",
+    "\"share\":{}}"
+   ],
+   "email": "teacher48@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/yjhx/8c669c4656a14a3bb00dc4e2abf302d4.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-12c6dbef-7a7fe6",
+   "name": "雷晓光",
+   "title": null,
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "有机化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [
+    "功能导向有机合成",
+    "化学生物学",
+    "生物合成",
+    "生物催化"
+   ],
+   "email": "teacher49@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/yjhx/9hxyzww157730.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-299fc4ac-9b4711",
+   "name": "刘剑",
+   "title": "博士后",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "物理化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [
+    "物理化学",
+    "理论和计算化学",
+    "化学动力学和光谱",
+    "量子统计力学",
+    "量子动力学",
+    "光化学"
+   ],
+   "email": "teacher50@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/szll/zzjs/llhxyjs/ff9ef7a6812a4498bac773256b20ffe8.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-64bdf183-f604b7",
+   "name": "刘志荣",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "物理化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": true,
+   "research_areas": [],
+   "email": "teacher51@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/liuzhirong",
+   "matchable": false
+  },
+  {
+   "id": "pku-ddae4631-2824b1",
+   "name": "刘忠范",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "物理化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [
+    "石墨烯科学与工程 石墨烯是二十一世纪的战略新兴材料",
+    "在航空航天",
+    "电子信息",
+    "新能源",
+    "热管理",
+    "节能环保",
+    "以及国防军工领域有着广阔的应用前景"
+   ],
+   "email": "teacher52@pku.edu.cn",
+   "homepage": "https://www.chem.pku.edu.cn/cnc/cn/zxcy/jy/50177nm241947.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-8d1af3f9-51747a",
+   "name": "刘海超",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "物理化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": true,
+   "research_areas": [],
+   "email": "teacher53@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/szll/zzjs/wlhxyjs1/55894.htm",
+   "matchable": false
+  },
+  {
+   "id": "pku-a62619f1-13ed12",
+   "name": "吴云东",
+   "title": "博士后",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "物理化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [],
+   "email": "teacher54@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/wlhx/9hxyzww60620.htm",
+   "matchable": false
+  },
+  {
+   "id": "pku-c0bb2627-a1fa1c",
+   "name": "吴凯",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "物理化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [],
+   "email": "teacher55@pku.edu.cn",
+   "homepage": "https://www.chem.pku.edu.cn/wukai/",
+   "matchable": false
+  },
+  {
+   "id": "pku-fdb7975f-163df4",
+   "name": "周继寒",
+   "title": "物理化学，多维原子成像，电子显微学",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "物理化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [
+    "物理化学",
+    "多维原子分辨成像",
+    "电子显微学"
+   ],
+   "email": "teacher56@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/wlhx/9hxyzww118814.htm",
+   "matchable": true
+  },
+  {
+   "id": "pku-5f790acc-d95827",
+   "name": "唐淳",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "物理化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [],
+   "email": "teacher57@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/wlhx/9hxyzww112404.htm",
+   "matchable": false
+  },
+  {
+   "id": "pku-96c361b7-e82c5f",
+   "name": "张锦",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "物理化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": null,
+   "research_areas": [],
+   "email": "teacher58@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/ktz/wlhx/9hxyzww108463.htm",
+   "matchable": false
+  },
+  {
+   "id": "pku-dc95f6fa-f1f490",
+   "name": "彭海琳",
+   "title": "教授",
+   "school": "北京大学",
+   "unit": "化学与分子工程学院",
+   "group": "物理化学",
+   "group_kind": "其他",
+   "is_phd_supervisor": true,
+   "research_areas": [],
+   "email": "teacher59@pku.edu.cn",
+   "homepage": "http://www.chem.pku.edu.cn/szll/zzjs/wlhxyjs1/55888.htm",
+   "matchable": false
+  }
+ ]
+}

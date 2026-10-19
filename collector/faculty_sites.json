@@ -1,0 +1,106 @@
+{
+  "_comment": "导师名单栏目配置。先跑 python crawl_faculty.py --discover 看各院系有哪些师资栏目，再把 URL 填进来。",
+  "_owner": "A",
+  "_note": "公告天天变，导师信息几个月才动一次，所以两者分开抓、分开存（notice vs faculty 两份契约）。",
+  "_honesty": "**这里是逐校手配的，不是自动发现的。** 实测 6 个院系自动发现只有 1 个可用，所以能跑通的是这一份配置，不是'多校能力'。宣传时要说清'已跑通 N 所'，不能说'覆盖各校'。",
+  "units": [
+    {
+      "school": "浙江大学",
+      "school_slug": "zju",
+      "unit": "物理学院",
+      "homepage": "https://physics.zju.edu.cn/",
+      "_how": "浙大全校师资统一挂在 person.zju.edu.cn 上，同一模板 → 解析路径 A（li > h3）",
+      "pages": [
+        { "group": "中国科学院院士", "url": "http://physics.zju.edu.cn/ysjs/list.htm" },
+        { "group": "特聘教授", "url": "https://physics.zju.edu.cn/qstp_73988/list.htm" },
+        { "group": "聚变理论与模拟中心", "url": "http://physics.zju.edu.cn/jbllymnzx/list.htm" },
+        { "group": "凝聚态物理研究所", "url": "http://physics.zju.edu.cn/njtwlyjs/list.htm" },
+        { "group": "浙江近代物理中心", "url": "http://physics.zju.edu.cn/zjjdwlzx/list.htm" }
+      ]
+    },
+    {
+      "school": "复旦大学",
+      "school_slug": "fudan",
+      "unit": "物理学系",
+      "homepage": "https://phys.fudan.edu.cn/",
+      "_how": "师资页是一张**带表头的表格**（姓名|职称|研究方向|邮箱|办公地点），页面上 <li> 数量是 0 —— 所以走解析路径 B（按表头映射列）。实测 23 人、研究方向与邮箱都是 100%。",
+      "_found_by": "自动发现本来就能找到这个栏目（名字就叫「师资队伍」），失败的是**解析**；加了表格路径之后直接可用。",
+      "pages": [
+        { "group": "Active Faculty 教学与研究", "url": "https://phys.fudan.edu.cn/7476/list.htm" }
+      ]
+    },
+    {
+      "school": "大连理工大学",
+      "school_slug": "dlut",
+      "unit": "教师主页（全校）",
+      "homepage": "http://faculty.dlut.edu.cn/",
+      "_how": "**Tsites 教师主页系统**，名册按拼音首字母分页：`pyjslb.jsp?urltype=tsites.PinYinTeacherList&wbtreeid=1001&py=<字母>`。每条是 `<li><a href=\"…/<slug>/zh_CN/index.htm\"><h3>姓名</h3><p>单位：X</p><p>职称：Y</p>` → 走路径 A + 二级抓取补方向。",
+      "_why_it_was_zero": "**这个院系曾经整页 0 人，原因值得记**：卡片里那一行是 `职称：助理研究员`，而 `_split_label` 把它拆成 label=`职称`、value=`助理研究员`，当时 `LABELS` 里没有「职称」→ key 是 None → **这一行被静默丢掉**，于是 `title_text` 始终是 None，第二道闸（「卡片不可能只有姓名」）把**整页真人一起拒掉**。姓名、结构、个人主页链接其实全都在。教训：**「标签存在但我不认识」不该导致整条被丢。**",
+      "_note": "这里抽到的是**全校**教师，不限院系；`group` 会用页面的「字母搜索」标题。要按院系筛的话得另外做，先把人拿全。",
+      "pages": [
+        { "group": "教师主页", "url": "http://faculty.dlut.edu.cn/pyjslb.jsp?urltype=tsites.PinYinTeacherList&wbtreeid=1001&py=a&lang=zh_CN" },
+        { "group": "教师主页", "url": "http://faculty.dlut.edu.cn/pyjslb.jsp?urltype=tsites.PinYinTeacherList&wbtreeid=1001&py=b&lang=zh_CN" },
+        { "group": "教师主页", "url": "http://faculty.dlut.edu.cn/pyjslb.jsp?urltype=tsites.PinYinTeacherList&wbtreeid=1001&py=c&lang=zh_CN" },
+        { "group": "教师主页", "url": "http://faculty.dlut.edu.cn/pyjslb.jsp?urltype=tsites.PinYinTeacherList&wbtreeid=1001&py=d&lang=zh_CN" },
+        { "group": "教师主页", "url": "http://faculty.dlut.edu.cn/pyjslb.jsp?urltype=tsites.PinYinTeacherList&wbtreeid=1001&py=f&lang=zh_CN" },
+        { "group": "教师主页", "url": "http://faculty.dlut.edu.cn/pyjslb.jsp?urltype=tsites.PinYinTeacherList&wbtreeid=1001&py=g&lang=zh_CN" },
+        { "group": "教师主页", "url": "http://faculty.dlut.edu.cn/pyjslb.jsp?urltype=tsites.PinYinTeacherList&wbtreeid=1001&py=h&lang=zh_CN" },
+        { "group": "教师主页", "url": "http://faculty.dlut.edu.cn/pyjslb.jsp?urltype=tsites.PinYinTeacherList&wbtreeid=1001&py=j&lang=zh_CN" },
+        { "group": "教师主页", "url": "http://faculty.dlut.edu.cn/pyjslb.jsp?urltype=tsites.PinYinTeacherList&wbtreeid=1001&py=k&lang=zh_CN" },
+        { "group": "教师主页", "url": "http://faculty.dlut.edu.cn/pyjslb.jsp?urltype=tsites.PinYinTeacherList&wbtreeid=1001&py=l&lang=zh_CN" },
+        { "group": "教师主页", "url": "http://faculty.dlut.edu.cn/pyjslb.jsp?urltype=tsites.PinYinTeacherList&wbtreeid=1001&py=m&lang=zh_CN" },
+        { "group": "教师主页", "url": "http://faculty.dlut.edu.cn/pyjslb.jsp?urltype=tsites.PinYinTeacherList&wbtreeid=1001&py=n&lang=zh_CN" },
+        { "group": "教师主页", "url": "http://faculty.dlut.edu.cn/pyjslb.jsp?urltype=tsites.PinYinTeacherList&wbtreeid=1001&py=p&lang=zh_CN" },
+        { "group": "教师主页", "url": "http://faculty.dlut.edu.cn/pyjslb.jsp?urltype=tsites.PinYinTeacherList&wbtreeid=1001&py=q&lang=zh_CN" },
+        { "group": "教师主页", "url": "http://faculty.dlut.edu.cn/pyjslb.jsp?urltype=tsites.PinYinTeacherList&wbtreeid=1001&py=s&lang=zh_CN" },
+        { "group": "教师主页", "url": "http://faculty.dlut.edu.cn/pyjslb.jsp?urltype=tsites.PinYinTeacherList&wbtreeid=1001&py=t&lang=zh_CN" },
+        { "group": "教师主页", "url": "http://faculty.dlut.edu.cn/pyjslb.jsp?urltype=tsites.PinYinTeacherList&wbtreeid=1001&py=w&lang=zh_CN" },
+        { "group": "教师主页", "url": "http://faculty.dlut.edu.cn/pyjslb.jsp?urltype=tsites.PinYinTeacherList&wbtreeid=1001&py=x&lang=zh_CN" },
+        { "group": "教师主页", "url": "http://faculty.dlut.edu.cn/pyjslb.jsp?urltype=tsites.PinYinTeacherList&wbtreeid=1001&py=y&lang=zh_CN" },
+        { "group": "教师主页", "url": "http://faculty.dlut.edu.cn/pyjslb.jsp?urltype=tsites.PinYinTeacherList&wbtreeid=1001&py=z&lang=zh_CN" }
+      ]
+    },
+    {
+      "school": "北京大学",
+      "school_slug": "pku",
+      "unit": "化学与分子工程学院",
+      "homepage": "https://www.chem.pku.edu.cn/",
+      "_how": "师资按**课题组方向**分栏：`/ktz/<缩写>/index.htm`。实测物理化学(wlhx) 25、无机化学(wjhx) 15、分析化学(fxhx) 9、有机化学(yjhx) 11、应用化学(yyhx) 7 —— 共 67 人，每人都有个人主页 → 走路径 A/D + **二级抓取**补方向。",
+      "_direction_coverage_low": "**这个院系的方向覆盖率天然偏低**：个人主页里只有一部分写着「研究方向/研究领域」。实测抽了 12 个，6 个页面有该字段且**全部抽到**、3 个页面根本没这个词、3 个 404。所以低覆盖是**页面侧**的原因，不是解析器 —— 这句要留着，免得下次有人去改正则。",
+      "pages": [
+        { "group": "物理化学", "url": "http://www.chem.pku.edu.cn/ktz/wlhx/index.htm" },
+        { "group": "无机化学", "url": "http://www.chem.pku.edu.cn/ktz/wjhx/index.htm" },
+        { "group": "分析化学", "url": "http://www.chem.pku.edu.cn/ktz/fxhx/index.htm" },
+        { "group": "有机化学", "url": "http://www.chem.pku.edu.cn/ktz/yjhx/index.htm" },
+        { "group": "应用化学", "url": "http://www.chem.pku.edu.cn/ktz/yyhx/index.htm" }
+      ]
+    },
+    {
+      "school": "浙江大学",
+      "school_slug": "zju",
+      "unit": "航空航天学院",
+      "homepage": "http://saa.zju.edu.cn/",
+      "_how": "师资页是**内容区里的人名链接**（`<a href=\"person.zju.edu.cn/…\">陈伟球</a>`），按研究所分组 → 走解析路径 D。判据是 **href 指向个人页而不是 list.htm 栏目页**（这条页上人名样式的链接 191 个，127 个指向个人页、37 个指向栏目页）。",
+      "_why_href_not_text": "**不能用「文字像人名」当判据**：那样会把「学院概况」「师资队伍」这类导航词算成人。评估报告里踩过这个坑 —— 一个只 6 个人的页面被数出 38 个「人」。",
+      "pages": [
+        { "group": "师资队伍", "url": "http://saa.zju.edu.cn/szdw/list.htm" }
+      ]
+    },
+    {
+      "school": "浙江大学",
+      "school_slug": "zju",
+      "unit": "材料科学与工程学院",
+      "homepage": "https://mse.zju.edu.cn/",
+      "_how": "列表页是**姓名和职称粘连**、中间没有分隔符（`朱笑东高级实验师`），走解析路径 C；列表页没有研究方向，靠**二级抓取**去个人主页补（`person.zju.edu.cn` 的正文里写着「研究方向：…」）。",
+      "_wrong_once": "我一开始把这一页判成「JS 渲染」——**判错了**。名字就在静态 HTML 里，只是我的姓名判据要求整段正好 2-4 个汉字，所以一个都认不出来。写进这条备注是因为：把「我的判据太窄」误判成「页面拿不到」，会让人去装浏览器渲染，方向就全错了。",
+      "_pagination": "这个 CMS 的分页是 list.htm / list2.htm / list3.htm，**每页只 16 条**。不翻页就只拿到 16 个人（实际 35+），而且漏掉的人不会报错，只是少。",
+      "pages": [
+        { "group": "正高职教师", "url": "https://mse.zju.edu.cn/51225/list.htm" },
+        { "group": "正高职教师", "url": "https://mse.zju.edu.cn/51225/list2.htm" },
+        { "group": "副高职教师", "url": "https://mse.zju.edu.cn/51226/list.htm" },
+        { "group": "副高职教师", "url": "https://mse.zju.edu.cn/51226/list2.htm" },
+        { "group": "副高职教师", "url": "https://mse.zju.edu.cn/51226/list3.htm" }
+      ]
+    }
+  ]
+}
