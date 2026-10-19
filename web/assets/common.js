@@ -1204,7 +1204,7 @@ function errHint(err) {
       '<p><a class="btn-ghost" href="notices.html">← 回公告列表</a></p>';
   }
   if (st === 402) {
-    return '<p>免费身份每天只能看 3 条公告详情，今天的用完了。' +
+    return '<p>免费身份的<strong>详情页</strong>额度是每天 3 条，今天的用完了（推送额度另算）。' +
       '<a href="pricing.html">去订阅页看看</a>，或者换个身份。</p>';
   }
   if (st) {

@@ -206,7 +206,8 @@
     const extra = season ? (season.features || []).filter((f) => f !== '以上全部') : [];
 
     const quota = typeof state.me.user.daily_free_quota === 'number' ? state.me.user.daily_free_quota : 3;
-    const free = ['公告列表：无限浏览', '每天 ' + quota + ' 条公告详情', '匹配结果 + 每条的理由'];
+    const free = ['公告列表：无限浏览', '每天 ' + quota + ' 条公告详情（详情额度，和推送额度分开）',
+                  '匹配结果 + 每条的理由'];
     const paid = (monthly.features || []).slice();
 
     el('compare').innerHTML =

@@ -93,8 +93,9 @@
 
   function quotaHTML(q) {
     if (!q || !q.remaining) return '';
-    return '<p class="quota-line">免费额度：每天 ' + esc(q.limit || '3') + ' 条，今天还剩 <strong>' +
-      esc(q.remaining) + '</strong> 条。额度只限制详情，列表和匹配都不受限。</p>';
+    return '<p class="quota-line"><strong>详情页</strong>免费额度：每天 ' + esc(q.limit || '3') +
+      ' 条，今天还剩 <strong>' + esc(q.remaining) + '</strong> 条。' +
+      '它和推送的免费条数不是同一个额度；公告列表和匹配都不受限。</p>';
   }
 
   /* 走查 #2：后端给的 `upgrade_hint` 是**对象**，之前当字符串拼，页面上渲染出一句
