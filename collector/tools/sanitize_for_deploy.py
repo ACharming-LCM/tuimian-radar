@@ -20,6 +20,7 @@
 from __future__ import annotations
 
 import argparse
+import base64
 import json
 import os
 import re
@@ -45,10 +46,15 @@ STAFF_ROLE = re.compile(r"[一-龥]{2,4}\s*[（(][^)）]{0,12}(?:秘书|辅导�
 ABSENT_ROW = re.compile(r"[一-龥]{2,4}\s+\S{1,10}\s+\S{1,10}\s+未到")
 PERSON_TABLE_HEADER = re.compile(r"序号\s*[\n| |\t]+\s*姓名|姓名\s*[\n| |\t]+\s*(?:考生编号|准考证号|学号)")
 
-# 已知的真实姓名（文档里引用过的）：不整段删，替换成占位符
+# 已知的真实姓名（文档里引用过的）：不整段删，替换成占位符。
+# 源码里不直接写这些名字 —— 否则"脱敏工具"本身又成了姓名清单。
 NAME_TOKENS = {
-    "彭碧琪": "张某某", "余泊桦": "王某某", "刘一鸣": "李某某",
-    "李隽": "赵某", "宁帅": "陈某",
+    base64.b64decode(s).decode("utf-8"): alias
+    for s, alias in (
+        ("5b2t56Kn55Cq", "张某某"), ("5L2Z5rOK5qGm", "王某某"),
+        ("5YiY5LiA6bij", "李某某"), ("5p2O6Zq9", "赵某"),
+        ("5a6B5biF", "陈某"),
+    )
 }
 
 

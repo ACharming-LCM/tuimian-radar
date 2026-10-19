@@ -1,0 +1,3 @@
+-r requirements.txt
+# 契约门禁用它校验 JSON Schema；运行时不需要
+jsonschema==4.26.0
