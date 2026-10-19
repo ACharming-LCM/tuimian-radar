@@ -39,6 +39,31 @@ MOBILE = re.compile(r"(?<!\d)(1[3-9]\d)\d{4}(\d{4})(?!\d)")
 IDCARD = re.compile(
     r"(?<![0-9A-Za-z])[1-9]\d{5}(?:19|20)\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01])\d{3}[\dXx](?![0-9A-Za-z])")
 
+# 人名表：PDF 抽出来的表格经常是"一行一个人"，没有 `|` 分隔。
+# 这些形状说明正文里有**具体的人**（学生/辅导员/教学秘书），整段隐去比逐行猜安全。
+STAFF_ROLE = re.compile(r"[一-龥]{2,4}\s*[（(][^)）]{0,12}(?:秘书|辅导员)[)）]")
+ABSENT_ROW = re.compile(r"[一-龥]{2,4}\s+\S{1,10}\s+\S{1,10}\s+未到")
+PERSON_TABLE_HEADER = re.compile(r"序号\s*[\n| |\t]+\s*姓名|姓名\s*[\n| |\t]+\s*(?:考生编号|准考证号|学号)")
+
+# 已知的真实姓名（文档里引用过的）：不整段删，替换成占位符
+NAME_TOKENS = {
+    "彭碧琪": "张某某", "余泊桦": "王某某", "刘一鸣": "李某某",
+    "李隽": "赵某", "宁帅": "陈某",
+}
+
+
+def _looks_like_people_table(body: str) -> bool:
+    if PERSON_TABLE_HEADER.search(body):
+        return True
+    if len(ABSENT_ROW.findall(body)) >= 2:
+        return True
+    if len(STAFF_ROLE.findall(body)) >= 2:
+        return True
+    # 3 个以上 7–8 位号码 + 学院/辅导员字样：典型是院系联系人表
+    if ("学院" in body or "辅导员" in body) and len(re.findall(r"(?<!\d)\d{7,8}(?!\d)", body)) >= 3:
+        return True
+    return False
+
 # 自检时跳过的机器字段（哈希 / id / 链接）
 MACHINE_KEYS = {"id", "notice_id", "event_id", "content_hash", "url", "homepage",
                 "source_url", "replaced_by", "duplicate_of"}
@@ -70,6 +95,9 @@ def sanitize_body(title: str, body: str) -> str:
     if LIST_TITLE.search(title or "") and ("|" in body or "姓名" in body):
         stats["list_bodies"] += 1
         return REDACTED_BODY
+    if _looks_like_people_table(body) or IDCARD.search(body):
+        stats["list_bodies"] += 1
+        return REDACTED_BODY
     if _has_people_table(body):
         kept = []
         for ln in body.splitlines():
@@ -99,8 +127,15 @@ def walk(obj, *, faculty=False):
         if faculty and obj.get("phone"):
             obj["phone"] = None
             stats["faculty_phone"] += 1
-        for v in obj.values():
-            if isinstance(v, (dict, list)):
+        for k, v in list(obj.items()):
+            if isinstance(v, str):
+                # 标题 / 单位 / 正文里出现的已知真实姓名，一律替换
+                nv = v
+                for real, alias in NAME_TOKENS.items():
+                    nv = nv.replace(real, alias)
+                if nv != v:
+                    obj[k] = nv
+            elif isinstance(v, (dict, list)):
                 walk(v)
     elif isinstance(obj, list):
         for v in obj:
@@ -173,6 +208,7 @@ def main(argv=None):
                 _scan(v, key)
         elif isinstance(o, str) and key not in MACHINE_KEYS:
             left += len(IDCARD.findall(o)) + len(MOBILE.findall(o))
+            left += sum(o.count(n) for n in NAME_TOKENS)
 
     for root, _, files in os.walk(dst):
         for name in files:
