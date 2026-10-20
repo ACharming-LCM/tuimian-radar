@@ -1,8 +1,8 @@
 {
  "_note": "本文件不是接口响应，是 fixtures 的说明。所有响应 fixture 里都不含 `_` 开头的键。",
- "_generated_on": "2026-10-19",
- "_as_of": "2026-10-19",
- "_how_to_reproduce": "cd collector && python tools/make_fixtures.py --as-of 2026-10-19",
+ "_generated_on": "2026-10-20",
+ "_as_of": "2026-10-20",
+ "_how_to_reproduce": "cd collector && python tools/make_fixtures.py --as-of 2026-10-20",
  "_time_sensitive": {
   "match.response.json": [
    "stats.dropped_expired",

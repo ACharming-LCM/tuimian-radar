@@ -1,7 +1,307 @@
 {
  "window_days": 7,
- "total": 27,
+ "total": 36,
  "items": [
+  {
+   "event_id": "adde_226c4b76ad774810",
+   "notice_id": "u57dcf3ee-47865-846408",
+   "type": "added",
+   "title": "南京大学2026年博士研究生校长特别奖学金入选名单公示",
+   "school": "南京大学",
+   "unit": "研究生院",
+   "url": "https://yzb.nju.edu.cn/ea/48/c47865a846408/page.htm",
+   "publish_date": "2026-10-20",
+   "detected_on": "2026-10-20",
+   "deadline": {
+    "state": "unknown",
+    "text": "未能读取截止日，请点原文核对",
+    "value": null,
+    "url": "https://yzb.nju.edu.cn/ea/48/c47865a846408/page.htm",
+    "must_check_original": true,
+    "days_left": null
+   },
+   "record_quality": "unknown",
+   "topic": null,
+   "is_fresh": true,
+   "age_days": 0,
+   "is_historical": false,
+   "history_reason": "0 天前发布，不在本周窗口内"
+  },
+  {
+   "event_id": "adde_eb49f6960e43558a",
+   "notice_id": "u57dcf3ee-47863-846404",
+   "type": "added",
+   "title": "南京大学2027年硕士推免生拟录取人数信息统计",
+   "school": "南京大学",
+   "unit": "研究生院",
+   "url": "https://yzb.nju.edu.cn/ea/44/c47863a846404/page.htm",
+   "publish_date": "2026-10-20",
+   "detected_on": "2026-10-20",
+   "deadline": {
+    "state": "unknown",
+    "text": "未能读取截止日，请点原文核对",
+    "value": null,
+    "url": "https://yzb.nju.edu.cn/ea/44/c47863a846404/page.htm",
+    "must_check_original": true,
+    "days_left": null
+   },
+   "record_quality": "unknown",
+   "topic": null,
+   "is_fresh": true,
+   "age_days": 0,
+   "is_historical": false,
+   "history_reason": "0 天前发布，不在本周窗口内"
+  },
+  {
+   "event_id": "adde_c14b068aff4e769f",
+   "notice_id": "ua8ae400a-23de6bd2dcc6e03c",
+   "type": "added",
+   "title": "北京大学2027年“申请-考核制”博士研究生网上报名公告",
+   "school": "北京大学",
+   "unit": "研究生招生网",
+   "url": "https://admission.pku.edu.cn/docs/20261020095057962801.pdf",
+   "publish_date": "2026-10-20",
+   "detected_on": "2026-10-20",
+   "deadline": {
+    "state": "absent",
+    "text": "该公告未公布截止日",
+    "value": null,
+    "url": "https://admission.pku.edu.cn/docs/20261020095057962801.pdf",
+    "must_check_original": false,
+    "days_left": null
+   },
+   "record_quality": "unknown",
+   "topic": null,
+   "is_fresh": true,
+   "age_days": 0,
+   "is_historical": false,
+   "history_reason": "0 天前发布，不在本周窗口内"
+  },
+  {
+   "event_id": "adde_725e4ac5d05d0e29",
+   "notice_id": "ua8ae400a-431f2c45a9bb1cbd",
+   "type": "added",
+   "title": "北京大学2027年博士研究生招生简章",
+   "school": "北京大学",
+   "unit": "研究生招生网",
+   "url": "https://admission.pku.edu.cn/docs/20261020091929804706.pdf",
+   "publish_date": "2026-10-20",
+   "detected_on": "2026-10-20",
+   "deadline": {
+    "state": "absent",
+    "text": "该公告未公布截止日",
+    "value": null,
+    "url": "https://admission.pku.edu.cn/docs/20261020091929804706.pdf",
+    "must_check_original": false,
+    "days_left": null
+   },
+   "record_quality": "unknown",
+   "topic": null,
+   "is_fresh": true,
+   "age_days": 0,
+   "is_historical": false,
+   "history_reason": "0 天前发布，不在本周窗口内"
+  },
+  {
+   "event_id": "adde_35eb00c3840f8730",
+   "notice_id": "ua8ae400a-f826282d436c916b",
+   "type": "added",
+   "title": "北京大学研究生招生网",
+   "school": "北京大学",
+   "unit": "研究生招生网",
+   "url": "https://admission.pku.edu.cn/zsxx/bszs/bszyml/2027/yx/zsml_bs_yx.html",
+   "publish_date": "2026-10-20",
+   "detected_on": "2026-10-20",
+   "deadline": {
+    "state": "unknown",
+    "text": "未能读取截止日，请点原文核对",
+    "value": null,
+    "url": "https://admission.pku.edu.cn/zsxx/bszs/bszyml/2027/yx/zsml_bs_yx.html",
+    "must_check_original": true,
+    "days_left": null
+   },
+   "record_quality": "unknown",
+   "topic": null,
+   "is_fresh": true,
+   "age_days": 0,
+   "is_historical": false,
+   "history_reason": "0 天前发布，不在本周窗口内"
+  },
+  {
+   "event_id": "adde_8b6fa13dc7ed10fe",
+   "notice_id": "ua8ae400a-5af72ede63cb219c",
+   "type": "added",
+   "title": "27\"申请-考核制\"博士研究生推荐信线上提交流程",
+   "school": "北京大学",
+   "unit": "研究生招生网",
+   "url": "https://admission.pku.edu.cn/docs/20261020091156436628.pdf",
+   "publish_date": "2026-10-20",
+   "detected_on": "2026-10-20",
+   "deadline": {
+    "state": "absent",
+    "text": "该公告未公布截止日",
+    "value": null,
+    "url": "https://admission.pku.edu.cn/docs/20261020091156436628.pdf",
+    "must_check_original": false,
+    "days_left": null
+   },
+   "record_quality": "unknown",
+   "topic": null,
+   "is_fresh": true,
+   "age_days": 0,
+   "is_historical": false,
+   "history_reason": "0 天前发布，不在本周窗口内"
+  },
+  {
+   "event_id": "adde_f29d682b4d7bc676",
+   "notice_id": "u285779f0-69706-3216693",
+   "type": "added",
+   "title": "浙江大学物理学院2027年博士研究生招生简章",
+   "school": "浙江大学",
+   "unit": "物理学院",
+   "url": "https://physics.zju.edu.cn/2026/1019/c69706a3216693/page.htm",
+   "publish_date": "2026-10-19",
+   "detected_on": "2026-10-20",
+   "deadline": {
+    "state": "found",
+    "text": "2026-11-20",
+    "value": "2026-11-20",
+    "url": "https://physics.zju.edu.cn/2026/1019/c69706a3216693/page.htm",
+    "must_check_original": false,
+    "days_left": 31
+   },
+   "record_quality": "unknown",
+   "topic": null,
+   "is_fresh": true,
+   "age_days": 1,
+   "is_historical": false,
+   "history_reason": "1 天前发布，不在本周窗口内"
+  },
+  {
+   "event_id": "adde_a6e40fccb2a54b82",
+   "notice_id": "ua37ee91b-4cb9d077dd59876b",
+   "type": "added",
+   "title": "【专项计划】天津大学2027年新质生产力专项博士研究生招生简章",
+   "school": "天津大学",
+   "unit": "研究生院",
+   "url": "https://yzb.tju.edu.cn/xwzx/tkbs_xw/202610/t20261019_324756.htm",
+   "publish_date": "2026-10-19",
+   "detected_on": "2026-10-20",
+   "deadline": {
+    "state": "found",
+    "text": "2026-11-13",
+    "value": "2026-11-13",
+    "url": "https://yzb.tju.edu.cn/xwzx/tkbs_xw/202610/t20261019_324756.htm",
+    "must_check_original": false,
+    "days_left": 24
+   },
+   "record_quality": "unknown",
+   "topic": null,
+   "is_fresh": true,
+   "age_days": 1,
+   "is_historical": false,
+   "history_reason": "1 天前发布，不在本周窗口内"
+  },
+  {
+   "event_id": "adde_6b0c4cf2a31f69c3",
+   "notice_id": "u1b6a206e-312aeebda93859c9",
+   "type": "added",
+   "title": "北航报考点2026年10月19日温馨提示",
+   "school": "北京航空航天大学",
+   "unit": "研究生院",
+   "url": "http://yzb.buaa.edu.cn/info/1003/3655.htm",
+   "publish_date": "2026-10-19",
+   "detected_on": "2026-10-20",
+   "deadline": {
+    "state": "absent",
+    "text": "该公告未公布截止日",
+    "value": null,
+    "url": "http://yzb.buaa.edu.cn/info/1003/3655.htm",
+    "must_check_original": false,
+    "days_left": null
+   },
+   "record_quality": "unknown",
+   "topic": null,
+   "is_fresh": true,
+   "age_days": 1,
+   "is_historical": false,
+   "history_reason": "1 天前发布，不在本周窗口内"
+  },
+  {
+   "event_id": "adde_ef370821db45ba09",
+   "notice_id": "u1b6a206e-eee27ffa25042066",
+   "type": "added",
+   "title": "报考北航2027年硕士研究生温馨提示（10月19日）",
+   "school": "北京航空航天大学",
+   "unit": "研究生院",
+   "url": "http://yzb.buaa.edu.cn/info/1003/3657.htm",
+   "publish_date": "2026-10-19",
+   "detected_on": "2026-10-20",
+   "deadline": {
+    "state": "absent",
+    "text": "该公告未公布截止日",
+    "value": null,
+    "url": "http://yzb.buaa.edu.cn/info/1003/3657.htm",
+    "must_check_original": false,
+    "days_left": null
+   },
+   "record_quality": "unknown",
+   "topic": null,
+   "is_fresh": true,
+   "age_days": 1,
+   "is_historical": false,
+   "history_reason": "1 天前发布，不在本周窗口内"
+  },
+  {
+   "event_id": "adde_847497b32c34b48e",
+   "notice_id": "u4050c4ba-3972caff984301fa",
+   "type": "added",
+   "title": "研究生教育AI算力平台需求调研",
+   "school": "中国科学技术大学",
+   "unit": "研究生院",
+   "url": "https://gradschool.ustc.edu.cn/article/3529",
+   "publish_date": "2026-10-19",
+   "detected_on": "2026-10-20",
+   "deadline": {
+    "state": "found",
+    "text": "2026-10-23",
+    "value": "2026-10-23",
+    "url": "https://gradschool.ustc.edu.cn/article/3529",
+    "must_check_original": false,
+    "days_left": 3
+   },
+   "record_quality": "unknown",
+   "topic": null,
+   "is_fresh": true,
+   "age_days": 1,
+   "is_historical": false,
+   "history_reason": "1 天前发布，不在本周窗口内"
+  },
+  {
+   "event_id": "adde_453110b56842f412",
+   "notice_id": "ua454ff46-ee549b70b717aed8",
+   "type": "added",
+   "title": "统一身份认证平台",
+   "school": "中南大学",
+   "unit": "研究生院",
+   "url": "https://oa.csu.edu.cn/con/PDFPage?YWMC=ZNDX_ZHBG_GGTZ&JLNM=412F491072C64979A9105B609AD1F5F5",
+   "publish_date": "2026-10-16",
+   "detected_on": "2026-10-20",
+   "deadline": {
+    "state": "unknown",
+    "text": "未能读取截止日，请点原文核对",
+    "value": null,
+    "url": "https://oa.csu.edu.cn/con/PDFPage?YWMC=ZNDX_ZHBG_GGTZ&JLNM=412F491072C64979A9105B609AD1F5F5",
+    "must_check_original": true,
+    "days_left": null
+   },
+   "record_quality": "unknown",
+   "topic": null,
+   "is_fresh": true,
+   "age_days": 4,
+   "is_historical": false,
+   "history_reason": "4 天前发布，不在本周窗口内"
+  },
   {
    "event_id": "adde_a6d3d9de3c848316",
    "notice_id": "u1b6a206e-739bce9a09580282",
@@ -23,9 +323,9 @@
    "record_quality": "unknown",
    "topic": null,
    "is_fresh": true,
-   "age_days": 2,
+   "age_days": 4,
    "is_historical": false,
-   "history_reason": "2 天前发布，不在本周窗口内"
+   "history_reason": "4 天前发布，不在本周窗口内"
   },
   {
    "event_id": "adde_a2643697fdffc95d",
@@ -48,9 +348,9 @@
    "record_quality": "unknown",
    "topic": null,
    "is_fresh": true,
-   "age_days": 2,
+   "age_days": 4,
    "is_historical": false,
-   "history_reason": "2 天前发布，不在本周窗口内"
+   "history_reason": "4 天前发布，不在本周窗口内"
   },
   {
    "event_id": "adde_4c8d9ba2c445d5d2",
@@ -73,9 +373,9 @@
    "record_quality": "unknown",
    "topic": null,
    "is_fresh": true,
-   "age_days": 2,
+   "age_days": 4,
    "is_historical": false,
-   "history_reason": "2 天前发布，不在本周窗口内"
+   "history_reason": "4 天前发布，不在本周窗口内"
   },
   {
    "event_id": "adde_18d30dfe61979477",
@@ -98,9 +398,9 @@
    "record_quality": "unknown",
    "topic": null,
    "is_fresh": true,
-   "age_days": 2,
+   "age_days": 4,
    "is_historical": false,
-   "history_reason": "2 天前发布，不在本周窗口内"
+   "history_reason": "4 天前发布，不在本周窗口内"
   },
   {
    "event_id": "adde_4ae6e574e9bee914",
@@ -123,9 +423,9 @@
    "record_quality": "unknown",
    "topic": null,
    "is_fresh": true,
-   "age_days": 3,
+   "age_days": 5,
    "is_historical": false,
-   "history_reason": "3 天前发布，不在本周窗口内"
+   "history_reason": "5 天前发布，不在本周窗口内"
   },
   {
    "event_id": "adde_24fc5bf6840e3395",
@@ -148,9 +448,9 @@
    "record_quality": "unknown",
    "topic": null,
    "is_fresh": true,
-   "age_days": 3,
+   "age_days": 5,
    "is_historical": false,
-   "history_reason": "3 天前发布，不在本周窗口内"
+   "history_reason": "5 天前发布，不在本周窗口内"
   },
   {
    "event_id": "adde_0189cd4ae1834e3d",
@@ -173,9 +473,9 @@
    "record_quality": "unknown",
    "topic": null,
    "is_fresh": true,
-   "age_days": 3,
+   "age_days": 5,
    "is_historical": false,
-   "history_reason": "3 天前发布，不在本周窗口内"
+   "history_reason": "5 天前发布，不在本周窗口内"
   },
   {
    "event_id": "adde_f7775e4b6b6d114f",
@@ -198,9 +498,9 @@
    "record_quality": "unknown",
    "topic": null,
    "is_fresh": true,
-   "age_days": 3,
+   "age_days": 5,
    "is_historical": false,
-   "history_reason": "3 天前发布，不在本周窗口内"
+   "history_reason": "5 天前发布，不在本周窗口内"
   },
   {
    "event_id": "adde_8548827247e386d8",
@@ -223,9 +523,9 @@
    "record_quality": "unknown",
    "topic": null,
    "is_fresh": true,
-   "age_days": 3,
+   "age_days": 5,
    "is_historical": false,
-   "history_reason": "3 天前发布，不在本周窗口内"
+   "history_reason": "5 天前发布，不在本周窗口内"
   },
   {
    "event_id": "adde_7163b714772e6136",
@@ -248,9 +548,34 @@
    "record_quality": "unknown",
    "topic": null,
    "is_fresh": true,
-   "age_days": 3,
+   "age_days": 5,
    "is_historical": false,
-   "history_reason": "3 天前发布，不在本周窗口内"
+   "history_reason": "5 天前发布，不在本周窗口内"
+  },
+  {
+   "event_id": "adde_bc5d1784790685ef",
+   "notice_id": "u57dcf3ee-47863-846040",
+   "type": "added",
+   "title": "南京大学2027年硕士研究生学制与培养费用",
+   "school": "南京大学",
+   "unit": "研究生院",
+   "url": "https://yzb.nju.edu.cn/e8/d8/c47863a846040/page.htm",
+   "publish_date": "2026-10-14",
+   "detected_on": "2026-10-20",
+   "deadline": {
+    "state": "unknown",
+    "text": "未能读取截止日，请点原文核对",
+    "value": null,
+    "url": "https://yzb.nju.edu.cn/e8/d8/c47863a846040/page.htm",
+    "must_check_original": true,
+    "days_left": null
+   },
+   "record_quality": "unknown",
+   "topic": null,
+   "is_fresh": true,
+   "age_days": 6,
+   "is_historical": false,
+   "history_reason": "6 天前发布，不在本周窗口内"
   },
   {
    "event_id": "adde_ff8936331e178f87",
@@ -273,9 +598,9 @@
    "record_quality": "unknown",
    "topic": null,
    "is_fresh": true,
-   "age_days": 4,
+   "age_days": 6,
    "is_historical": false,
-   "history_reason": "4 天前发布，不在本周窗口内"
+   "history_reason": "6 天前发布，不在本周窗口内"
   },
   {
    "event_id": "adde_e1384ef004d9467d",
@@ -298,34 +623,9 @@
    "record_quality": "unknown",
    "topic": null,
    "is_fresh": true,
-   "age_days": 4,
+   "age_days": 6,
    "is_historical": false,
-   "history_reason": "4 天前发布，不在本周窗口内"
-  },
-  {
-   "event_id": "adde_bc5d1784790685ef",
-   "notice_id": "u57dcf3ee-47863-846040",
-   "type": "added",
-   "title": "南京大学2027年硕士研究生学制与培养费用",
-   "school": "南京大学",
-   "unit": "研究生院",
-   "url": "https://yzb.nju.edu.cn/e8/d8/c47863a846040/page.htm",
-   "publish_date": "2026-10-14",
-   "detected_on": "2026-10-17",
-   "deadline": {
-    "state": "unknown",
-    "text": "未能读取截止日，请点原文核对",
-    "value": null,
-    "url": "https://yzb.nju.edu.cn/e8/d8/c47863a846040/page.htm",
-    "must_check_original": true,
-    "days_left": null
-   },
-   "record_quality": "unknown",
-   "topic": null,
-   "is_fresh": true,
-   "age_days": 4,
-   "is_historical": false,
-   "history_reason": "4 天前发布，不在本周窗口内"
+   "history_reason": "6 天前发布，不在本周窗口内"
   },
   {
    "event_id": "adde_a97d2c696b2a366f",
@@ -348,9 +648,9 @@
    "record_quality": "unknown",
    "topic": null,
    "is_fresh": true,
-   "age_days": 4,
+   "age_days": 6,
    "is_historical": false,
-   "history_reason": "4 天前发布，不在本周窗口内"
+   "history_reason": "6 天前发布，不在本周窗口内"
   },
   {
    "event_id": "adde_66522116438587f0",
@@ -373,9 +673,9 @@
    "record_quality": "unknown",
    "topic": null,
    "is_fresh": true,
-   "age_days": 4,
+   "age_days": 6,
    "is_historical": false,
-   "history_reason": "4 天前发布，不在本周窗口内"
+   "history_reason": "6 天前发布，不在本周窗口内"
   },
   {
    "event_id": "adde_de42aa829820e897",
@@ -398,9 +698,9 @@
    "record_quality": "unknown",
    "topic": null,
    "is_fresh": true,
-   "age_days": 4,
+   "age_days": 6,
    "is_historical": false,
-   "history_reason": "4 天前发布，不在本周窗口内"
+   "history_reason": "6 天前发布，不在本周窗口内"
   },
   {
    "event_id": "adde_4e6f5394b9807a1b",
@@ -423,9 +723,9 @@
    "record_quality": "unknown",
    "topic": null,
    "is_fresh": true,
-   "age_days": 4,
+   "age_days": 6,
    "is_historical": false,
-   "history_reason": "4 天前发布，不在本周窗口内"
+   "history_reason": "6 天前发布，不在本周窗口内"
   },
   {
    "event_id": "adde_75c494eacc6dc0aa",
@@ -448,9 +748,9 @@
    "record_quality": "unknown",
    "topic": null,
    "is_fresh": true,
-   "age_days": 4,
+   "age_days": 6,
    "is_historical": false,
-   "history_reason": "4 天前发布，不在本周窗口内"
+   "history_reason": "6 天前发布，不在本周窗口内"
   },
   {
    "event_id": "adde_ca48cb2dcbc157e1",
@@ -473,9 +773,9 @@
    "record_quality": "unknown",
    "topic": null,
    "is_fresh": true,
-   "age_days": 4,
+   "age_days": 6,
    "is_historical": false,
-   "history_reason": "4 天前发布，不在本周窗口内"
+   "history_reason": "6 天前发布，不在本周窗口内"
   },
   {
    "event_id": "adde_e22eb1a70a188f25",
@@ -486,7 +786,7 @@
    "unit": "研究生院",
    "url": "https://oa.csu.edu.cn/con/PDFPage?YWMC=ZNDX_ZHBG_GGTZ&JLNM=6267FD1C03A84E058835A223534B741E",
    "publish_date": "2026-10-13",
-   "detected_on": "2026-10-17",
+   "detected_on": "2026-10-18",
    "deadline": {
     "state": "unknown",
     "text": "未能读取截止日，请点原文核对",
@@ -498,9 +798,9 @@
    "record_quality": "unknown",
    "topic": null,
    "is_fresh": true,
-   "age_days": 5,
+   "age_days": 7,
    "is_historical": false,
-   "history_reason": "5 天前发布，不在本周窗口内"
+   "history_reason": "7 天前发布，不在本周窗口内"
   },
   {
    "event_id": "adde_f39c206ce10758a2",
@@ -518,14 +818,14 @@
     "value": "2026-11-20",
     "url": "http://office.fe.zju.edu.cn/2026/1013/c40413a3214106/page.htm",
     "must_check_original": false,
-    "days_left": 33
+    "days_left": 31
    },
    "record_quality": "unknown",
    "topic": null,
    "is_fresh": true,
-   "age_days": 5,
+   "age_days": 7,
    "is_historical": false,
-   "history_reason": "5 天前发布，不在本周窗口内"
+   "history_reason": "7 天前发布，不在本周窗口内"
   },
   {
    "event_id": "adde_21fd4d5ba95f4c8f",
@@ -548,9 +848,9 @@
    "record_quality": "unknown",
    "topic": null,
    "is_fresh": true,
-   "age_days": 5,
+   "age_days": 7,
    "is_historical": false,
-   "history_reason": "5 天前发布，不在本周窗口内"
+   "history_reason": "7 天前发布，不在本周窗口内"
   },
   {
    "event_id": "adde_32db54b09ac51282",
@@ -573,9 +873,9 @@
    "record_quality": "unknown",
    "topic": null,
    "is_fresh": true,
-   "age_days": 5,
+   "age_days": 7,
    "is_historical": false,
-   "history_reason": "5 天前发布，不在本周窗口内"
+   "history_reason": "7 天前发布，不在本周窗口内"
   },
   {
    "event_id": "adde_b65e6d30f22683fa",
@@ -593,89 +893,14 @@
     "value": "2026-10-21",
     "url": "https://graduate.sysu.edu.cn/zsw/article/545",
     "must_check_original": false,
-    "days_left": 3
+    "days_left": 1
    },
    "record_quality": "unknown",
    "topic": null,
    "is_fresh": true,
-   "age_days": 5,
+   "age_days": 7,
    "is_historical": false,
-   "history_reason": "5 天前发布，不在本周窗口内"
-  },
-  {
-   "event_id": "adde_824d6dfb262e25b4",
-   "notice_id": "ua37ee91b-5210ba085c35712b",
-   "type": "added",
-   "title": "天津大学研究生招生网",
-   "school": "天津大学",
-   "unit": "研究生院",
-   "url": "https://yzb.tju.edu.cn/xwzx/tkbs_xw/202610/t20261012_324752.htm",
-   "publish_date": "2026-10-12",
-   "detected_on": "2026-10-17",
-   "deadline": {
-    "state": "found",
-    "text": "2026-11-13",
-    "value": "2026-11-13",
-    "url": "https://yzb.tju.edu.cn/xwzx/tkbs_xw/202610/t20261012_324752.htm",
-    "must_check_original": false,
-    "days_left": 26
-   },
-   "record_quality": "unknown",
-   "topic": null,
-   "is_fresh": true,
-   "age_days": 6,
-   "is_historical": false,
-   "history_reason": "6 天前发布，不在本周窗口内"
-  },
-  {
-   "event_id": "adde_58327ff5d2bf2fcc",
-   "notice_id": "ua789e854-20a1eb38a28bfeff",
-   "type": "added",
-   "title": "物院论坛（第七十六讲）：赵海涛教授做客北大物理论坛，畅谈“物理智能衍进材料智能”",
-   "school": "北京大学",
-   "unit": "物理学院",
-   "url": "https://www.phy.pku.edu.cn/info/1182/17552.htm",
-   "publish_date": "2026-10-12",
-   "detected_on": "2026-10-17",
-   "deadline": {
-    "state": "absent",
-    "text": "该公告未公布截止日",
-    "value": null,
-    "url": "https://www.phy.pku.edu.cn/info/1182/17552.htm",
-    "must_check_original": false,
-    "days_left": null
-   },
-   "record_quality": "unknown",
-   "topic": null,
-   "is_fresh": true,
-   "age_days": 6,
-   "is_historical": false,
-   "history_reason": "6 天前发布，不在本周窗口内"
-  },
-  {
-   "event_id": "adde_0694f97a5d83fa25",
-   "notice_id": "u707654a2-9e87b6fe81686713",
-   "type": "added",
-   "title": "关于李忠明教授做客我校研究生“名师名家讲坛”的公告",
-   "school": "郑州大学",
-   "unit": "研究生院",
-   "url": "https://gs.zzu.edu.cn/info/1071/13898.htm",
-   "publish_date": "2026-10-12",
-   "detected_on": "2026-10-17",
-   "deadline": {
-    "state": "absent",
-    "text": "该公告未公布截止日",
-    "value": null,
-    "url": "https://gs.zzu.edu.cn/info/1071/13898.htm",
-    "must_check_original": false,
-    "days_left": null
-   },
-   "record_quality": "unknown",
-   "topic": null,
-   "is_fresh": true,
-   "age_days": 6,
-   "is_historical": false,
-   "history_reason": "6 天前发布，不在本周窗口内"
+   "history_reason": "7 天前发布，不在本周窗口内"
   }
  ],
  "empty_reason": null,

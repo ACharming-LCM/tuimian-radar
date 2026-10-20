@@ -480,7 +480,15 @@ def retain_unrefreshed(records, prev, per_site):
     兜底有两个：`freshness.json` 里该站点是 `network_failed`/`all_boards_empty`（不是 `ok`），
     以及 `--allow-drop`（它的语义本来就是"我确认数据真的变少了"）会跳过沿用。
     """
-    fresh = {common.canonical_url(r.get("url") or "") for r in records if r.get("url")}
+    # **按站点比 URL，不能全局比。** 用全局集合时，A 校未刷新、但它的某条 URL
+    # 恰好也出现在 B 校本轮抓到的新记录里，那条旧记录就不会被沿用，随后被 diff
+    # 判成"公告被删了" —— 而事实是 A 校我们根本没抓到。2026-10-20 实测：
+    # 北大本轮失败，两条"拟录取名单公示"因此进了 removed，触发了下面的守卫。
+    fresh_by_site = {}
+    for r in records:
+        if r.get("url"):
+            k = (r.get("school"), r.get("unit"))
+            fresh_by_site.setdefault(k, set()).add(common.canonical_url(r["url"]))
     now_n = {}
     for r in records:
         k = (r.get("school"), r.get("unit"))
@@ -498,13 +506,11 @@ def retain_unrefreshed(records, prev, per_site):
         olds = old_by_site.get(key) or []
         if verdict == "ok" or not olds:
             continue
-        kept = []
-        for r in olds:
-            u = common.canonical_url(r.get("url") or "")
-            if u in fresh:
-                continue
-            fresh.add(u)
-            kept.append(r)
+        have = fresh_by_site.get(key, set())
+        # 同一站点里旧记录可能共用 URL（去重前的重复行）：**全部沿用**，
+        # 不能因为集合里已经有一个就丢掉另一个，否则 diff 照样会报"被删"。
+        kept = [r for r in olds
+                if not r.get("url") or common.canonical_url(r["url"]) not in have]
         if not kept:
             continue
         carried.extend(kept)

@@ -34,7 +34,7 @@ pre{background:#f6f8fa;padding:8pt;white-space:pre-wrap}hr{border:none;border-to
 </tr>
 <tr>
 <td>现在做到</td>
-<td>29 所学校 / 37 个站点 / 2,561 条公告 / 557 位导师；232 条自动门禁全绿</td>
+<td>29 所学校 / 37 个站点 / 2,646 条公告 / 557 位导师；233 条自动门禁全绿</td>
 </tr>
 <tr>
 <td>差异化</td>
@@ -132,8 +132,8 @@ pre{background:#f6f8fa;padding:8pt;white-space:pre-wrap}hr{border:none;border-to
 </tr>
 </tbody>
 </table>
-<p>当前数据：<code>found</code> 728 / <code>absent</code> 1167 / <code>unknown</code> 666。
-<strong>截止日明确且未过的只有 36 条</strong>——这个数很小，但不是 bug：多数学校本来就不写截止日，我们不猜。</p>
+<p>当前数据：<code>found</code> 749 / <code>absent</code> 1199 / <code>unknown</code> 698。
+<strong>截止日明确且未过的只有 40 条</strong>——这个数很小，但不是 bug：多数学校本来就不写截止日，我们不猜。</p>
 <p><strong>② 每条都能回原文</strong></p>
 <p>推送、导师、套磁信引文都带原始 URL。用户不需要相信我们，只需要点一下。</p>
 <p><strong>③ 空了就说空</strong></p>
@@ -168,7 +168,7 @@ pre{background:#f6f8fa;padding:8pt;white-space:pre-wrap}hr{border:none;border-to
 </ul>
 <h3>4.3 质量保障</h3>
 <ul>
-<li><strong>232 条自动门禁</strong>：契约形状、三态不变量、数据健康、接口行为、公网只读、请求体上限。</li>
+<li><strong>233 条自动门禁</strong>：契约形状、三态不变量、数据健康、接口行为、公网只读、请求体上限。</li>
 <li>数据健康门禁：正文空壳、分类自洽、悬空事件、发布日缺失率、截止日 unknown 占比突变、标题坍塌。</li>
 <li>三校外部对照：漏率从 74.1% 降到 <strong>17.4%</strong>（北大 155/212、川大 266/302、清华物理 19/19）。</li>
 <li>其余 26 所尚未做外部对照——这是已知边界，写在 README 里。</li>
@@ -184,11 +184,11 @@ pre{background:#f6f8fa;padding:8pt;white-space:pre-wrap}hr{border:none;border-to
 <tbody>
 <tr>
 <td>公告入库</td>
-<td style="text-align: right;">2,561 条</td>
+<td style="text-align: right;">2,646 条</td>
 </tr>
 <tr>
-<td>默认展示（剔除 142 条 junk）</td>
-<td style="text-align: right;">2,419 条</td>
+<td>默认展示（剔除 150 条 junk）</td>
+<td style="text-align: right;">2,496 条</td>
 </tr>
 <tr>
 <td>招生通知（announcement）</td>
@@ -204,7 +204,7 @@ pre{background:#f6f8fa;padding:8pt;white-space:pre-wrap}hr{border:none;border-to
 </tr>
 <tr>
 <td>其他</td>
-<td style="text-align: right;">1,710 条</td>
+<td style="text-align: right;">1,708 条（另有 87 条旧记录未分类）</td>
 </tr>
 <tr>
 <td>学校 / 站点 / 院系单位</td>
@@ -216,7 +216,7 @@ pre{background:#f6f8fa;padding:8pt;white-space:pre-wrap}hr{border:none;border-to
 </tr>
 <tr>
 <td>事件流</td>
-<td style="text-align: right;">2,561 条</td>
+<td style="text-align: right;">2,660 条</td>
 </tr>
 <tr>
 <td>近 7 天发布的招生通知</td>
@@ -224,11 +224,11 @@ pre{background:#f6f8fa;padding:8pt;white-space:pre-wrap}hr{border:none;border-to
 </tr>
 <tr>
 <td>近 30 天发布的招生通知</td>
-<td style="text-align: right;">18 条</td>
+<td style="text-align: right;">17 条</td>
 </tr>
 <tr>
 <td>契约门禁</td>
-<td style="text-align: right;">232 通过 / 0 失败</td>
+<td style="text-align: right;">233 通过 / 0 失败</td>
 </tr>
 </tbody>
 </table>
@@ -330,7 +330,7 @@ pre{background:#f6f8fa;padding:8pt;white-space:pre-wrap}hr{border:none;border-to
 <tr>
 <td>MVP（现在）</td>
 <td>已完成</td>
-<td>29 校、推送链路、导师、套磁信、232 门禁</td>
+<td>29 校、推送链路、导师、套磁信、233 门禁</td>
 </tr>
 <tr>
 <td>公测</td>
@@ -390,7 +390,7 @@ pre{background:#f6f8fa;padding:8pt;white-space:pre-wrap}hr{border:none;border-to
 <h2>11. 团队</h2>
 <ul>
 <li>A：数据管道（抓取、抽取、分类、去重、质量门禁）</li>
-<li>B：服务层（接口、打分、状态、232 条契约门禁）</li>
+<li>B：服务层（接口、打分、状态、233 条契约门禁）</li>
 <li>C/F：前端（11 个页面、移动端、演示脚本）</li>
 <li>统筹：交付节奏与验收；QA：只读巡检（每轮自己跑门禁、走学生画像）</li>
 </ul>
@@ -400,6 +400,6 @@ pre{background:#f6f8fa;padding:8pt;white-space:pre-wrap}hr{border:none;border-to
 </blockquote>
 <hr />
 <h2>12. 一句话收尾</h2>
-<p><strong>这个项目最值钱的不是 2,561 条数据，是它对「不知道」的处理方式。</strong></p>
+<p><strong>这个项目最值钱的不是 2,646 条数据，是它对「不知道」的处理方式。</strong></p>
 <p>读不到截止日就说读不到；没有对口公告就说今天没有；判据错了就把判据和实测一起写下来，让下一个人能推翻它。
 守住这三条，29 所学校也是可信的；丢了它们，200 所也只是另一堆没人敢用的数据。</p></body></html>

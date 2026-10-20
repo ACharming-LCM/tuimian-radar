@@ -1,16 +1,77 @@
 {
- "generated_at": "2026-10-18T16:43:07",
+ "generated_at": "2026-10-20T16:40:37",
  "counts": {
-  "previous": 1135,
-  "current": 1135,
-  "added": 0,
+  "previous": 2645,
+  "current": 2646,
+  "added": 1,
   "changed": 0,
   "reparsed": 0,
   "removed": 0,
   "reidentified": 0,
-  "unchanged": 1135
+  "unchanged": 2645
  },
- "added": [],
+ "added": [
+  {
+   "id": "u815fd713-f6bdf965c9dfa12e",
+   "school": "上海大学",
+   "school_slug": "u815fd713",
+   "unit": "研究生院",
+   "board": "硕士招生简章",
+   "title": "上海大学研究生院",
+   "publish_date": "2025-09-23",
+   "url": "https://gmis.shu.edu.cn/ZSJZ/SS/2026/",
+   "source": null,
+   "body_text": "上海大学2026年学术学位硕士研究生招生专业目录\n上海大学2026年全日制专业学位硕士研究生招生专业目录\n上海大学2026年非全日制专业学位硕士研究生招生专业目录\n上海大学2026年学术学位硕士研究生招生计划汇总表\n上海大学2026年全日制专业学位硕士研究生招生计划汇总表\n上海大学2026年非全日制专业学位硕士研究生招生计划汇总表\n上海大学2026年学术学位硕士研究生初试科目及参考书目\n上海大学2026年专业学位硕士研究生初试科目及参考书目\n上海大学2026年硕士研究生复试科目及参考书目",
+   "body_len": 246,
+   "attachments": [],
+   "deadline": null,
+   "target_year": 2026,
+   "degree_types": [
+    "硕士"
+   ],
+   "apply_mode": "统考",
+   "majors": [],
+   "materials": [],
+   "contact": {
+    "email": null,
+    "phone": null
+   },
+   "tags": [
+    "复试",
+    "专业目录"
+   ],
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 0.33
+   },
+   "crawled_at": "2026-10-20T16:40:36",
+   "content_hash": "sha1:c1ec625dd7105272ab68ea9a2f3dafa6611a16a9",
+   "relevance": 2,
+   "body_how": "generic",
+   "field_state": {
+    "deadline": "unknown",
+    "majors": "unknown",
+    "materials": "unknown",
+    "contact": "unknown",
+    "attachments": "unknown",
+    "body": "generic"
+   },
+   "record_quality": "junk",
+   "quality_hits": [
+    "title_is_site_name"
+   ],
+   "title_source": "none",
+   "topic": "apply",
+   "topic_hits": [
+    "复试",
+    "专业目录"
+   ],
+   "is_fresh": "stale",
+   "age_days": 392,
+   "admission_year": 2026
+  }
+ ],
  "changed": [],
  "reparsed": [],
  "removed": [],

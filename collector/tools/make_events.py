@@ -200,6 +200,28 @@ def build(diff):
     return events, skipped, at
 
 
+def load_seen_urls(path):
+    """已经产生过 `added` 事件的 URL。**id 会变，URL 不会。**
+
+    同一公告换 unit 后 id 变了，若只按 event_id 去重，日更会再写一条 `added`，
+    用户就收到同一条公告的第二份推送。按 URL 兜一层，避免这种重复。
+    """
+    urls = set()
+    if not os.path.exists(path):
+        return urls
+    with open(path, encoding="utf-8") as f:
+        for ln in f:
+            if not ln.strip():
+                continue
+            try:
+                e = json.loads(ln)
+            except json.JSONDecodeError:
+                continue
+            if e.get("type") == KIND_ADDED and e.get("url"):
+                urls.add((e["url"] or "").rstrip("/"))
+    return urls
+
+
 def load_seen(path):
     """已有事件里出现过的 event_id。**半截行要跳过** ——
     上次写到一半被打断，不该让整个事件流永久坏掉。"""
@@ -321,16 +343,20 @@ def backfill_corpus(notices_path, events_path, write=False):
     with open(notices_path, encoding="utf-8") as f:
         recs = [json.loads(ln) for ln in f if ln.strip()]
     seen = load_seen(events_path)
+    seen_urls = load_seen_urls(events_path)
     fresh, skipped_nofield = [], 0
     for r in recs:
         eid = event_id(KIND_ADDED, r.get("id") or "", "")
-        if eid in seen:
+        u = (r.get("url") or "").rstrip("/")
+        if eid in seen or (u and u in seen_urls):
             continue
         if not r.get("url") or not r.get("id"):
             skipped_nofield += 1
             continue
         at = r.get("crawled_at") or datetime.now().isoformat(timespec="seconds")
         fresh.append(base_event(r, KIND_ADDED, at, at[:10], eid))
+        if u:
+            seen_urls.add(u)
 
     n_bf = sum(1 for e in fresh if e.get("is_backfill"))
     print(f"存量公告 {len(recs)} 条 → 待补事件 {len(fresh)} 条"
@@ -388,6 +414,7 @@ def daily(changes_path, notices_path, events_path, write=False):
     by_id = {r.get("id"): r for r in notices}
 
     seen = load_seen(events_path)
+    seen_urls = load_seen_urls(events_path)
     n_before = len(seen)
     batch, dropped = [], []
 
@@ -399,10 +426,14 @@ def daily(changes_path, notices_path, events_path, write=False):
         print(f"changes.json 生成于 {at}，本轮事件 {len(evs)} 个"
               + (f"，跳过 {len(skipped)} 个（缺 url/id）" if skipped else ""))
         for e in evs:
-            if e["event_id"] in seen:
+            u = (e.get("url") or "").rstrip("/")
+            if e["event_id"] in seen or (
+                    e.get("type") == KIND_ADDED and u and u in seen_urls):
                 dropped.append(e["event_id"])
                 continue
             seen.add(e["event_id"])
+            if e.get("type") == KIND_ADDED and u:
+                seen_urls.add(u)
             batch.append(e)
     else:
         print(f"⚠️ 没有 {changes_path}，跳过变更事件（只做存量覆盖）")
@@ -411,13 +442,16 @@ def daily(changes_path, notices_path, events_path, write=False):
     missing, n_corpus = 0, 0
     for r in notices:
         eid = event_id(KIND_ADDED, r.get("id") or "", "")
-        if eid in seen:
+        u = (r.get("url") or "").rstrip("/")
+        if eid in seen or (u and u in seen_urls):
             continue
         if not r.get("url") or not r.get("id"):
             missing += 1
             continue
         stamp = r.get("crawled_at") or datetime.now().isoformat(timespec="seconds")
         seen.add(eid)
+        if u:
+            seen_urls.add(u)
         batch.append(base_event(r, KIND_ADDED, stamp, stamp[:10], eid))
         n_corpus += 1
     print(f"存量覆盖：公告 {len(notices)} 条 → 本次补 {n_corpus} 条"
@@ -481,17 +515,18 @@ def audit(notices_path, events_path):
       是我们自己的**栏目选择漂移**（复旦 c15157 栏这轮没被选中；吉大那 6 条当年
       把导航条当成了栏目）。**不是学校删了公告。**
     """
-    ids, by_url = set(), {}
+    ids, records, by_url = set(), [], {}
     if os.path.exists(notices_path):
         with open(notices_path, encoding="utf-8") as f:
             for ln in f:
                 if not ln.strip():
                     continue
                 r = json.loads(ln)
+                records.append(r)
                 ids.add(r.get("id"))
                 if r.get("url"):
                     by_url[(r["url"] or "").rstrip("/")] = r.get("id")
-    events, covered, orphans = 0, set(), []
+    events, covered, covered_urls, orphans = 0, set(), set(), []
     if os.path.exists(events_path):
         with open(events_path, encoding="utf-8") as f:
             for ln in f:
@@ -504,6 +539,8 @@ def audit(notices_path, events_path):
                 events += 1
                 nid = e.get("notice_id")
                 covered.add(nid)
+                if e.get("url"):
+                    covered_urls.add((e["url"] or "").rstrip("/"))
                 if nid and nid not in ids:
                     same = by_url.get((e.get("url") or "").rstrip("/"))
                     orphans.append({"event_id": e.get("event_id"), "type": e.get("type"),
@@ -512,8 +549,16 @@ def audit(notices_path, events_path):
                                     "url": e.get("url"), "notice_missing": True,
                                     "cause": "id_changed" if same else "not_captured",
                                     "replaced_by": same})
-    return ({"events": events, "notices": len(ids), "no_event": len(ids - covered)},
-            orphans)
+    # **按 URL 也算覆盖。** `make_id` 依赖 school+unit，同一条公告换了个栏目
+    # 就会换 id（A8 记录过），事件仍然指着旧 id。只看 id 会把这 14 条误报成
+    # "没有任何事件" —— 其实事件在，只是 id 变了（audit 同时会把它们列为
+    # id_changed 悬空事件，两处口径要一致）。
+    no_event = sum(
+        1 for r in records
+        if r.get("id") not in covered
+        and (r.get("url") or "").rstrip("/") not in covered_urls
+    )
+    return ({"events": events, "notices": len(ids), "no_event": no_event}, orphans)
 
 
 def main():

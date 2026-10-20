@@ -1,60 +1,67 @@
 {
- "id": "u1b6a206e-739bce9a09580282",
- "school": "北京航空航天大学",
- "school_slug": "u1b6a206e",
- "unit": "研究生院",
- "board": "学历硕士",
- "title": "关于10月14日温馨提示的学籍学历校验补充通知（2026年10月16日）",
- "publish_date": "2026-10-16",
- "url": "http://yzb.buaa.edu.cn/info/1003/3653.htm",
+ "id": "ua8ae400a-5af72ede63cb219c",
+ "school": "北京大学",
+ "school_slug": "ua8ae400a",
+ "unit": "研究生招生网",
+ "board": " 硕士招生  博士招生  港澳台招生  留学生招生  夏令营  网上报名",
+ "title": "27\"申请-考核制\"博士研究生推荐信线上提交流程",
+ "publish_date": "2026-10-20",
+ "url": "https://admission.pku.edu.cn/docs/20261020091156436628.pdf",
  "source": null,
- "body_text": "根据上级提供的学籍学历校验信息，现对北航研招网10月14日公布的“报考北航2027年硕士研究生温馨提示（10月14日）”及“北航报考点2026年10月14日温馨提示”做补充通知，对预报名阶段学籍学历校验存在疑问的考生予以提醒，具体名单见附件。考生若有疑问，可拨打010-88888888（工作日上午8:30-11:30；下午14:30-17:30）或发送邮件至yzb@buaa.edu.cn咨询。\n附件名单中的考生，须按照附件中“提交材料类别”列提及的内容，通过PC端点击附件中提及的“提交材料网址”，上传相关材料。未提交相应材料者，将不予审核通过，造成无法参加考试的后果由考生自行承担。点击可下载  硕士初试考生提交材料操作指南.pdf。\n附件：\n报考北航2027年硕士研究生10月14日温馨提示中学籍学历检验补充名单（2026年10月16日）.pdf\n北航报考点报考2027年硕士研究生10月14日温馨提示中学籍学历检验补充名单（2026年10月16日）.pdf",
- "body_len": 433,
- "attachments": [],
+ "body_text": "考生上传推荐信流程 \n1. 考生填写推荐人信息在报名系统中“专家推荐信”环节，考生按要求填写推荐专家的姓名、 工作单位、 邮箱等信息，确保信息的准确性和完整性。 \n注意： （1）考生在填写信息前，需要先与推荐专家沟通，征得推荐专家的同意和配合；\n（2）信息填写完毕后，考生须确认推荐专家姓名、单位和邮箱准确无误，若填写错误推荐专家将无法收到推荐信邀请邮件；（3）每个志愿须提交两封专家推荐信。 \n \n \n2. 系统发送填写推荐信邀请推荐专家信息填写完毕并确认无误后， 点击 “发送邮件” 按钮，报名系统将根据考生填写的信息， 自动向推荐专家邮箱发送邮件，邀请推荐专家填写并上传推荐信。邮件发送成功后，会出现“邮件已发送”的弹窗。 \n\n \n3. 考生确认推荐信上传状态在院系报名时间截止前， 考生须登录报名网站确认专家推荐信是否成功上传。若未上传， 考生应提醒推荐专家在报名时间截止前填写并上传推荐信。 \n \n \n4. 保存和邮寄推荐信原件除上传电子版推荐信外， 考生还须妥善保存推荐信原件 （须由推荐专家密封并在封口骑缝处签字） ，按照报考院系的“申请-考核” 制招生说明要求将推荐信原件寄 （送） 达至院系。 \n",
+ "body_len": 507,
+ "attachments": [
+  {
+   "name": "20261020091156436628.pdf",
+   "url": "https://admission.pku.edu.cn/docs/20261020091156436628.pdf",
+   "parsed": true,
+   "kind": "file",
+   "text_len": 507,
+   "note": null
+  }
+ ],
  "deadline": null,
- "target_year": 2026,
+ "target_year": null,
  "degree_types": [
-  "硕士"
+  "博士"
  ],
  "apply_mode": null,
- "majors": [
-  "材料",
-  "信息"
+ "majors": [],
+ "materials": [
+  "推荐信",
+  "专家推荐"
  ],
- "materials": [],
  "contact": {
-  "email": "yzb@buaa.edu.cn",
-  "phone": "010-88888888"
+  "email": null,
+  "phone": null
  },
  "tags": [],
  "extract": {
   "method": "rule",
   "version": "v6",
-  "confidence": 0.5
+  "confidence": 0.33
  },
- "crawled_at": "2026-10-18T17:51:25",
- "content_hash": "sha1:26c561372c4741210151190a34c5d1d98249ad69",
- "relevance": 0,
- "body_how": "selector",
+ "crawled_at": "2026-10-20T16:26:58",
+ "content_hash": "sha1:1539c863f4d54ff93bc07fa89ea7d3fc02c91e61",
+ "relevance": 2,
+ "body_how": "file",
  "field_state": {
   "deadline": "absent",
-  "majors": "found",
-  "materials": "absent",
-  "contact": "found",
-  "attachments": "absent",
+  "majors": "absent",
+  "materials": "found",
+  "contact": "absent",
+  "attachments": "found",
   "body": "ok"
  },
  "record_quality": "ok",
  "quality_hits": [],
  "title_source": "detail",
- "topic": "non_apply",
+ "topic": "apply",
  "topic_hits": [
-  "学籍"
+  "报名",
+  "报考"
  ],
  "is_fresh": true,
- "age_days": 3,
- "admission_year": null,
- "age_tier": "live",
- "notice_kind": "other",
- "kind_hits": []
+ "age_days": 0,
+ "admission_year": null
 }

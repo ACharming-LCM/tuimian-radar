@@ -53,18 +53,68 @@
   ]
  },
  "stats": {
-  "total": 2561,
+  "total": 2646,
   "dropped_expired": 0,
-  "dropped_mode": 378,
-  "scored": 2183
+  "dropped_mode": 393,
+  "scored": 2253
  },
  "items": [
+  {
+   "id": "u285779f0-69706-3216693",
+   "score": 1.0,
+   "raw_score": 1.0,
+   "bucket": "可规划",
+   "days_left": 31,
+   "title": "浙江大学物理学院2027年博士研究生招生简章",
+   "school": "浙江大学",
+   "unit": "物理学院",
+   "publish_date": "2026-10-19",
+   "deadline": "2026-11-20",
+   "url": "https://physics.zju.edu.cn/2026/1019/c69706a3216693/page.htm",
+   "reasons": [
+    "专业对口：物理学、材料、光学",
+    "推免",
+    "博士、直博",
+    "目标单位：物理学院",
+    "2027 年招生（对应你这一届）"
+   ],
+   "warnings": [
+    "公告提到「托福」，若你没有相应材料请先确认是否影响申请",
+    "公告提到「雅思」，若你没有相应材料请先确认是否影响申请",
+    "公告提到「推荐信」，若你没有相应材料请先确认是否影响申请"
+   ],
+   "has_attachments": true,
+   "attachments_count": 4,
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 1.0
+   },
+   "field_trust": {
+    "untrusted_count": 0,
+    "untrusted_fields": [],
+    "weak_fields": [],
+    "has_untrusted": false,
+    "states": {
+     "deadline": "found",
+     "majors": "found",
+     "materials": "found",
+     "contact": "found",
+     "attachments": "found"
+    },
+    "body": "ok"
+   },
+   "record_quality": "ok",
+   "topic": "apply",
+   "is_fresh": true,
+   "age_days": 1
+  },
   {
    "id": "u1b6a206e-6a8f889bbae7dd25",
    "score": 1.0,
    "raw_score": 1.0,
    "bucket": "立即行动",
-   "days_left": 1,
+   "days_left": 0,
    "title": "北航报考点（报考点代码：1106）招收2027年学历硕士研究生网上报名公告",
    "school": "北京航空航天大学",
    "unit": "研究生院",
@@ -110,7 +160,7 @@
    "score": 1.0,
    "raw_score": 1.0,
    "bucket": "可规划",
-   "days_left": 81,
+   "days_left": 80,
    "title": "天津大学2027年博士研究生招生简章",
    "school": "天津大学",
    "unit": "研究生院",
@@ -162,7 +212,7 @@
    "score": 1.0,
    "raw_score": 1.0,
    "bucket": "立即行动",
-   "days_left": 5,
+   "days_left": 4,
    "title": "四川大学2027年硕士研究生网上报名公告【报考我校必读】",
    "school": "四川大学",
    "unit": "研究生院",
@@ -212,7 +262,7 @@
    "score": 1.0,
    "raw_score": 1.0,
    "bucket": "立即行动",
-   "days_left": 5,
+   "days_left": 4,
    "title": "2027年全国硕士研究生招生考试中山大学报考点（代码：4413）公告",
    "school": "中山大学",
    "unit": "研究生院",
@@ -258,7 +308,7 @@
    "score": 1.0,
    "raw_score": 1.0,
    "bucket": "已过期",
-   "days_left": -19,
+   "days_left": -20,
    "title": "中山大学2027年硕士研究生招生章程及专业目录",
    "school": "中山大学",
    "unit": "研究生院",
@@ -300,11 +350,57 @@
    "age_days": 19
   },
   {
+   "id": "u0e6b64d1-43463-780720",
+   "score": 1.0,
+   "raw_score": 1.0,
+   "bucket": "已过期",
+   "days_left": -11,
+   "title": "华东师范大学2027年公费师范毕业生免试攻读非全日制教育硕士研究生招生简章",
+   "school": "华东师范大学",
+   "unit": "研究生院",
+   "publish_date": "2026-09-23",
+   "deadline": "2026-10-09",
+   "url": "https://yjszs.ecnu.edu.cn/e9/b0/c43463a780720/page.htm",
+   "reasons": [
+    "专业对口：物理学、材料",
+    "推免",
+    "硕士",
+    "目标单位：研究生院",
+    "2027 年招生（对应你这一届）"
+   ],
+   "warnings": [],
+   "has_attachments": false,
+   "attachments_count": 0,
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 1.0
+   },
+   "field_trust": {
+    "untrusted_count": 0,
+    "untrusted_fields": [],
+    "weak_fields": [],
+    "has_untrusted": false,
+    "states": {
+     "deadline": "found",
+     "majors": "found",
+     "materials": "found",
+     "contact": "found",
+     "attachments": "absent"
+    },
+    "body": "ok"
+   },
+   "record_quality": "ok",
+   "topic": "apply",
+   "is_fresh": true,
+   "age_days": 27
+  },
+  {
    "id": "u57dcf3ee-47868-842869",
    "score": 0.97,
    "raw_score": 0.97,
    "bucket": "已过期",
-   "days_left": -38,
+   "days_left": -39,
    "title": "关于开展2027年南京大学博士研究生校长特别奖学金评选工作的通知",
    "school": "南京大学",
    "unit": "研究生院",
@@ -346,11 +442,57 @@
    "age_days": 46
   },
   {
+   "id": "u57dcf3ee-47865-842868",
+   "score": 0.97,
+   "raw_score": 0.97,
+   "bucket": "已过期",
+   "days_left": -39,
+   "title": "关于开展2027年南京大学博士研究生校长特别奖学金评选工作的通知",
+   "school": "南京大学",
+   "unit": "研究生院",
+   "publish_date": "2026-09-03",
+   "deadline": "2026-09-11",
+   "url": "https://yzb.nju.edu.cn/dc/74/c47865a842868/page.htm",
+   "reasons": [
+    "专业对口：材料",
+    "推免",
+    "博士、直博",
+    "目标单位：研究生院",
+    "2027 年招生（对应你这一届）"
+   ],
+   "warnings": [],
+   "has_attachments": true,
+   "attachments_count": 2,
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 1.0
+   },
+   "field_trust": {
+    "untrusted_count": 0,
+    "untrusted_fields": [],
+    "weak_fields": [],
+    "has_untrusted": false,
+    "states": {
+     "deadline": "found",
+     "majors": "found",
+     "materials": "found",
+     "contact": "found",
+     "attachments": "found"
+    },
+    "body": "missing"
+   },
+   "record_quality": "ok",
+   "topic": "non_apply",
+   "is_fresh": false,
+   "age_days": 47
+  },
+  {
    "id": "ua8ae400a-3b3b99e96499c7e2",
    "score": 0.955,
    "raw_score": 0.955,
    "bucket": "立即行动",
-   "days_left": 5,
+   "days_left": 4,
    "title": "27年全国硕士研究生招生考试北京大学（10001）网报公告",
    "school": "北京大学",
    "unit": "研究生招生网",
@@ -544,6 +686,105 @@
    "age_days": 11
   },
   {
+   "id": "u57dcf3ee-47863-845593",
+   "score": 0.949,
+   "raw_score": 1.0,
+   "bucket": "需人工确认",
+   "days_left": null,
+   "title": "南京大学2027年硕士研究生招生目录",
+   "school": "南京大学",
+   "unit": "研究生院",
+   "publish_date": "2026-10-08",
+   "deadline": null,
+   "url": "https://yzb.nju.edu.cn/e7/19/c47863a845593/page.htm",
+   "reasons": [
+    "专业对口：物理学、力学、材料",
+    "推免",
+    "硕士",
+    "目标单位：研究生院",
+    "2027 年招生（对应你这一届）"
+   ],
+   "warnings": [
+    "未抽到截止日期，务必点开原文确认",
+    "公告提到「雅思」，若你没有相应材料请先确认是否影响申请"
+   ],
+   "has_attachments": true,
+   "attachments_count": 1,
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 0.83
+   },
+   "field_trust": {
+    "untrusted_count": 1,
+    "untrusted_fields": [
+     "deadline"
+    ],
+    "weak_fields": [],
+    "has_untrusted": true,
+    "states": {
+     "deadline": "unknown",
+     "majors": "found",
+     "materials": "found",
+     "contact": "found",
+     "attachments": "found"
+    },
+    "body": "missing"
+   },
+   "record_quality": "ok",
+   "topic": "apply",
+   "is_fresh": true,
+   "age_days": 12
+  },
+  {
+   "id": "u09c53391-414812c9011502ca",
+   "score": 0.94,
+   "raw_score": 0.94,
+   "bucket": "已过期",
+   "days_left": -97,
+   "title": "重庆大学研究生招生信息网（测试版）",
+   "school": "重庆大学",
+   "unit": "研究生院",
+   "publish_date": "2026-07-06",
+   "deadline": "2026-07-15",
+   "url": "https://yz.cqu.edu.cn/news/2026-07/2555.html",
+   "reasons": [
+    "专业对口：物理学、材料",
+    "推免",
+    "博士、直博",
+    "目标单位：研究生院",
+    "2027 年招生（对应你这一届）"
+   ],
+   "warnings": [],
+   "has_attachments": true,
+   "attachments_count": 1,
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 1.0
+   },
+   "field_trust": {
+    "untrusted_count": 0,
+    "untrusted_fields": [],
+    "weak_fields": [
+     "body"
+    ],
+    "has_untrusted": false,
+    "states": {
+     "deadline": "found",
+     "majors": "found",
+     "materials": "found",
+     "contact": "found",
+     "attachments": "found"
+    },
+    "body": "generic"
+   },
+   "record_quality": "ok",
+   "topic": "apply",
+   "is_fresh": false,
+   "age_days": 106
+  },
+  {
    "id": "u0f849fc1-d22b4d50ae80cb36",
    "score": 0.9205,
    "raw_score": 0.97,
@@ -647,7 +888,7 @@
    "score": 0.9205,
    "raw_score": 0.97,
    "bucket": "已过期",
-   "days_left": -37,
+   "days_left": -38,
    "title": "2027年“四川大学",
    "school": "四川大学",
    "unit": "研究生院",
@@ -744,6 +985,108 @@
    "age_days": 41
   },
   {
+   "id": "u57dcf3ee-47863-843228",
+   "score": 0.9205,
+   "raw_score": 0.97,
+   "bucket": "需人工确认",
+   "days_left": null,
+   "title": "南京大学2027年接收推荐免试研究生工作办法",
+   "school": "南京大学",
+   "unit": "研究生院",
+   "publish_date": "2026-09-08",
+   "deadline": null,
+   "url": "https://yzb.nju.edu.cn/dd/dc/c47863a843228/page.htm",
+   "reasons": [
+    "专业对口：材料",
+    "推免",
+    "博士、直博",
+    "目标单位：研究生院",
+    "2027 年招生（对应你这一届）"
+   ],
+   "warnings": [
+    "未抽到截止日期，务必点开原文确认",
+    "公告提到「推荐信」，若你没有相应材料请先确认是否影响申请"
+   ],
+   "has_attachments": true,
+   "attachments_count": 4,
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 0.83
+   },
+   "field_trust": {
+    "untrusted_count": 1,
+    "untrusted_fields": [
+     "deadline"
+    ],
+    "weak_fields": [],
+    "has_untrusted": true,
+    "states": {
+     "deadline": "unknown",
+     "majors": "found",
+     "materials": "found",
+     "contact": "found",
+     "attachments": "found"
+    },
+    "body": "missing"
+   },
+   "record_quality": "ok",
+   "topic": "apply",
+   "is_fresh": false,
+   "age_days": 42
+  },
+  {
+   "id": "u57dcf3ee-47865-843230",
+   "score": 0.9205,
+   "raw_score": 0.97,
+   "bucket": "需人工确认",
+   "days_left": null,
+   "title": "南京大学2027年接收推荐免试研究生工作办法",
+   "school": "南京大学",
+   "unit": "研究生院",
+   "publish_date": "2026-09-08",
+   "deadline": null,
+   "url": "https://yzb.nju.edu.cn/dd/de/c47865a843230/page.htm",
+   "reasons": [
+    "专业对口：材料",
+    "推免",
+    "博士、直博",
+    "目标单位：研究生院",
+    "2027 年招生（对应你这一届）"
+   ],
+   "warnings": [
+    "未抽到截止日期，务必点开原文确认",
+    "公告提到「推荐信」，若你没有相应材料请先确认是否影响申请"
+   ],
+   "has_attachments": true,
+   "attachments_count": 4,
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 0.83
+   },
+   "field_trust": {
+    "untrusted_count": 1,
+    "untrusted_fields": [
+     "deadline"
+    ],
+    "weak_fields": [],
+    "has_untrusted": true,
+    "states": {
+     "deadline": "unknown",
+     "majors": "found",
+     "materials": "found",
+     "contact": "found",
+     "attachments": "found"
+    },
+    "body": "missing"
+   },
+   "record_quality": "ok",
+   "topic": "apply",
+   "is_fresh": false,
+   "age_days": 42
+  },
+  {
    "id": "u4bf1b0fe-c8c118178c27c894",
    "score": 0.9205,
    "raw_score": 0.97,
@@ -801,7 +1144,7 @@
    "score": 0.9205,
    "raw_score": 0.97,
    "bucket": "已过期",
-   "days_left": -11,
+   "days_left": -12,
    "title": "华中师范大学2027年公费师范生免试攻读教育硕士招生办法",
    "school": "华中师范大学",
    "unit": "研究生院",
@@ -892,11 +1235,59 @@
    "age_days": 42
   },
   {
+   "id": "u0e6b64d1-43463-775121",
+   "score": 0.9205,
+   "raw_score": 0.97,
+   "bucket": "无截止日",
+   "days_left": null,
+   "title": "华东师范大学2027年接收优秀应届本科毕业生免试攻读研究生（含本科直博）工作办法",
+   "school": "华东师范大学",
+   "unit": "研究生院",
+   "publish_date": "2026-09-04",
+   "deadline": null,
+   "url": "https://yjszs.ecnu.edu.cn/d3/d1/c43463a775121/page.htm",
+   "reasons": [
+    "专业对口：材料",
+    "推免",
+    "博士、直博",
+    "目标单位：研究生院",
+    "2027 年招生（对应你这一届）"
+   ],
+   "warnings": [
+    "未抽到截止日期，务必点开原文确认"
+   ],
+   "has_attachments": false,
+   "attachments_count": 0,
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 0.83
+   },
+   "field_trust": {
+    "untrusted_count": 0,
+    "untrusted_fields": [],
+    "weak_fields": [],
+    "has_untrusted": false,
+    "states": {
+     "deadline": "absent",
+     "majors": "found",
+     "materials": "found",
+     "contact": "found",
+     "attachments": "absent"
+    },
+    "body": "ok"
+   },
+   "record_quality": "ok",
+   "topic": "apply",
+   "is_fresh": false,
+   "age_days": 46
+  },
+  {
    "id": "u4bf1b0fe-5c766e0275b48ccb",
    "score": 0.9205,
    "raw_score": 0.97,
    "bucket": "已过期",
-   "days_left": -39,
+   "days_left": -40,
    "title": "四川大学2027年“工程硕博士培养改革专项”全日制招生简章",
    "school": "四川大学",
    "unit": "研究生院",
@@ -996,7 +1387,7 @@
    "score": 0.9205,
    "raw_score": 0.97,
    "bucket": "已过期",
-   "days_left": -50,
+   "days_left": -51,
    "title": "浙江大学材料科学与工程学院推荐 2027届优秀应届本科毕业生免试攻读研究生工作细则",
    "school": "浙江大学",
    "unit": "材料科学与工程学院",
@@ -1089,408 +1480,17 @@
    "age_days": 81
   },
   {
-   "id": "ucd1acaac-6667-585158",
-   "score": 0.91,
-   "raw_score": 0.91,
-   "bucket": "立即行动",
-   "days_left": 5,
-   "title": "东南大学2027年硕士研究生招生章程",
-   "school": "东南大学",
-   "unit": "研究生院",
-   "publish_date": "2026-10-08",
-   "deadline": "2026-10-24",
-   "url": "https://yzb.seu.edu.cn/2026/1008/c6667a585158/page.htm",
-   "reasons": [
-    "专业对口：材料",
-    "推免",
-    "目标单位：研究生院",
-    "2027 年招生（对应你这一届）"
-   ],
-   "warnings": [
-    "标题写「硕士」但抽取到「博士」，层次判断可能有误，请核对原文"
-   ],
-   "has_attachments": false,
-   "attachments_count": 0,
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 1.0
-   },
-   "field_trust": {
-    "untrusted_count": 0,
-    "untrusted_fields": [],
-    "weak_fields": [],
-    "has_untrusted": false,
-    "states": {
-     "deadline": "found",
-     "majors": "found",
-     "materials": "found",
-     "contact": "found",
-     "attachments": "absent"
-    },
-    "body": "ok"
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 11
-  },
-  {
-   "id": "u4bf1b0fe-4f73ce616973e53a",
-   "score": 0.91,
-   "raw_score": 0.91,
-   "bucket": "已过期",
-   "days_left": -7,
-   "title": "四川大学2027年硕士研究生招生章程",
-   "school": "四川大学",
-   "unit": "研究生院",
-   "publish_date": "2026-10-08",
-   "deadline": "2026-10-12",
-   "url": "https://yz.scu.edu.cn/zsxx/Details/a9e04641-aa5f-401f-892e-f069c0f8ecb2",
-   "reasons": [
-    "专业对口：材料",
-    "夏令营",
-    "目标单位：研究生院",
-    "2027 年招生（对应你这一届）"
-   ],
-   "warnings": [
-    "标题写「硕士」但抽取到「博士」，层次判断可能有误，请核对原文"
-   ],
-   "has_attachments": false,
-   "attachments_count": 0,
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 1.0
-   },
-   "field_trust": {
-    "untrusted_count": 1,
-    "untrusted_fields": [
-     "attachments"
-    ],
-    "weak_fields": [
-     "body"
-    ],
-    "has_untrusted": true,
-    "states": {
-     "deadline": "found",
-     "majors": "found",
-     "materials": "found",
-     "contact": "found",
-     "attachments": "unknown"
-    },
-    "body": "generic"
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 11
-  },
-  {
-   "id": "ua37ee91b-4bd106beb5116449",
-   "score": 0.91,
-   "raw_score": 0.91,
-   "bucket": "已过期",
-   "days_left": -7,
-   "title": "天津大学2027年硕士学位研究生招生简章",
-   "school": "天津大学",
-   "unit": "研究生院",
-   "publish_date": "2026-10-07",
-   "deadline": "2026-10-12",
-   "url": "https://yzb.tju.edu.cn/xwzx/tkss_xw/202610/t20261007_324742.htm",
-   "reasons": [
-    "专业对口：材料",
-    "推免",
-    "目标单位：研究生院",
-    "2027 年招生（对应你这一届）"
-   ],
-   "warnings": [
-    "标题写「硕士」但抽取到「博士」，层次判断可能有误，请核对原文"
-   ],
-   "has_attachments": true,
-   "attachments_count": 1,
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 1.0
-   },
-   "field_trust": {
-    "untrusted_count": 0,
-    "untrusted_fields": [],
-    "weak_fields": [
-     "body"
-    ],
-    "has_untrusted": false,
-    "states": {
-     "deadline": "found",
-     "majors": "found",
-     "materials": "found",
-     "contact": "found",
-     "attachments": "found"
-    },
-    "body": "generic"
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 12
-  },
-  {
-   "id": "u1b6a206e-620b047fa5c68442",
-   "score": 0.91,
-   "raw_score": 0.91,
-   "bucket": "立即行动",
-   "days_left": 1,
-   "title": "北航招收2027年学历硕士研究生招生简章",
-   "school": "北京航空航天大学",
-   "unit": "研究生院",
-   "publish_date": "2026-09-30",
-   "deadline": "2026-10-20",
-   "url": "http://yzb.buaa.edu.cn/info/1003/3632.htm",
-   "reasons": [
-    "专业对口：材料",
-    "推免",
-    "目标单位：研究生院",
-    "2027 年招生（对应你这一届）"
-   ],
-   "warnings": [
-    "标题写「硕士」但抽取到「博士」，层次判断可能有误，请核对原文"
-   ],
-   "has_attachments": false,
-   "attachments_count": 0,
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 1.0
-   },
-   "field_trust": {
-    "untrusted_count": 0,
-    "untrusted_fields": [],
-    "weak_fields": [],
-    "has_untrusted": false,
-    "states": {
-     "deadline": "found",
-     "majors": "found",
-     "materials": "found",
-     "contact": "found",
-     "attachments": "absent"
-    },
-    "body": "ok"
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 19
-  },
-  {
-   "id": "uf47e0e0b-00264bf5c086d0a6",
-   "score": 0.91,
-   "raw_score": 0.91,
-   "bucket": "已过期",
-   "days_left": -7,
-   "title": "吉林大学2027年硕士研究生招生章程及招生专业目录",
-   "school": "吉林大学",
-   "unit": "研究生院",
-   "publish_date": "2026-09-30",
-   "deadline": "2026-10-12",
-   "url": "https://yzb.jlu.edu.cn/info/1047/3678.htm",
-   "reasons": [
-    "专业对口：材料",
-    "推免",
-    "目标单位：研究生院",
-    "2027 年招生（对应你这一届）"
-   ],
-   "warnings": [
-    "标题写「硕士」但抽取到「博士」，层次判断可能有误，请核对原文"
-   ],
-   "has_attachments": false,
-   "attachments_count": 0,
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 1.0
-   },
-   "field_trust": {
-    "untrusted_count": 0,
-    "untrusted_fields": [],
-    "weak_fields": [],
-    "has_untrusted": false,
-    "states": {
-     "deadline": "found",
-     "majors": "found",
-     "materials": "found",
-     "contact": "found",
-     "attachments": "absent"
-    },
-    "body": "ok"
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 19
-  },
-  {
-   "id": "u4bf1b0fe-77f2962d8855dba5",
-   "score": 0.901,
-   "raw_score": 1.0,
-   "bucket": "立即行动",
-   "days_left": 5,
-   "title": "四川大学报考点（望江校区考点5101和江安校区考点5189）2027年全国硕士研究生招生考试网上报名公告",
-   "school": "四川大学",
-   "unit": "研究生院",
-   "publish_date": "2026-10-08",
-   "deadline": "2026-10-24",
-   "url": "https://yz.scu.edu.cn/zsxx/Details/f292b80f-a159-4d42-a784-28a5f4e10b77",
-   "reasons": [
-    "专业对口：材料",
-    "夏令营",
-    "硕士",
-    "目标单位：研究生院",
-    "2027 年招生（对应你这一届）"
-   ],
-   "warnings": [],
-   "has_attachments": false,
-   "attachments_count": 0,
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 0.67
-   },
-   "field_trust": {
-    "untrusted_count": 3,
-    "untrusted_fields": [
-     "materials",
-     "contact",
-     "attachments"
-    ],
-    "weak_fields": [
-     "body"
-    ],
-    "has_untrusted": true,
-    "states": {
-     "deadline": "found",
-     "majors": "found",
-     "materials": "unknown",
-     "contact": "unknown",
-     "attachments": "unknown"
-    },
-    "body": "generic"
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 11
-  },
-  {
-   "id": "ua37ee91b-3276d864dd266a20",
-   "score": 0.8921,
-   "raw_score": 0.94,
-   "bucket": "需人工确认",
-   "days_left": null,
-   "title": "关于天津大学2027年接收优秀应届本科毕业生免试攻读研究生预报名的通知",
-   "school": "天津大学",
-   "unit": "研究生院",
-   "publish_date": "2026-07-02",
-   "deadline": null,
-   "url": "https://yzb.tju.edu.cn/xwzx/tkss_xw/202607/t20260702_324675.htm",
-   "reasons": [
-    "专业对口：材料",
-    "推免",
-    "硕士",
-    "目标单位：研究生院",
-    "2027 年招生（对应你这一届）"
-   ],
-   "warnings": [
-    "未抽到截止日期，务必点开原文确认"
-   ],
-   "has_attachments": false,
-   "attachments_count": 0,
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 0.83
-   },
-   "field_trust": {
-    "untrusted_count": 2,
-    "untrusted_fields": [
-     "deadline",
-     "attachments"
-    ],
-    "weak_fields": [
-     "body"
-    ],
-    "has_untrusted": true,
-    "states": {
-     "deadline": "unknown",
-     "majors": "found",
-     "materials": "found",
-     "contact": "found",
-     "attachments": "unknown"
-    },
-    "body": "generic"
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": false,
-   "age_days": 109
-  },
-  {
-   "id": "u821fddd7-a21ddaac3df47a11",
-   "score": 0.88,
-   "raw_score": 0.88,
-   "bucket": "已过期",
-   "days_left": -10,
-   "title": "2027年全国硕士研究生招生考试清华大学（10003）报名公告",
-   "school": "清华大学",
-   "unit": "研究生招生网",
-   "publish_date": "2026-10-08",
-   "deadline": "2026-10-09",
-   "url": "https://yz.tsinghua.edu.cn/info/1024/3268.htm",
-   "reasons": [
-    "专业对口：材料",
-    "推免",
-    "硕士",
-    "2027 年招生（对应你这一届）"
-   ],
-   "warnings": [],
-   "has_attachments": false,
-   "attachments_count": 0,
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 1.0
-   },
-   "field_trust": {
-    "untrusted_count": 0,
-    "untrusted_fields": [],
-    "weak_fields": [],
-    "has_untrusted": false,
-    "states": {
-     "deadline": "found",
-     "majors": "found",
-     "materials": "found",
-     "contact": "found",
-     "attachments": "absent"
-    },
-    "body": "ok"
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 11
-  },
-  {
-   "id": "uf47e0e0b-f9e6316f4365cfd0",
-   "score": 0.874,
+   "id": "u0e6b64d1-43463-770758",
+   "score": 0.9205,
    "raw_score": 0.97,
    "bucket": "无截止日",
    "days_left": null,
-   "title": "吉林大学2027年接收优秀应届本科毕业生免试攻读研究生招生简章及专业目录",
-   "school": "吉林大学",
+   "title": "关于华东师范大学2027年接收优秀应届本科毕业生免试攻读研究生（含本科直博） 预报名的通知（增加中法联培项目）",
+   "school": "华东师范大学",
    "unit": "研究生院",
-   "publish_date": "2026-09-11",
+   "publish_date": "2026-07-24",
    "deadline": null,
-   "url": "https://yzb.jlu.edu.cn/info/1047/3637.htm",
+   "url": "https://yjszs.ecnu.edu.cn/c2/c6/c43463a770758/page.htm",
    "reasons": [
     "专业对口：材料",
     "推免",
@@ -1499,14 +1499,15 @@
     "2027 年招生（对应你这一届）"
    ],
    "warnings": [
-    "未抽到截止日期，务必点开原文确认"
+    "未抽到截止日期，务必点开原文确认",
+    "公告提到「推荐信」，若你没有相应材料请先确认是否影响申请"
    ],
    "has_attachments": true,
-   "attachments_count": 4,
+   "attachments_count": 1,
    "extract": {
     "method": "rule",
     "version": "v6",
-    "confidence": 0.67
+    "confidence": 0.83
    },
    "field_trust": {
     "untrusted_count": 0,
@@ -1525,7 +1526,7 @@
    "record_quality": "ok",
    "topic": "apply",
    "is_fresh": false,
-   "age_days": 38
+   "age_days": 88
   }
  ]
 }

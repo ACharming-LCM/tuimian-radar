@@ -157,7 +157,15 @@ def measure():
         urls[r.get("url")] = urls.get(r.get("url"), 0) + 1
 
     have = {e.get("notice_id") for e in evs}
-    no_event = sum(1 for r in recs if r.get("id") not in have)
+    # `make_id` 依赖 school+unit：同一条公告换个栏目 id 就变了，事件还指着旧 id。
+    # 按 URL 也算覆盖，否则会把「id 变了」误报成「这条公告没有任何事件」
+    # （与 collector/tools/make_events.py 的 audit 保持同一口径）。
+    have_urls = {(e.get("url") or "").rstrip("/") for e in evs if e.get("url")}
+    no_event = sum(
+        1 for r in recs
+        if r.get("id") not in have
+        and (r.get("url") or "").rstrip("/") not in have_urls
+    )
 
     orphans = 0
     if os.path.exists(ORPHANS):

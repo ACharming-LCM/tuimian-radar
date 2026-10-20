@@ -645,7 +645,10 @@ def year_筛选精确匹配():
         return adm if adm is not None else r.get("target_year")
     expect = sum(1 for r in VISIBLE if _y(r) == 2027)
     assert body["total"] == expect, (body["total"], expect)
-    assert all(i["target_year"] == 2027 for i in body["items"])
+    # 筛选口径是 `admission_year`，没有时才回退 `target_year`；
+    # 断言也必须用同一口径。原来直接断言 target_year，数据里一旦出现
+    # 「admission_year=2027、target_year=2026」的记录就会假红。
+    assert all(_y(i) == 2027 for i in body["items"])
 
 
 @case
@@ -1521,7 +1524,9 @@ def match_口径切到push时和推送同一个公式():
             raw, push_mod.weighted_score(dims))
         conf = (rec.get("extract") or {}).get("confidence")
         conf = 0.5 if conf is None else float(conf)
-        assert abs(final - raw * (0.7 + 0.3 * conf)) < 1e-9, (final, raw, conf)
+        # `final` 落盘前保留 4 位小数；这里按同一精度比，不能用 1e-9。
+        assert abs(final - round(raw * (0.7 + 0.3 * conf), 4)) < 1e-9, (
+            final, raw, conf)
 
         config.MATCH_SCORE_FROM_PUSH = False
         _f2, raw2, _r2, _w2 = matching.score_notice(rec, PROF, today)
@@ -3059,9 +3064,14 @@ def 数据文件被重写后接口自己跟上():
                                   FACULTY_STORE, StateStore.load(":memory:")))
         assert c.get("/api/health").json()["data"]["loaded"] == len(RAW)
 
-        # 模拟"重跑管道"：只留 3 条
+        # 模拟"重跑管道"：只留 3 条**非 junk** 记录。
+        # 默认响应会拒收 junk，拿 RAW[:3] 可能只剩 2 条 —— 那是数据行恰好
+        # 变了，不是"接口没跟上"，两种失败长得一样，所以这里主动排除。
+        keep = [r for r in RAW
+                if (r.get("record_quality") or "") != "junk"][:3]
+        assert len(keep) == 3
         with open(tmp, "w", encoding="utf-8") as f:
-            for r in RAW[:3]:
+            for r in keep:
                 f.write(json.dumps(r, ensure_ascii=False) + "\n")
 
         assert c.get("/api/health").json()["data"]["loaded"] == 3, "health 没跟上"
@@ -3606,6 +3616,19 @@ def _fresh_client_for(data, now=None, **kw):
     fr = FreshnessStore("/nonexistent/freshness.json", data)
     return TestClient(create_app(STORE, FACULTY_STORE, StateStore.load(":memory:"),
                                  None, None, fr, kw.pop("crawl", None)))
+
+
+@case
+def freshness_未来时间戳不许显示负数():
+    """容器 UTC + 数据 +08 时实测 -7.68 小时。页面不能写「-7.7 小时前」。"""
+    future = (datetime.now() + timedelta(hours=8)).isoformat(timespec="seconds")
+    data = {"generated_at": future, "schools": [
+        {"school": "A", "unit": "研招网", "last_ok": future, "records": 1,
+         "boards": 1, "boards_empty": 0, "failed": []},
+    ]}
+    d = _fresh_client_for(data).get("/api/freshness").json()
+    assert d["generated_age_hours"] == 0.0, d["generated_age_hours"]
+    assert d["oldest_hours"] == 0.0, d["oldest_hours"]
 
 
 @case

@@ -1,8 +1,332 @@
 {
- "total": 2419,
+ "total": 2496,
  "page": 1,
  "size": 50,
  "items": [
+  {
+   "id": "ua8ae400a-5af72ede63cb219c",
+   "school": "北京大学",
+   "school_slug": "ua8ae400a",
+   "unit": "研究生招生网",
+   "board": " 硕士招生  博士招生  港澳台招生  留学生招生  夏令营  网上报名",
+   "title": "27\"申请-考核制\"博士研究生推荐信线上提交流程",
+   "publish_date": "2026-10-20",
+   "url": "https://admission.pku.edu.cn/docs/20261020091156436628.pdf",
+   "deadline": null,
+   "apply_mode": null,
+   "target_year": null,
+   "degree_types": [
+    "博士"
+   ],
+   "majors": [],
+   "tags": [],
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 0.33
+   },
+   "record_quality": "ok",
+   "topic": "apply",
+   "is_fresh": true,
+   "age_days": 0,
+   "admission_year": null,
+   "age_tier": null,
+   "has_attachments": true,
+   "attachments_count": 1
+  },
+  {
+   "id": "ua8ae400a-431f2c45a9bb1cbd",
+   "school": "北京大学",
+   "school_slug": "ua8ae400a",
+   "unit": "研究生招生网",
+   "board": " 硕士招生  博士招生  港澳台招生  留学生招生  夏令营  网上报名",
+   "title": "北京大学2027年博士研究生招生简章",
+   "publish_date": "2026-10-20",
+   "url": "https://admission.pku.edu.cn/docs/20261020091929804706.pdf",
+   "deadline": null,
+   "apply_mode": "推免",
+   "target_year": 2027,
+   "degree_types": [
+    "博士",
+    "直博"
+   ],
+   "majors": [
+    "力学",
+    "材料",
+    "软件",
+    "电子",
+    "信息",
+    "机械",
+    "生物",
+    "医学"
+   ],
+   "tags": [
+    "推免",
+    "直博",
+    "复试",
+    "招生简章",
+    "专业目录",
+    "公示",
+    "录取",
+    "专项计划"
+   ],
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 0.83
+   },
+   "record_quality": "ok",
+   "topic": "apply",
+   "is_fresh": true,
+   "age_days": 0,
+   "admission_year": 2027,
+   "age_tier": null,
+   "has_attachments": true,
+   "attachments_count": 1
+  },
+  {
+   "id": "ua8ae400a-23de6bd2dcc6e03c",
+   "school": "北京大学",
+   "school_slug": "ua8ae400a",
+   "unit": "研究生招生网",
+   "board": " 硕士招生  博士招生  港澳台招生  留学生招生  夏令营  网上报名",
+   "title": "北京大学2027年“申请-考核制”博士研究生网上报名公告",
+   "publish_date": "2026-10-20",
+   "url": "https://admission.pku.edu.cn/docs/20261020095057962801.pdf",
+   "deadline": null,
+   "apply_mode": "统考",
+   "target_year": 2027,
+   "degree_types": [
+    "博士"
+   ],
+   "majors": [
+    "材料",
+    "信息",
+    "医学"
+   ],
+   "tags": [
+    "推免",
+    "招生简章",
+    "专业目录",
+    "录取",
+    "专项计划"
+   ],
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 0.67
+   },
+   "record_quality": "ok",
+   "topic": "apply",
+   "is_fresh": true,
+   "age_days": 0,
+   "admission_year": 2027,
+   "age_tier": null,
+   "has_attachments": true,
+   "attachments_count": 1
+  },
+  {
+   "id": "u57dcf3ee-47863-846404",
+   "school": "南京大学",
+   "school_slug": "u57dcf3ee",
+   "unit": "研究生院",
+   "board": "硕士最新通知",
+   "title": "南京大学2027年硕士推免生拟录取人数信息统计",
+   "publish_date": "2026-10-20",
+   "url": "https://yzb.nju.edu.cn/ea/44/c47863a846404/page.htm",
+   "deadline": null,
+   "apply_mode": "推免",
+   "target_year": 2027,
+   "degree_types": [
+    "硕士"
+   ],
+   "majors": [
+    "信息",
+    "教育",
+    "统计"
+   ],
+   "tags": [
+    "推免",
+    "公示",
+    "录取"
+   ],
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 0.5
+   },
+   "record_quality": "thin",
+   "topic": "non_apply",
+   "is_fresh": true,
+   "age_days": 0,
+   "admission_year": null,
+   "age_tier": null,
+   "has_attachments": true,
+   "attachments_count": 1
+  },
+  {
+   "id": "u1b6a206e-eee27ffa25042066",
+   "school": "北京航空航天大学",
+   "school_slug": "u1b6a206e",
+   "unit": "研究生院",
+   "board": "学历硕士",
+   "title": "报考北航2027年硕士研究生温馨提示（10月19日）",
+   "publish_date": "2026-10-19",
+   "url": "http://yzb.buaa.edu.cn/info/1003/3657.htm",
+   "deadline": null,
+   "apply_mode": null,
+   "target_year": 2027,
+   "degree_types": [
+    "硕士"
+   ],
+   "majors": [
+    "材料",
+    "法学"
+   ],
+   "tags": [
+    "专业目录",
+    "录取"
+   ],
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 0.33
+   },
+   "record_quality": "ok",
+   "topic": "apply",
+   "is_fresh": true,
+   "age_days": 1,
+   "admission_year": 2027,
+   "age_tier": null,
+   "has_attachments": false,
+   "attachments_count": 0
+  },
+  {
+   "id": "u1b6a206e-312aeebda93859c9",
+   "school": "北京航空航天大学",
+   "school_slug": "u1b6a206e",
+   "unit": "研究生院",
+   "board": "学历硕士",
+   "title": "北航报考点2026年10月19日温馨提示",
+   "publish_date": "2026-10-19",
+   "url": "http://yzb.buaa.edu.cn/info/1003/3655.htm",
+   "deadline": null,
+   "apply_mode": "统考",
+   "target_year": 2026,
+   "degree_types": [
+    "硕士"
+   ],
+   "majors": [
+    "材料"
+   ],
+   "tags": [
+    "录取"
+   ],
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 0.5
+   },
+   "record_quality": "ok",
+   "topic": "apply",
+   "is_fresh": true,
+   "age_days": 1,
+   "admission_year": 2026,
+   "age_tier": null,
+   "has_attachments": false,
+   "attachments_count": 0
+  },
+  {
+   "id": "ua37ee91b-4cb9d077dd59876b",
+   "school": "天津大学",
+   "school_slug": "ua37ee91b",
+   "unit": "研究生院",
+   "board": "统考博士",
+   "title": "【专项计划】天津大学2027年新质生产力专项博士研究生招生简章",
+   "publish_date": "2026-10-19",
+   "url": "https://yzb.tju.edu.cn/xwzx/tkbs_xw/202610/t20261019_324756.htm",
+   "deadline": "2026-11-13",
+   "apply_mode": null,
+   "target_year": 2035,
+   "degree_types": [
+    "博士"
+   ],
+   "majors": [
+    "数学",
+    "材料",
+    "控制",
+    "机械",
+    "生物",
+    "环境",
+    "能源",
+    "化工"
+   ],
+   "tags": [
+    "招生简章",
+    "录取",
+    "专项计划"
+   ],
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 0.67
+   },
+   "record_quality": "ok",
+   "topic": "apply",
+   "is_fresh": true,
+   "age_days": 1,
+   "admission_year": 2027,
+   "age_tier": null,
+   "has_attachments": false,
+   "attachments_count": 0
+  },
+  {
+   "id": "u285779f0-69706-3216693",
+   "school": "浙江大学",
+   "school_slug": "u285779f0",
+   "unit": "物理学院",
+   "board": "最新消息 招生信息",
+   "title": "浙江大学物理学院2027年博士研究生招生简章",
+   "publish_date": "2026-10-19",
+   "url": "https://physics.zju.edu.cn/2026/1019/c69706a3216693/page.htm",
+   "deadline": "2026-11-20",
+   "apply_mode": "推免",
+   "target_year": 2027,
+   "degree_types": [
+    "博士",
+    "直博"
+   ],
+   "majors": [
+    "物理学",
+    "材料",
+    "电子",
+    "信息",
+    "管理",
+    "教育",
+    "光学"
+   ],
+   "tags": [
+    "推免",
+    "直博",
+    "复试",
+    "招生简章",
+    "录取",
+    "专项计划"
+   ],
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 1.0
+   },
+   "record_quality": "ok",
+   "topic": "apply",
+   "is_fresh": true,
+   "age_days": 1,
+   "admission_year": 2027,
+   "age_tier": null,
+   "has_attachments": true,
+   "attachments_count": 4
+  },
   {
    "id": "ufa82ed2b-d989cbe1679cbd09",
    "school": "大连理工大学",
@@ -571,48 +895,6 @@
    "attachments_count": 0
   },
   {
-   "id": "u821fddd7-a22d8152a47d2f41",
-   "school": "清华大学",
-   "school_slug": "u821fddd7",
-   "unit": "研究生招生网",
-   "board": "最新公告Notice",
-   "title": "2027年全国硕士研究生招生考试清华大学报考点（1103）公告",
-   "publish_date": "2026-10-08",
-   "url": "https://yz.tsinghua.edu.cn/info/1024/3270.htm",
-   "deadline": "2026-10-24",
-   "apply_mode": "统考",
-   "target_year": 2027,
-   "degree_types": [
-    "硕士"
-   ],
-   "majors": [
-    "材料",
-    "电子",
-    "信息",
-    "机械",
-    "管理",
-    "教育"
-   ],
-   "tags": [
-    "复试",
-    "录取",
-    "专项计划"
-   ],
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 1.0
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 11,
-   "admission_year": 2027,
-   "age_tier": "live",
-   "has_attachments": false,
-   "attachments_count": 0
-  },
-  {
    "id": "ud39a7e19-28498-3211878",
    "school": "浙江大学",
    "school_slug": "ud39a7e19",
@@ -956,6 +1238,307 @@
    "attachments_count": 1
   },
   {
+   "id": "u57dcf3ee-47863-845593",
+   "school": "南京大学",
+   "school_slug": "u57dcf3ee",
+   "unit": "研究生院",
+   "board": "硕士最新通知",
+   "title": "南京大学2027年硕士研究生招生目录",
+   "publish_date": "2026-10-08",
+   "url": "https://yzb.nju.edu.cn/e7/19/c47863a845593/page.htm",
+   "deadline": null,
+   "apply_mode": "推免",
+   "target_year": 2027,
+   "degree_types": [
+    "硕士"
+   ],
+   "majors": [
+    "物理学",
+    "力学",
+    "数学",
+    "材料",
+    "电子",
+    "信息",
+    "通信",
+    "建筑"
+   ],
+   "tags": [
+    "推免",
+    "录取",
+    "专项计划"
+   ],
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 0.83
+   },
+   "record_quality": "ok",
+   "topic": "apply",
+   "is_fresh": true,
+   "age_days": 12,
+   "admission_year": 2027,
+   "age_tier": null,
+   "has_attachments": true,
+   "attachments_count": 1
+  },
+  {
+   "id": "u57dcf3ee-47863-845592",
+   "school": "南京大学",
+   "school_slug": "u57dcf3ee",
+   "unit": "研究生院",
+   "board": "硕士最新通知",
+   "title": "南京大学2027年硕士研究生招生章程",
+   "publish_date": "2026-10-08",
+   "url": "https://yzb.nju.edu.cn/e7/18/c47863a845592/page.htm",
+   "deadline": "2026-10-12",
+   "apply_mode": "推免",
+   "target_year": 2027,
+   "degree_types": [
+    "博士"
+   ],
+   "majors": [
+    "数学",
+    "计算机",
+    "信息",
+    "医学",
+    "经济",
+    "管理",
+    "法学",
+    "教育"
+   ],
+   "tags": [
+    "推免",
+    "复试",
+    "专业目录",
+    "公示",
+    "录取",
+    "名额",
+    "专项计划"
+   ],
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 1.0
+   },
+   "record_quality": "ok",
+   "topic": "apply",
+   "is_fresh": true,
+   "age_days": 12,
+   "admission_year": 2027,
+   "age_tier": null,
+   "has_attachments": true,
+   "attachments_count": 1
+  },
+  {
+   "id": "u821fddd7-a29c0b3457a36227",
+   "school": "清华大学",
+   "school_slug": "u821fddd7",
+   "unit": "研究生招生网",
+   "board": "最新公告Notice",
+   "title": "2027年清华大学初步录取强基生的信息校对和网上确认的相关通知",
+   "publish_date": "2026-10-08",
+   "url": "https://yz.tsinghua.edu.cn/info/1024/3276.htm",
+   "deadline": null,
+   "apply_mode": "推免",
+   "target_year": 2027,
+   "degree_types": [
+    "硕士"
+   ],
+   "majors": [
+    "信息"
+   ],
+   "tags": [
+    "推免",
+    "录取"
+   ],
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 0.5
+   },
+   "record_quality": "ok",
+   "topic": "apply",
+   "is_fresh": true,
+   "age_days": 11,
+   "admission_year": 2027,
+   "age_tier": "live",
+   "has_attachments": false,
+   "attachments_count": 0
+  },
+  {
+   "id": "u821fddd7-2f1bd79c0fad08d6",
+   "school": "清华大学",
+   "school_slug": "u821fddd7",
+   "unit": "研究生招生网",
+   "board": "最新公告Notice",
+   "title": "清华大学2027年硕士研究生招生专业目录_统招(含招生人数)",
+   "publish_date": "2026-10-08",
+   "url": "https://yzbm.tsinghua.edu.cn/publish/s02/s0203/detail/c0fb8664-255f-4d6f-bf40-a5893e3343ec",
+   "deadline": null,
+   "apply_mode": "统考",
+   "target_year": 2027,
+   "degree_types": [
+    "硕士"
+   ],
+   "majors": [
+    "土木",
+    "建筑",
+    "环境"
+   ],
+   "tags": [
+    "复试",
+    "专业目录",
+    "录取"
+   ],
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 0.83
+   },
+   "record_quality": "ok",
+   "topic": "apply",
+   "is_fresh": true,
+   "age_days": 11,
+   "admission_year": 2027,
+   "age_tier": "live",
+   "has_attachments": false,
+   "attachments_count": 0
+  },
+  {
+   "id": "u821fddd7-a22d8152a47d2f41",
+   "school": "清华大学",
+   "school_slug": "u821fddd7",
+   "unit": "研究生招生网",
+   "board": "最新公告Notice",
+   "title": "2027年全国硕士研究生招生考试清华大学报考点（1103）公告",
+   "publish_date": "2026-10-08",
+   "url": "https://yz.tsinghua.edu.cn/info/1024/3270.htm",
+   "deadline": "2026-10-24",
+   "apply_mode": "统考",
+   "target_year": 2027,
+   "degree_types": [
+    "硕士"
+   ],
+   "majors": [
+    "材料",
+    "电子",
+    "信息",
+    "机械",
+    "管理",
+    "教育"
+   ],
+   "tags": [
+    "复试",
+    "录取",
+    "专项计划"
+   ],
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 1.0
+   },
+   "record_quality": "ok",
+   "topic": "apply",
+   "is_fresh": true,
+   "age_days": 11,
+   "admission_year": 2027,
+   "age_tier": "live",
+   "has_attachments": false,
+   "attachments_count": 0
+  },
+  {
+   "id": "u821fddd7-a21ddaac3df47a11",
+   "school": "清华大学",
+   "school_slug": "u821fddd7",
+   "unit": "研究生招生网",
+   "board": "最新公告Notice",
+   "title": "2027年全国硕士研究生招生考试清华大学（10003）报名公告",
+   "publish_date": "2026-10-08",
+   "url": "https://yz.tsinghua.edu.cn/info/1024/3268.htm",
+   "deadline": "2026-10-09",
+   "apply_mode": "推免",
+   "target_year": 2027,
+   "degree_types": [
+    "硕士"
+   ],
+   "majors": [
+    "材料",
+    "电子",
+    "信息",
+    "机械",
+    "管理",
+    "教育"
+   ],
+   "tags": [
+    "推免",
+    "复试",
+    "招生简章",
+    "专业目录",
+    "录取",
+    "专项计划"
+   ],
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 1.0
+   },
+   "record_quality": "ok",
+   "topic": "apply",
+   "is_fresh": true,
+   "age_days": 11,
+   "admission_year": 2027,
+   "age_tier": "recent",
+   "has_attachments": false,
+   "attachments_count": 0
+  },
+  {
+   "id": "u821fddd7-f9945c0975c2551e",
+   "school": "清华大学",
+   "school_slug": "u821fddd7",
+   "unit": "研究生招生网",
+   "board": "最新公告Notice",
+   "title": "清华大学2027年硕士研究生招生简章",
+   "publish_date": "2026-10-08",
+   "url": "https://yz.tsinghua.edu.cn/info/1024/3266.htm",
+   "deadline": null,
+   "apply_mode": "推免",
+   "target_year": 2027,
+   "degree_types": [
+    "博士"
+   ],
+   "majors": [
+    "材料",
+    "电子",
+    "信息",
+    "通信",
+    "医学",
+    "管理",
+    "法学",
+    "教育"
+   ],
+   "tags": [
+    "推免",
+    "复试",
+    "招生简章",
+    "专业目录",
+    "录取",
+    "专项计划"
+   ],
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 0.83
+   },
+   "record_quality": "ok",
+   "topic": "apply",
+   "is_fresh": true,
+   "age_days": 11,
+   "admission_year": 2027,
+   "age_tier": "live",
+   "has_attachments": true,
+   "attachments_count": 1
+  },
+  {
    "id": "u1b6a206e-6a8f889bbae7dd25",
    "school": "北京航空航天大学",
    "school_slug": "u1b6a206e",
@@ -1137,6 +1720,88 @@
    "age_days": 11,
    "admission_year": 2027,
    "age_tier": "live",
+   "has_attachments": false,
+   "attachments_count": 0
+  },
+  {
+   "id": "u0e6b64d1-43463-783700",
+   "school": "华东师范大学",
+   "school_slug": "u0e6b64d1",
+   "unit": "研究生院",
+   "board": "招生信息 硕士招生 博士招生 港澳台招生 招生宣传",
+   "title": "华东师范大学报考点2027年硕士研究生招生考试公告",
+   "publish_date": "2026-10-08",
+   "url": "https://yjszs.ecnu.edu.cn/f5/54/c43463a783700/page.htm",
+   "deadline": "2026-10-12",
+   "apply_mode": "统考",
+   "target_year": 2027,
+   "degree_types": [
+    "硕士"
+   ],
+   "majors": [
+    "材料",
+    "信息",
+    "教育"
+   ],
+   "tags": [
+    "复试",
+    "录取"
+   ],
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 1.0
+   },
+   "record_quality": "ok",
+   "topic": "apply",
+   "is_fresh": true,
+   "age_days": 12,
+   "admission_year": 2027,
+   "age_tier": null,
+   "has_attachments": false,
+   "attachments_count": 0
+  },
+  {
+   "id": "u0e6b64d1-43463-783559",
+   "school": "华东师范大学",
+   "school_slug": "u0e6b64d1",
+   "unit": "研究生院",
+   "board": "招生信息 硕士招生 博士招生 港澳台招生 招生宣传",
+   "title": "华东师范大学2027年少数民族高层次骨干人才计划硕士研究生招生公告",
+   "publish_date": "2026-10-08",
+   "url": "https://yjszs.ecnu.edu.cn/f4/c7/c43463a783559/page.htm",
+   "deadline": "2026-10-21",
+   "apply_mode": "统考",
+   "target_year": 2027,
+   "degree_types": [
+    "硕士"
+   ],
+   "majors": [
+    "材料",
+    "电子",
+    "信息",
+    "医学",
+    "管理",
+    "教育"
+   ],
+   "tags": [
+    "复试",
+    "招生简章",
+    "专业目录",
+    "录取",
+    "专项计划"
+   ],
+   "extract": {
+    "method": "rule",
+    "version": "v6",
+    "confidence": 0.83
+   },
+   "record_quality": "ok",
+   "topic": "apply",
+   "is_fresh": true,
+   "age_days": 12,
+   "admission_year": 2027,
+   "age_tier": null,
    "has_attachments": false,
    "attachments_count": 0
   },
@@ -1432,692 +2097,6 @@
    "is_fresh": true,
    "age_days": 11,
    "admission_year": 2026,
-   "age_tier": "live",
-   "has_attachments": false,
-   "attachments_count": 0
-  },
-  {
-   "id": "u09c53391-2d8b2296da85507a",
-   "school": "重庆大学",
-   "school_slug": "u09c53391",
-   "unit": "研究生院",
-   "board": "硕士招生",
-   "title": "重庆大学研究生招生信息网（测试版）",
-   "publish_date": "2026-10-08",
-   "url": "https://yz.cqu.edu.cn/news/2026-10/2603.html",
-   "deadline": "2026-10-31",
-   "apply_mode": "统考",
-   "target_year": 2027,
-   "degree_types": [
-    "硕士"
-   ],
-   "majors": [
-    "材料",
-    "信息",
-    "管理",
-    "教育"
-   ],
-   "tags": [
-    "复试"
-   ],
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 0.83
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 11,
-   "admission_year": 2027,
-   "age_tier": "live",
-   "has_attachments": false,
-   "attachments_count": 0
-  },
-  {
-   "id": "u4bf1b0fe-da4df82828d042f6",
-   "school": "四川大学",
-   "school_slug": "u4bf1b0fe",
-   "unit": "研究生院",
-   "board": "硕士公告",
-   "title": "四川大学2027年硕士研究生网上报名公告【报考我校必读】",
-   "publish_date": "2026-10-08",
-   "url": "https://yz.scu.edu.cn/zsxx/Details/29e690be-7154-40d2-b361-f564d3bbb969",
-   "deadline": "2026-10-24",
-   "apply_mode": "夏令营",
-   "target_year": 2027,
-   "degree_types": [
-    "硕士"
-   ],
-   "majors": [
-    "材料",
-    "信息",
-    "医学",
-    "管理",
-    "法学",
-    "教育"
-   ],
-   "tags": [
-    "夏令营",
-    "复试",
-    "专业目录",
-    "录取",
-    "专项计划"
-   ],
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 1.0
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 11,
-   "admission_year": 2027,
-   "age_tier": "live",
-   "has_attachments": false,
-   "attachments_count": 0
-  },
-  {
-   "id": "u4bf1b0fe-77f2962d8855dba5",
-   "school": "四川大学",
-   "school_slug": "u4bf1b0fe",
-   "unit": "研究生院",
-   "board": "硕士公告",
-   "title": "四川大学报考点（望江校区考点5101和江安校区考点5189）2027年全国硕士研究生招生考试网上报名公告",
-   "publish_date": "2026-10-08",
-   "url": "https://yz.scu.edu.cn/zsxx/Details/f292b80f-a159-4d42-a784-28a5f4e10b77",
-   "deadline": "2026-10-24",
-   "apply_mode": "夏令营",
-   "target_year": 2027,
-   "degree_types": [
-    "硕士"
-   ],
-   "majors": [
-    "材料",
-    "信息",
-    "管理",
-    "教育"
-   ],
-   "tags": [
-    "夏令营",
-    "复试",
-    "专业目录",
-    "录取"
-   ],
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 0.67
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 11,
-   "admission_year": 2027,
-   "age_tier": "live",
-   "has_attachments": false,
-   "attachments_count": 0
-  },
-  {
-   "id": "u4bf1b0fe-274d4c0567c2751f",
-   "school": "四川大学",
-   "school_slug": "u4bf1b0fe",
-   "unit": "研究生院",
-   "board": "硕士公告",
-   "title": "四川省2027年全国硕士研究生招生考试网上报名公告",
-   "publish_date": "2026-10-08",
-   "url": "https://www.sceea.cn/Html/202610/Newsdetail_4975.html",
-   "deadline": "2026-10-24",
-   "apply_mode": "统考",
-   "target_year": 2027,
-   "degree_types": [
-    "硕士"
-   ],
-   "majors": [
-    "材料",
-    "信息",
-    "管理",
-    "法学",
-    "教育"
-   ],
-   "tags": [
-    "复试",
-    "录取",
-    "专项计划"
-   ],
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 0.83
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 11,
-   "admission_year": 2027,
-   "age_tier": "live",
-   "has_attachments": false,
-   "attachments_count": 0
-  },
-  {
-   "id": "u4bf1b0fe-810464aecd6fea3e",
-   "school": "四川大学",
-   "school_slug": "u4bf1b0fe",
-   "unit": "研究生院",
-   "board": "硕士公告",
-   "title": "推免生接受人数汇总表",
-   "publish_date": "2026-10-08",
-   "url": "https://yz.scu.edu.cn/tms/tmsjkgs",
-   "deadline": "2026-10-18",
-   "apply_mode": "夏令营",
-   "target_year": 2027,
-   "degree_types": [
-    "博士",
-    "直博"
-   ],
-   "majors": [],
-   "tags": [
-    "推免",
-    "夏令营",
-    "直博"
-   ],
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 0.5
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 11,
-   "admission_year": 2027,
-   "age_tier": "recent",
-   "has_attachments": false,
-   "attachments_count": 0
-  },
-  {
-   "id": "u4bf1b0fe-4f73ce616973e53a",
-   "school": "四川大学",
-   "school_slug": "u4bf1b0fe",
-   "unit": "研究生院",
-   "board": "硕士章程",
-   "title": "四川大学2027年硕士研究生招生章程",
-   "publish_date": "2026-10-08",
-   "url": "https://yz.scu.edu.cn/zsxx/Details/a9e04641-aa5f-401f-892e-f069c0f8ecb2",
-   "deadline": "2026-10-12",
-   "apply_mode": "夏令营",
-   "target_year": 2027,
-   "degree_types": [
-    "博士"
-   ],
-   "majors": [
-    "材料",
-    "计算机",
-    "信息",
-    "医学",
-    "管理",
-    "法学",
-    "教育",
-    "农学"
-   ],
-   "tags": [
-    "推免",
-    "夏令营",
-    "调剂",
-    "复试",
-    "专业目录",
-    "录取",
-    "专项计划"
-   ],
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 1.0
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 11,
-   "admission_year": 2027,
-   "age_tier": "recent",
-   "has_attachments": false,
-   "attachments_count": 0
-  },
-  {
-   "id": "u821fddd7-a29c0b3457a36227",
-   "school": "清华大学",
-   "school_slug": "u821fddd7",
-   "unit": "研究生招生网",
-   "board": "最新公告Notice",
-   "title": "2027年清华大学初步录取强基生的信息校对和网上确认的相关通知",
-   "publish_date": "2026-10-08",
-   "url": "https://yz.tsinghua.edu.cn/info/1024/3276.htm",
-   "deadline": null,
-   "apply_mode": "推免",
-   "target_year": 2027,
-   "degree_types": [
-    "硕士"
-   ],
-   "majors": [
-    "信息"
-   ],
-   "tags": [
-    "推免",
-    "录取"
-   ],
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 0.5
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 11,
-   "admission_year": 2027,
-   "age_tier": "live",
-   "has_attachments": false,
-   "attachments_count": 0
-  },
-  {
-   "id": "u821fddd7-2f1bd79c0fad08d6",
-   "school": "清华大学",
-   "school_slug": "u821fddd7",
-   "unit": "研究生招生网",
-   "board": "最新公告Notice",
-   "title": "清华大学2027年硕士研究生招生专业目录_统招(含招生人数)",
-   "publish_date": "2026-10-08",
-   "url": "https://yzbm.tsinghua.edu.cn/publish/s02/s0203/detail/c0fb8664-255f-4d6f-bf40-a5893e3343ec",
-   "deadline": null,
-   "apply_mode": "统考",
-   "target_year": 2027,
-   "degree_types": [
-    "硕士"
-   ],
-   "majors": [
-    "土木",
-    "建筑",
-    "环境"
-   ],
-   "tags": [
-    "复试",
-    "专业目录",
-    "录取"
-   ],
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 0.83
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 11,
-   "admission_year": 2027,
-   "age_tier": "live",
-   "has_attachments": false,
-   "attachments_count": 0
-  },
-  {
-   "id": "u821fddd7-a21ddaac3df47a11",
-   "school": "清华大学",
-   "school_slug": "u821fddd7",
-   "unit": "研究生招生网",
-   "board": "最新公告Notice",
-   "title": "2027年全国硕士研究生招生考试清华大学（10003）报名公告",
-   "publish_date": "2026-10-08",
-   "url": "https://yz.tsinghua.edu.cn/info/1024/3268.htm",
-   "deadline": "2026-10-09",
-   "apply_mode": "推免",
-   "target_year": 2027,
-   "degree_types": [
-    "硕士"
-   ],
-   "majors": [
-    "材料",
-    "电子",
-    "信息",
-    "机械",
-    "管理",
-    "教育"
-   ],
-   "tags": [
-    "推免",
-    "复试",
-    "招生简章",
-    "专业目录",
-    "录取",
-    "专项计划"
-   ],
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 1.0
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 11,
-   "admission_year": 2027,
-   "age_tier": "recent",
-   "has_attachments": false,
-   "attachments_count": 0
-  },
-  {
-   "id": "u821fddd7-f9945c0975c2551e",
-   "school": "清华大学",
-   "school_slug": "u821fddd7",
-   "unit": "研究生招生网",
-   "board": "最新公告Notice",
-   "title": "清华大学2027年硕士研究生招生简章",
-   "publish_date": "2026-10-08",
-   "url": "https://yz.tsinghua.edu.cn/info/1024/3266.htm",
-   "deadline": null,
-   "apply_mode": "推免",
-   "target_year": 2027,
-   "degree_types": [
-    "博士"
-   ],
-   "majors": [
-    "材料",
-    "电子",
-    "信息",
-    "通信",
-    "医学",
-    "管理",
-    "法学",
-    "教育"
-   ],
-   "tags": [
-    "推免",
-    "复试",
-    "招生简章",
-    "专业目录",
-    "录取",
-    "专项计划"
-   ],
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 0.83
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 11,
-   "admission_year": 2027,
-   "age_tier": "live",
-   "has_attachments": true,
-   "attachments_count": 1
-  },
-  {
-   "id": "ua37ee91b-4bd106beb5116449",
-   "school": "天津大学",
-   "school_slug": "ua37ee91b",
-   "unit": "研究生院",
-   "board": "统考硕士",
-   "title": "天津大学2027年硕士学位研究生招生简章",
-   "publish_date": "2026-10-07",
-   "url": "https://yzb.tju.edu.cn/xwzx/tkss_xw/202610/t20261007_324742.htm",
-   "deadline": "2026-10-12",
-   "apply_mode": "推免",
-   "target_year": 2027,
-   "degree_types": [
-    "博士"
-   ],
-   "majors": [
-    "化学",
-    "材料",
-    "电子",
-    "信息",
-    "机械",
-    "土木",
-    "建筑",
-    "医学"
-   ],
-   "tags": [
-    "推免",
-    "调剂",
-    "复试",
-    "招生简章",
-    "专业目录",
-    "公示",
-    "录取",
-    "专项计划",
-    "国优计划"
-   ],
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 1.0
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 12,
-   "admission_year": 2027,
-   "age_tier": "recent",
-   "has_attachments": true,
-   "attachments_count": 1
-  },
-  {
-   "id": "u2f6e7289-8f880e15caedfac8",
-   "school": "华中师范大学",
-   "school_slug": "u2f6e7289",
-   "unit": "研究生院",
-   "board": "招生工作 硕士研究生 博士研究生 港澳台研究生 公师生在职攻读教育硕士 招生政策 招生宣传",
-   "title": "华中师范大学2027年招收攻读硕士学位研究生招生简章",
-   "publish_date": "2026-10-06",
-   "url": "https://gs.ccnu.edu.cn/info/1028/7093.htm",
-   "deadline": null,
-   "apply_mode": null,
-   "target_year": 2027,
-   "degree_types": [
-    "硕士"
-   ],
-   "majors": [],
-   "tags": [
-    "招生简章"
-   ],
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 0.17
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 13,
-   "admission_year": 2027,
-   "age_tier": "live",
-   "has_attachments": false,
-   "attachments_count": 0
-  },
-  {
-   "id": "u0f849fc1-8a9cf2d6d1e6b92f",
-   "school": "中山大学",
-   "school_slug": "u0f849fc1",
-   "unit": "研究生院",
-   "board": "硕士招生",
-   "title": "2027年全国硕士研究生招生考试中山大学报考点（代码：4413）公告",
-   "publish_date": "2026-10-05",
-   "url": "https://graduate.sysu.edu.cn/zsw/article/542",
-   "deadline": "2026-10-24",
-   "apply_mode": "推免",
-   "target_year": 2027,
-   "degree_types": [
-    "硕士"
-   ],
-   "majors": [
-    "材料",
-    "信息",
-    "管理",
-    "教育"
-   ],
-   "tags": [
-    "推免",
-    "复试",
-    "专业目录",
-    "录取"
-   ],
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 1.0
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 14,
-   "admission_year": 2027,
-   "age_tier": "live",
-   "has_attachments": true,
-   "attachments_count": 1
-  },
-  {
-   "id": "ud39a7e19-28498-3210936",
-   "school": "浙江大学",
-   "school_slug": "ud39a7e19",
-   "unit": "研究生招生网",
-   "board": "招生信息 研究生招生 在职攻读硕士学位 同等学力申请学位",
-   "title": "浙江大学2027年硕士研究生招生简章",
-   "publish_date": "2026-09-30",
-   "url": "http://www.grs.zju.edu.cn/yjszs/2026/0930/c28498a3210936/page.htm",
-   "deadline": "2026-10-15",
-   "apply_mode": "推免",
-   "target_year": 2027,
-   "degree_types": [
-    "博士"
-   ],
-   "majors": [
-    "数学",
-    "化学",
-    "材料",
-    "计算机",
-    "信息",
-    "生物",
-    "医学",
-    "经济"
-   ],
-   "tags": [
-    "推免",
-    "调剂",
-    "复试",
-    "招生简章",
-    "专业目录",
-    "录取",
-    "专项计划"
-   ],
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 1.0
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 19,
-   "admission_year": 2027,
-   "age_tier": "recent",
-   "has_attachments": false,
-   "attachments_count": 0
-  },
-  {
-   "id": "u0f849fc1-3c99a5bab5d89a41",
-   "school": "中山大学",
-   "school_slug": "u0f849fc1",
-   "unit": "研究生院",
-   "board": "硕士招生",
-   "title": "中山大学2027年硕士研究生招生章程及专业目录",
-   "publish_date": "2026-09-30",
-   "url": "https://graduate.sysu.edu.cn/zsw/article/541",
-   "deadline": "2026-09-30",
-   "apply_mode": "推免",
-   "target_year": 2027,
-   "degree_types": [
-    "博士",
-    "直博"
-   ],
-   "majors": [
-    "物理学",
-    "力学",
-    "数学",
-    "化学",
-    "材料",
-    "计算机",
-    "软件",
-    "电子"
-   ],
-   "tags": [
-    "推免",
-    "直博",
-    "调剂",
-    "复试",
-    "招生简章",
-    "专业目录",
-    "公示",
-    "录取",
-    "专项计划"
-   ],
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 1.0
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 19,
-   "admission_year": 2027,
-   "age_tier": "recent",
-   "has_attachments": true,
-   "attachments_count": 7
-  },
-  {
-   "id": "u1b6a206e-620b047fa5c68442",
-   "school": "北京航空航天大学",
-   "school_slug": "u1b6a206e",
-   "unit": "研究生院",
-   "board": "学历硕士",
-   "title": "北航招收2027年学历硕士研究生招生简章",
-   "publish_date": "2026-09-30",
-   "url": "http://yzb.buaa.edu.cn/info/1003/3632.htm",
-   "deadline": "2026-10-20",
-   "apply_mode": "推免",
-   "target_year": 2027,
-   "degree_types": [
-    "博士"
-   ],
-   "majors": [
-    "材料",
-    "电子",
-    "信息",
-    "管理",
-    "法学",
-    "教育",
-    "航空",
-    "航天"
-   ],
-   "tags": [
-    "推免",
-    "调剂",
-    "复试",
-    "招生简章",
-    "专业目录",
-    "录取",
-    "专项计划"
-   ],
-   "extract": {
-    "method": "rule",
-    "version": "v6",
-    "confidence": 1.0
-   },
-   "record_quality": "ok",
-   "topic": "apply",
-   "is_fresh": true,
-   "age_days": 19,
-   "admission_year": 2027,
    "age_tier": "live",
    "has_attachments": false,
    "attachments_count": 0

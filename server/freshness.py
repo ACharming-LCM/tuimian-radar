@@ -56,9 +56,15 @@ def _parse_dt(s):
 
 
 def _age_hours(dt, now):
+    """时间差（小时），四舍五入两位。`now`/`dt` 都是 naive local time。
+
+    **不许出现负数。** 容器时区是 UTC、数据时间戳是 +08 时，`now - dt`
+    会是负的（实测 -7.68 小时），页面会写「-7.7 小时前」。时间戳在未来
+    只可能是时钟/时区不一致；对外说「0 小时」比说一个负数诚实。
+    """
     if dt is None:
         return None
-    return round((now - dt).total_seconds() / 3600.0, 2)
+    return round(max(0.0, (now - dt).total_seconds() / 3600.0), 2)
 
 
 def humanize_age(hours):

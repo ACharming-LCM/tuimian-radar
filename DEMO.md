@@ -9,7 +9,7 @@
 
 ```powershell
 cd server
-..\.venv\Scripts\python.exe tests/run.py        # 期望 232 通过 / 0 失败
+..\.venv\Scripts\python.exe tests/run.py        # 期望 233 通过 / 0 失败
 cd ..
 .venv\Scripts\python.exe run.py --check          # 数据文件与依赖体检
 ```
@@ -74,7 +74,7 @@ cd ..
 
 ### 收尾（10 秒）
 
-> 「这个项目最值钱的不是 2,561 条数据，是它对『不知道』的处理方式。
+> 「这个项目最值钱的不是 2,646 条数据，是它对『不知道』的处理方式。
 > 读不到就说读不到，没有就说没有，判据错了就把过程写下来。」
 
 ## 备用话术

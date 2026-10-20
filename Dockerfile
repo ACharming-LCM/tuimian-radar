@@ -10,12 +10,18 @@ FROM python:3.10-slim
 ENV PYTHONUNBUFFERED=1 \
     PYTHONIOENCODING=utf-8 \
     PIP_NO_CACHE_DIR=1 \
+    TZ=Asia/Shanghai \
     HOST=0.0.0.0 \
     PORT=7860 \
     TUIMIAN_CRAWL_SCHEDULE=0 \
     TUIMIAN_PUBLIC=1
 
 WORKDIR /app
+
+# 容器默认 UTC；数据时间戳是本地 +08，时区不一致会让「数据多久前」变成负数
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata \
+    && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
+    && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
 RUN pip install -i https://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com -r requirements.txt

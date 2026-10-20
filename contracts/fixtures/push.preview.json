@@ -1,11 +1,11 @@
 {
  "user_id": "u_demo_sub",
- "generated_at": "2026-10-19T12:29:01",
+ "generated_at": "2026-10-20T16:47:55",
  "plan": {
   "active": true,
   "plan_id": "monthly",
   "plan_name": "月度订阅",
-  "expires_at": "2026-11-18T12:29:01",
+  "expires_at": "2026-11-19T16:47:55",
   "reason": "active",
   "text": "月度订阅：推送 + 匹配排序 + 套磁信"
  },
@@ -20,8 +20,8 @@
   "path": "contracts/fixtures/events.sample.json",
   "total": 5,
   "data_time": "2026-10-19T12:06:36",
-  "data_age_hours": 0.37,
-  "data_age_text": "22 分钟前",
+  "data_age_hours": 28.69,
+  "data_age_text": "1.2 天前",
   "stale": null,
   "stale_after_hours": 30.0,
   "note": "**演示样例事件**，不是今天真实抓到的。页面上必须标出来，否则就是用假输入冒充真结果。"
@@ -48,7 +48,7 @@
    "record_quality": "ok",
    "topic": "apply",
    "is_fresh": true,
-   "age_days": 6,
+   "age_days": 7,
    "matched_because": [
     "意向学校：中山大学",
     "意向方向：材料"
@@ -69,8 +69,8 @@
    "why": [
     "意向学校命中：中山大学",
     "方向命中：材料",
-    "6 天前发布（30 天内）",
-    "2 天内截止（高优）"
+    "7 天前发布（30 天内）",
+    "1 天内截止（高优）"
    ],
    "deadline": {
     "state": "found",
@@ -78,14 +78,14 @@
     "value": "2026-10-21",
     "url": "https://graduate.sysu.edu.cn/zsw/article/545",
     "must_check_original": false,
-    "days_left": 2
+    "days_left": 1
    },
    "urgency_weight": 2.0,
    "reminder": {
-    "kind": "T-3",
-    "window_days": 3,
-    "days_left": 2,
-    "text": "还剩 2 天（2026-10-21 截止），已进入 3 天提醒窗口"
+    "kind": "T-1",
+    "window_days": 1,
+    "days_left": 1,
+    "text": "明天截止（2026-10-21）"
    },
    "change": {
     "field": "deadline",
@@ -94,7 +94,7 @@
    },
    "channel": "preview",
    "headline": "【截止日变了】中山大学：中山大学2027年少数民族高层次骨干人才研究生招生计划公告",
-   "body": "之前没读到截止日，现在读到了 2026-10-21 · 研究生院 · 2026-10-13 发布 · 截止 2026-10-21（还剩 2 天）"
+   "body": "之前没读到截止日，现在读到了 2026-10-21 · 研究生院 · 2026-10-13 发布 · 明天截止（2026-10-21）"
   },
   {
    "push_id": "push_be3b6168d53d479a",
@@ -114,7 +114,7 @@
    "record_quality": "ok",
    "topic": "apply",
    "is_fresh": true,
-   "age_days": 9,
+   "age_days": 10,
    "matched_because": [
     "意向方向：材料"
    ],
@@ -133,7 +133,7 @@
    },
    "why": [
     "方向命中：材料",
-    "9 天前发布（30 天内）",
+    "10 天前发布（30 天内）",
     "公告未公布截止日"
    ],
    "deadline": {
@@ -169,7 +169,7 @@
    "record_quality": "ok",
    "topic": "apply",
    "is_fresh": true,
-   "age_days": 9,
+   "age_days": 10,
    "matched_because": [
     "意向方向：教育"
    ],
@@ -188,7 +188,7 @@
    },
    "why": [
     "方向命中：教育",
-    "9 天前发布（30 天内）",
+    "10 天前发布（30 天内）",
     "截止日未读到，请点原文核对"
    ],
    "deadline": {
