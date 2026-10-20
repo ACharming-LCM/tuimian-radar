@@ -6,6 +6,9 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   gate:
     runs-on: ubuntu-latest
@@ -17,9 +20,22 @@ jobs:
           cache: pip
       - name: Install dependencies
         run: pip install -r requirements-dev.txt
-      - name: Contract gate (232 checks)
+      - name: Contract gate (233 checks)
         working-directory: server
-        run: python tests/run.py
+        run: |
+          set -o pipefail
+          python tests/run.py 2>&1 | tee /tmp/gate.log
+      - name: Publish failure log (temporary)
+        if: failure()
+        run: |
+          mkdir -p ci
+          cp /tmp/gate.log ci/gate-failure.txt || true
+          git config user.name "ci"
+          git config user.email "ci@example.com"
+          git checkout -B ci-logs
+          git add -f ci/gate-failure.txt
+          git commit -m "ci failure log"
+          git push -f origin ci-logs
       - name: Data privacy self-check
         run: python collector/tools/sanitize_for_deploy.py --src data/sample/out --dst /tmp/sanitize_check
         # 对已脱敏数据再跑一遍：left_after_check 必须为 0
