@@ -321,11 +321,22 @@ def wants_professional_degree(profile):
     也不该排第一；这不是猜他"要学术"，是这条项目类型对目标人群不成立。
     """
     profile = profile or {}
-    levels = " ".join(_norm(x) for x in (profile.get("target_levels") or []))
+
+    def as_list(v):
+        # 契约里的示例画像可能把数组写成字符串（`"majors": "物理学"`）。
+        # 直接拿字符串去 `+` 列表会 TypeError（2026-10-20 门禁抓到：
+        # 匹配页新增 EMBA 过滤后，这条路径第一次被示例画像走到）。
+        if v is None:
+            return []
+        if isinstance(v, str):
+            return [v]
+        return list(v) if isinstance(v, (list, tuple, set)) else [v]
+
+    levels = " ".join(_norm(x) for x in as_list(profile.get("target_levels")))
     if any(t in levels for t in _PROFESSIONAL_HINTS):
         return True
     hay = " ".join(_norm(x) for x in
-                   (profile.get("majors") or []) + (profile.get("interest_keywords") or []))
+                   as_list(profile.get("majors")) + as_list(profile.get("interest_keywords")))
     return any(t in hay for t in _MGMT_MAJOR_HINTS)
 
 

@@ -2,6 +2,9 @@
 
 [![CI](https://github.com/ACharming-LCM/tuimian-radar/actions/workflows/ci.yml/badge.svg)](https://github.com/ACharming-LCM/tuimian-radar/actions/workflows/ci.yml)
 
+> **口径基线（改数字先改这一行）**：数据快照 **2026-10-20 16:43** · **2,646 条** · 门禁 **233 通过 / 0 失败**。
+> 演示视频 2 分 03 秒；已知 4 所学校本轮抓取失败（数据沿用上一轮）。
+
 **在线演示**：https://lcmcharming-tuimian-radar.ms.show/
 （魔搭创空间：https://www.modelscope.cn/studios/LCMcharming/tuimian-radar）
 
@@ -20,7 +23,7 @@
 > 文档与日志中引用的真实姓名、学号、电话、邮箱已替换为占位符（如「张某某」、`teacher01@…`）。
 
 **交付材料**：[DELIVERY.md](DELIVERY.md)（本次交付说明与链接汇总）· [BP.md](BP.md) / [BP.pdf](BP.pdf)（商业计划书）· [DEMO.md](DEMO.md)（2–3 分钟演示脚本）·
-[demo/demo.html](demo/demo.html)（截图版演示，浏览器直接打开）· [demo/demo.mp4](demo/demo.mp4)（87 秒演示视频）·
+[demo/demo.html](demo/demo.html)（截图版演示，浏览器直接打开）· [demo/demo.mp4](demo/demo.mp4)（2 分 03 秒演示视频）·
 [DEPLOY.md](DEPLOY.md)（魔搭 / Docker 部署）。
 
 ---
@@ -105,7 +108,7 @@ python -m venv .venv
 
 ```powershell
 cd server
-..\.venv\Scripts\python.exe tests/run.py      # 契约门禁，230 条，必须 0 失败
+..\.venv\Scripts\python.exe tests/run.py      # 契约门禁，233 条，必须 0 失败
 ```
 
 ### 抓数据
@@ -144,7 +147,7 @@ tuimian/
 │   ├─ push.py          推送打分与分层（tier1 / tier2 + why）
 │   ├─ match.py         画像匹配
 │   ├─ quality.py       数据健康门禁
-│   └─ tests/run.py     契约门禁（226 条）
+│   └─ tests/run.py     契约门禁（233 条）
 ├─ web/             前端（C 的地盘，11 个页面，纯静态）
 ├─ contracts/       数据契约（改代码前先改这里）
 ├─ data/
@@ -187,7 +190,9 @@ tuimian/
 - 微信公众号内容抓不到（无开放接口）
 - SPA / JS 渲染页面抓不到（需浏览器预渲染）
 - 扫描版 PDF 无 OCR 引擎，13 条附件读不出字
-- 鉴权是假的（演示用假登录态），没有真实账号体系
+- 用户身份仍是演示用假登录态，**没有真实账号体系**；但公网部署已经加了只读与隔离：
+  演示身份不可写、访客自动分配 `guest_xxx`、论坛只读；后台口令从环境变量
+  `TUIMIAN_ADMIN_TOKEN` 读取（未设时每次启动随机生成，不再固定 `demo-admin`）
 - 没有邮件 / 微信通知渠道，"盯着并叫你"只做到站内红点
 
 ---

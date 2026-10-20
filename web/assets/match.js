@@ -10,7 +10,8 @@
     faculty: null,
     profile: null,      // 当前使用的画像（用户自己填的，或示例）
     bucket: 'ALL',
-    tier: (typeof DEFAULT_TIER === 'string' ? DEFAULT_TIER : 'month'),   // 时效四档，默认「本月」
+    // 匹配页默认「全部」：本月常常没有匹配，默认空屏会让首屏看起来像坏了
+    tier: '',   // '' = 全部；用户点时效片再筛
     sort: 'score',
     fresh: null         // GET /api/freshness：「数据是什么时候的」
   };

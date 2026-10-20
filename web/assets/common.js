@@ -412,6 +412,9 @@ function hbTone(h) {
   if (!h || typeof h !== 'object') return 'hb-unknown';
   const lastOk = h.last_run ? h.last_run.ok : null;
   if (lastOk === false || (h.runs_24h_failed || 0) > 0) return 'hb-bad';
+  // 演示版**没有定时任务**（TUIMIAN_CRAWL_SCHEDULE=0）：0 轮不是"结果未知"，
+  // 是"没启用"。把它涂黄会让人以为抓取坏了。
+  if (h.runs_24h === 0 && lastOk !== false) return 'hb-ok';
   if (lastOk === null || (h.runs_24h_unknown || 0) > 0) return 'hb-warn';
   return 'hb-ok';
 }
@@ -422,7 +425,8 @@ function hbTitle(h) {
   if (typeof lr.seconds === 'number') bits.push('最近一轮耗时 ' + Math.round(lr.seconds) + ' 秒（' + (lr.kind || '?') + '）');
   if (h.last_full_at) bits.push('最近一次全量：' + String(h.last_full_at).replace('T', ' ').slice(0, 16));
   if (typeof h.consecutive_ok === 'number') bits.push('连续成功 ' + h.consecutive_ok + ' 轮');
-  if (typeof h.runs_24h === 'number') bits.push('24 小时 ' + h.runs_24h + ' 轮（失败 ' + (h.runs_24h_failed || 0) + ' / 未知 ' + (h.runs_24h_unknown || 0) + '）');
+  if (h.runs_24h === 0) bits.push('演示版未启用定时抓取');
+  else if (typeof h.runs_24h === 'number') bits.push('24 小时 ' + h.runs_24h + ' 轮（失败 ' + (h.runs_24h_failed || 0) + ' / 未知 ' + (h.runs_24h_unknown || 0) + '）');
   bits.push('「最近一轮新增」是那一轮抓到的条数，不是当天合计（接口没有当天累计字段）');
   return bits.join('\n');
 }
@@ -450,11 +454,16 @@ function heartbeatHTML(h) {
     parts.push('现在看到的数据是 ' + esc(age) + '的');
   } else {
     lead = '数据更新于 <strong>' + esc(age) + '</strong>';
-    if (typeof h.runs_24h === 'number') parts.push('最近 24 小时自动跑了 ' + h.runs_24h + ' 轮');
+    if (h.runs_24h === 0) {
+      // 0 轮是配置（演示版关闭了定时任务），不是"结果未知"
+      parts.push('演示版未启用定时抓取');
+    } else if (typeof h.runs_24h === 'number') {
+      parts.push('最近 24 小时自动跑了 ' + h.runs_24h + ' 轮');
+    }
     if (lr && typeof lr.new_notices === 'number') parts.push('最近一轮新增 ' + lr.new_notices + ' 条');
     // 未知**不是失败**（契约：ok=null = 我们不知道那一轮成功没有），但也不能不吭声 ——
     // 否则"连续成功 N 轮"和"有一轮不知道"会并排出现而没人解释。
-    if (tone === 'hb-warn' || (h.runs_24h_unknown || 0) > 0) {
+    if (h.runs_24h !== 0 && (tone === 'hb-warn' || (h.runs_24h_unknown || 0) > 0)) {
       parts.push('有一轮结果未知（没留成功标记，不是失败）');
     }
   }
@@ -576,7 +585,13 @@ const TIERS = [
   { key: 'library', label: '资料库', min: 30, note: '历史参考，非最新' },
   { key: 'nodate', label: '日期未知', note: '没抓到发布日，不放进任何时效档' }
 ];
-const DEFAULT_TIER = 'month';
+// 允许 `?tier=library` 直接落到某一档（演示截图/分享用；未知值仍回落到本月）
+const DEFAULT_TIER = (function () {
+  try {
+    const q = new URLSearchParams(location.search).get('tier');
+    return TIERS.some((t) => t.key === q) ? q : 'month';
+  } catch (e) { return 'month'; }
+})();
 const ARCHIVE_DAYS = 180;   // 超过这个天数：卡片默认折叠，带灰色「历史」标记
 
 /** 发布日距今多少天；拿不到日期返回 null（**不许当成 0**）。

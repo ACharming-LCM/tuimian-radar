@@ -1524,9 +1524,11 @@ def match_口径切到push时和推送同一个公式():
             raw, push_mod.weighted_score(dims))
         conf = (rec.get("extract") or {}).get("confidence")
         conf = 0.5 if conf is None else float(conf)
-        # `final` 落盘前保留 4 位小数；这里按同一精度比，不能用 1e-9。
-        assert abs(final - round(raw * (0.7 + 0.3 * conf), 4)) < 1e-9, (
-            final, raw, conf)
+        # `final` 落盘前保留 4 位小数，边界值（0.43945）在二进制里可能
+        # round 到 0.4394 或 0.4395。**这里比的是降权关系，不是舍入方向**，
+        # 用 1e-4 容差；用 round + 严格相等会在不同机器上随机红。
+        expected = raw * (0.7 + 0.3 * conf)
+        assert abs(final - expected) < 1e-4, (final, expected, raw, conf)
 
         config.MATCH_SCORE_FROM_PUSH = False
         _f2, raw2, _r2, _w2 = matching.score_notice(rec, PROF, today)
@@ -1633,7 +1635,9 @@ def match_默认不排除已截止的_显式开关还能用():
     # ③ 两个口径的恒等式都要成立
     for body in (r, r2):
         s = body["stats"]
-        assert s["total"] == s["dropped_expired"] + s["dropped_mode"] + s["scored"], s
+        assert s["total"] == (s["dropped_expired"] + s["dropped_mode"]
+                              + s["dropped_nonapply"] + s["dropped_kind"]
+                              + s["dropped_junk"] + s["scored"]), s
 
     # ④ **示例画像不许替用户做这个决定**
     #    `collector/tools/profile-example.json` 是"产品默认行为"的代表，
@@ -1687,7 +1691,9 @@ def match_item_带_field_trust_且_stats_恒等式成立():
 
     # ③ stats 恒等式
     s = body["stats"]
-    assert s["total"] == s["dropped_expired"] + s["dropped_mode"] + s["scored"], s
+    assert s["total"] == (s["dropped_expired"] + s["dropped_mode"]
+                          + s["dropped_nonapply"] + s["dropped_kind"]
+                          + s["dropped_junk"] + s["scored"]), s
     assert s["total"] == len(RAW), (s["total"], len(RAW))
     # `len(items)` 是 limit 决定的，**不是**匹配总数
     assert len(items) == 30 and s["scored"] >= 30, (len(items), s["scored"])
@@ -1697,8 +1703,10 @@ def match_item_带_field_trust_且_stats_恒等式成立():
 def match_stats_与源数据对得上():
     stats = CLIENT.post("/api/match", json=PROF, params={"limit": 1}).json()["stats"]
     assert stats["total"] == len(RAW)
-    # 丢弃的两个口径：已过期 + 招生方式不符；剩下的都参与打分
-    assert stats["dropped_expired"] + stats["dropped_mode"] + stats["scored"] == len(RAW), stats
+    # 丢弃的口径：已过期 + 招生方式不符 + 非招生 + 目录/在职 + 脏记录；剩下的参与打分
+    assert (stats["dropped_expired"] + stats["dropped_mode"]
+            + stats["dropped_nonapply"] + stats["dropped_kind"]
+            + stats["dropped_junk"] + stats["scored"]) == len(RAW), stats
 
 
 # ---------- 5. 导师 ----------
@@ -4560,9 +4568,12 @@ def _cred_record(pid, title, deadline=None, fs=None, school="测试大学",
     """造一条公告。`fs` 传 None 表示**老数据**（没有 field_state）。"""
     rec = {
         "id": pid, "school": school, "school_slug": "test", "unit": "研究生院",
-        "board": "招生", "title": title, "publish_date": publish,
+        # 匹配页现在要求标题里有"推免语"；测试记录也按真实公告的写法来。
+        "board": "招生", "title": "推免 " + title, "publish_date": publish,
         "url": f"https://example.invalid/{pid}", "deadline": deadline,
         "apply_mode": "推免", "target_year": 2027, "degree_types": ["硕士"],
+        # 匹配页现在只收 announcement；测试记录也要是"一条真实公告"的形状
+        "topic": "apply", "notice_kind": "announcement", "record_quality": "ok",
         "majors": majors if majors is not None else [],
         # **A 一落盘 `field_state`，字段必然在这里**；`_raw` 用来验"原样透传"
         "tags": ["推免"], "extract": {"version": "v4", "confidence": conf},

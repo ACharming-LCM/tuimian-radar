@@ -206,9 +206,27 @@ def bucket_of(deadline, today, rec=None):
 
 def match(records, prof, today):
     dropped_expired = dropped_mode = 0
+    dropped_nonapply = dropped_kind = dropped_junk = 0
     wanted = prof.get("wanted_modes") or []
     out = []
     for rec in records:
+        # 匹配页承诺「推免 / 夏令营 / 预推免公告」，只收招生类。
+        if rec.get("record_quality") == "junk":
+            dropped_junk += 1
+            continue
+        topic = rec.get("topic")
+        if topic is not None and topic != "apply":
+            dropped_nonapply += 1
+            continue
+        kind = rec.get("notice_kind")
+        if kind != "announcement":
+            dropped_kind += 1
+            continue
+        title = rec.get("title") or ""
+        if not any(w in title for w in ("推免", "免试", "夏令营", "预推免",
+                                        "直博", "优秀应届本科毕业生")):
+            dropped_nonapply += 1
+            continue
         bucket, left = bucket_of(rec.get("deadline"), today, rec)
         # 硬过滤 ① 已过期
         if prof.get("exclude_expired") and bucket == "已过期":
@@ -231,7 +249,11 @@ def match(records, prof, today):
         })
     out.sort(key=lambda x: -x["score"])
     stats = {"total": len(records), "dropped_expired": dropped_expired,
-             "dropped_mode": dropped_mode, "scored": len(out)}
+             "dropped_mode": dropped_mode,
+             "dropped_nonapply": dropped_nonapply,
+             "dropped_kind": dropped_kind,
+             "dropped_junk": dropped_junk,
+             "scored": len(out)}
     return out, stats
 
 
@@ -343,7 +365,9 @@ def render(items, stats, prof):
     print(f"\n画像：{prof.get('name') or '未命名'} | {prof.get('school')} · "
           f"{'、'.join(prof.get('majors') or [])} | 目标 {prof.get('target_entry_year')} 年入学")
     print(f"筛选：{stats['total']} 条公告 → 丢弃已过期 {stats['dropped_expired']}、"
-          f"招生方式不符 {stats['dropped_mode']} → 打分 {stats['scored']} 条\n")
+          f"招生方式不符 {stats['dropped_mode']}、非招生 {stats['dropped_nonapply']}、"
+          f"目录/在职 {stats['dropped_kind']}、脏记录 {stats['dropped_junk']} "
+          f"→ 打分 {stats['scored']} 条\n")
     if not items:
         print("  没有匹配结果。检查 profile 的 wanted_modes / exclude_expired。")
         return

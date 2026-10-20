@@ -304,9 +304,35 @@ def match_notices(records, prof, today, limit=None):
     分页和筛选会让 id 对不齐。凡前端渲染要用的字段，同一个响应里给全。
     """
     dropped_expired = dropped_mode = 0
+    dropped_nonapply = dropped_kind = dropped_junk = 0
     wanted = prof.get("wanted_modes") or []
     out = []
     for rec in records:
+        # 页面标题写的是「推免 / 夏令营 / 预推免公告」——匹配页也必须只收招生类。
+        # 不筛的话，首屏会出现「博士后奖」「图像采集」「名师讲坛」这些
+        # topic=non_apply 的记录，分数还很高（2026-10-20 线上实测）。
+        if quality.is_junk(rec):
+            dropped_junk += 1
+            continue
+        topic = rec.get("topic")
+        if topic is not None and topic != "apply":
+            dropped_nonapply += 1
+            continue
+        # 匹配页只承诺「招生通知」（announcement）。目录/简章、在职项目、
+        # 以及未分类的老记录都不进匹配结果 —— 否则首屏会出现交换项目、
+        # 学费标准这类「报得了名但不是推免」的公告（2026-10-20 线上实测）。
+        kind = rec.get("notice_kind")
+        if kind != "announcement":
+            dropped_kind += 1
+            continue
+        # 标题里没有任何"推免语"的，不进推免匹配页。
+        # 「报名通知」四个字也会被 kind.py 判成 announcement，但交换项目、
+        # 政治理论考试这种和推免无关（2026-10-20 线上实测）。
+        title = rec.get("title") or ""
+        if not any(w in title for w in ("推免", "免试", "夏令营", "预推免",
+                                        "直博", "优秀应届本科毕业生")):
+            dropped_nonapply += 1
+            continue
         # **排序/分桶走三态判定**，不看 `deadline is None`（契约第 14 节）
         dl_state = credibility.state_of(rec, "deadline")
         bucket, left = bucket_of(rec.get("deadline"), today, state=dl_state)
@@ -356,7 +382,11 @@ def match_notices(records, prof, today, limit=None):
     # 稳定排序：并列分数保持原顺序（matches 参考实现，也 matches fixture）
     out.sort(key=lambda x: -x["score"])
     stats = {"total": len(records), "dropped_expired": dropped_expired,
-             "dropped_mode": dropped_mode, "scored": len(out)}
+             "dropped_mode": dropped_mode,
+             "dropped_nonapply": dropped_nonapply,
+             "dropped_kind": dropped_kind,
+             "dropped_junk": dropped_junk,
+             "scored": len(out)}
     if limit:
         out = out[:limit]
     return out, stats
