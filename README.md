@@ -1,5 +1,7 @@
 # tuimian · 推免雷达
 
+[![CI](https://github.com/ACharming-LCM/tuimian-radar/actions/workflows/ci.yml/badge.svg)](https://github.com/ACharming-LCM/tuimian-radar/actions/workflows/ci.yml)
+
 把散落在各校研究生院 / 院系官网的招生公告抓成结构化数据，按你的背景筛出**该看的那几条**，每条都能点回原文核对。
 
 > **这份 README 是 2026-10-19 重写的。** 旧版是开发第一天的日志（写着"18 条""286 条"），已作废。

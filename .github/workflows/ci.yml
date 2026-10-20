@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+      - name: Contract gate (232 checks)
+        working-directory: server
+        run: python tests/run.py
+      - name: Data privacy self-check
+        run: python collector/tools/sanitize_for_deploy.py --src data/sample/out --dst /tmp/sanitize_check
+        # 对已脱敏数据再跑一遍：left_after_check 必须为 0
