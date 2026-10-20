@@ -29,11 +29,11 @@ jobs:
         if: failure()
         run: |
           mkdir -p ci
-          cp /tmp/gate.log ci/gate-failure.log || true
+          cp /tmp/gate.log ci/gate-failure.txt || true
           git config user.name "ci"
           git config user.email "ci@example.com"
           git checkout -B ci-logs
-          git add ci/gate-failure.log
+          git add -f ci/gate-failure.txt
           git commit -m "ci failure log"
           git push -f origin ci-logs
       - name: Data privacy self-check
