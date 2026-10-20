@@ -19,7 +19,7 @@
 > 重新生成公开版。
 > 文档与日志中引用的真实姓名、学号、电话、邮箱已替换为占位符（如「张某某」、`teacher01@…`）。
 
-**交付材料**：[BP.md](BP.md) / [BP.pdf](BP.pdf)（商业计划书）· [DEMO.md](DEMO.md)（2–3 分钟演示脚本）·
+**交付材料**：[DELIVERY.md](DELIVERY.md)（本次交付说明与链接汇总）· [BP.md](BP.md) / [BP.pdf](BP.pdf)（商业计划书）· [DEMO.md](DEMO.md)（2–3 分钟演示脚本）·
 [demo/demo.html](demo/demo.html)（截图版演示，浏览器直接打开）· [demo/demo.mp4](demo/demo.mp4)（87 秒演示视频）·
 [DEPLOY.md](DEPLOY.md)（魔搭 / Docker 部署）。
 
