@@ -1,5 +1,16 @@
 # 部署到魔搭创空间（得到 https 演示链接）
 
+> **已部署（2026-10-20）**
+> - 应用直链：https://lcmcharming-tuimian-radar.ms.show/
+> - 创空间页：https://www.modelscope.cn/studios/LCMcharming/tuimian-radar
+> - 配置：Docker 类型 + `platform/2v-cpu-8g-mem`，监听 `0.0.0.0:7860`，`TUIMIAN_PUBLIC=1`
+> - 实测：`/api/health` 200（2561 条）；首页/推送/公告/导师/今日更新/订阅页 200；
+>   演示身份写入 403、访客 `guest_xxx` 写入 200、论坛发帖 403。
+>
+> 重新部署：改完代码后上传 `Dockerfile`、`requirements.txt`、`run.py`、`server/`、
+> `collector/`、`contracts/`、`web/`、`data/sample/`，在创空间页点「重新部署」。
+> 注意：魔搭要求 **ENTRYPOINT**（不能用 CMD）且端口必须是 **7860**。
+
 ## 1. 本地生成脱敏数据
 
 部署用的数据是 `data/out/` 的脱敏副本。原始抓取数据里有考生名单，不能上公网：
