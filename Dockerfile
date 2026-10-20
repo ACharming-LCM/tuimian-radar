@@ -32,4 +32,5 @@ RUN mkdir -p server/var && useradd -m -u 1000 app && chown -R app /app
 USER app
 
 EXPOSE 7860
-CMD ["python", "run.py"]
+# 魔搭创空间要求 Docker 类型必须配置 ENTRYPOINT（不是 CMD）
+ENTRYPOINT ["python", "run.py"]
