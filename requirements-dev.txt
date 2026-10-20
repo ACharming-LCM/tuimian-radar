@@ -1,3 +1,5 @@
 -r requirements.txt
 # 契约门禁用它校验 JSON Schema；运行时不需要
 jsonschema==4.26.0
+# fastapi / starlette 的 TestClient 依赖（新版本拆成了 httpx2）
+httpx2==2.14.0
