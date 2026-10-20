@@ -1,11 +1,11 @@
 {
  "user_id": "u_demo_sub",
- "generated_at": "2026-10-20T16:47:55",
+ "generated_at": "2026-10-20T17:13:51",
  "plan": {
   "active": true,
   "plan_id": "monthly",
   "plan_name": "月度订阅",
-  "expires_at": "2026-11-19T16:47:55",
+  "expires_at": "2026-11-19T17:13:51",
   "reason": "active",
   "text": "月度订阅：推送 + 匹配排序 + 套磁信"
  },
@@ -20,7 +20,7 @@
   "path": "contracts/fixtures/events.sample.json",
   "total": 5,
   "data_time": "2026-10-19T12:06:36",
-  "data_age_hours": 28.69,
+  "data_age_hours": 29.12,
   "data_age_text": "1.2 天前",
   "stale": null,
   "stale_after_hours": 30.0,
@@ -273,13 +273,51 @@
   "truncated": false,
   "truncated_reason": null,
   "committed": false,
-  "apply_fresh_announcement": 37,
-  "apply_fresh_announcement_matched": 28
+  "apply_fresh_announcement": 41,
+  "apply_fresh_announcement_matched": 31
  },
  "_note": "推送只做**站内预览**，未接邮件/微信通道；每条都带原文链接；没有支付通道，订阅用手动开通码。",
  "reference": {
-  "total": 207,
+  "total": 210,
   "items": [
+   {
+    "notice_id": "ua8ae400a-431f2c45a9bb1cbd",
+    "title": "北京大学2027年博士研究生招生简章",
+    "school": "北京大学",
+    "unit": "研究生招生网",
+    "publish_date": "2026-10-20",
+    "url": "https://admission.pku.edu.cn/docs/20261020091929804706.pdf",
+    "notice_kind": "catalog",
+    "matched_because": [
+     "意向方向：材料"
+    ]
+   },
+   {
+    "notice_id": "u285779f0-69706-3216693",
+    "title": "浙江大学物理学院2027年博士研究生招生简章",
+    "school": "浙江大学",
+    "unit": "物理学院",
+    "publish_date": "2026-10-19",
+    "url": "https://physics.zju.edu.cn/2026/1019/c69706a3216693/page.htm",
+    "notice_kind": "catalog",
+    "matched_because": [
+     "本科专业：物理学",
+     "意向方向：材料",
+     "意向方向：教育"
+    ]
+   },
+   {
+    "notice_id": "ua37ee91b-4cb9d077dd59876b",
+    "title": "【专项计划】天津大学2027年新质生产力专项博士研究生招生简章",
+    "school": "天津大学",
+    "unit": "研究生院",
+    "publish_date": "2026-10-19",
+    "url": "https://yzb.tju.edu.cn/xwzx/tkbs_xw/202610/t20261019_324756.htm",
+    "notice_kind": "catalog",
+    "matched_because": [
+     "意向方向：材料"
+    ]
+   },
    {
     "notice_id": "ue00ab131-61ff3e8bee4b5336",
     "title": "电子科技大学2027年硕士研究生招生章程",
@@ -366,44 +404,6 @@
     "notice_kind": "catalog",
     "matched_because": [
      "本科专业：物理学",
-     "意向方向：材料"
-    ]
-   },
-   {
-    "notice_id": "ua8ae400a-7844e9634204cec3",
-    "title": "北京大学 2027 年硕士研究生招生简章（校本部）",
-    "school": "北京大学",
-    "unit": "研究生招生网",
-    "publish_date": "2026-10-08",
-    "url": "https://admission.pku.edu.cn/docs/20261008162609970607.pdf",
-    "notice_kind": "catalog",
-    "matched_because": [
-     "本科专业：物理学",
-     "意向方向：材料"
-    ]
-   },
-   {
-    "notice_id": "ucd1acaac-6667-585158",
-    "title": "东南大学2027年硕士研究生招生章程",
-    "school": "东南大学",
-    "unit": "研究生院",
-    "publish_date": "2026-10-08",
-    "url": "https://yzb.seu.edu.cn/2026/1008/c6667a585158/page.htm",
-    "notice_kind": "catalog",
-    "matched_because": [
-     "意向方向：材料",
-     "意向方向：教育"
-    ]
-   },
-   {
-    "notice_id": "ua37ee91b-4bd106beb5116449",
-    "title": "天津大学2027年硕士学位研究生招生简章",
-    "school": "天津大学",
-    "unit": "研究生院",
-    "publish_date": "2026-10-07",
-    "url": "https://yzb.tju.edu.cn/xwzx/tkss_xw/202610/t20261007_324742.htm",
-    "notice_kind": "catalog",
-    "matched_because": [
      "意向方向：材料"
     ]
    }

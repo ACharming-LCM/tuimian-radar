@@ -63,5 +63,10 @@
  ],
  "is_fresh": true,
  "age_days": 0,
- "admission_year": null
+ "admission_year": null,
+ "notice_kind": "announcement",
+ "kind_hits": [
+  "考核"
+ ],
+ "age_tier": "live"
 }
