@@ -14,6 +14,8 @@
 | GitHub 仓库（公开） | https://github.com/ACharming-LCM/tuimian-radar |
 | BP（PDF） | [BP.pdf](BP.pdf) |
 | 演示视频（2 分 03 秒，中文旁白） | [demo/demo.mp4](demo/demo.mp4) |
+| **5 分钟路演 HTML（推荐现场用）** | [demo/推免雷达-路演-5分钟.html](demo/推免雷达-路演-5分钟.html) |
+| 5 分钟路演打印版 PDF | [demo/推免雷达-路演-5分钟-打印版.pdf](demo/推免雷达-路演-5分钟-打印版.pdf) |
 | 截图版演示（浏览器打开） | [demo/demo.html](demo/demo.html) |
 | 现场演示脚本 | [DEMO.md](DEMO.md) |
 | 部署说明 | [DEPLOY.md](DEPLOY.md) |
@@ -62,6 +64,9 @@
 - `BP.md` / `BP.pdf`：商业计划书（问题、产品、技术、市场、竞争、商业模式、合规、路线图、风险）。
 - `demo/demo.mp4`：2 分 03 秒，1920×1080，中文旁白 + 字幕；11 页。
 - `demo/demo.html`：浏览器直接播放的截图版演示。
+- `demo/推免雷达-路演-5分钟.html`：10 页、5 分钟路演版（HTML，双击打开，按 F5 放映；
+  每页带讲稿，正文 ≥20px）。打印版 PDF 同目录。结构：需求与付费 → 痛点 → 产品链路 →
+  三态 → 为什么推给你 → 导师/套磁信 → 创新点 → 商业 → 收尾；**删掉了“踩坑/边界”章节**。
 - `DEMO.md`：七步现场演示脚本、备用话术、常见翻车点。
 - `DEPLOY.md`：魔搭 / Docker 部署步骤。
 - 线上已部署并通过自检。
